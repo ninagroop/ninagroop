@@ -29,8 +29,8 @@ const Products = ({ filter }) => {
               name
               metadata {
                 # @TODO: call out explicit key enums in README
-                testKey
-                featured
+                gender
+                color
               }
               images
             }

@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -13,8 +13,8 @@ module.exports = {
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: ["Price"],
-        secretKey: process.env.STRIPE_SECRET_KEY,
+        objects: ['Price'],
+        secretKey: process.env.GATSBY_STRIPE_SECRET_KEY,
         downloadFiles: false,
       },
     },
