@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { reactLocalStorage } from "reactjs-localstorage"
 
-const StoreContext = React.createContext()
+const StoreContext = React.createContext({})
 
 const StoreProvider = ({ children }) => {
   const [store, _updateStore] = useState([])
