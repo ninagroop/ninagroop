@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from 'react'
 import { reactLocalStorage } from 'reactjs-localstorage'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { Store } from '../data/store'
 import { StoreContext } from '../context/store'
 import {
   ItemContain,
