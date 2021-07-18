@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Featured = styled.section`
-  margin-top: 60px;
+  margin-top: 10px;
 
   .featureditems {
     width: 100%;
@@ -17,11 +17,28 @@ export const Featured = styled.section`
       align-self: center;
       text-align: center;
     }
+
+    img {
+      max-height: 201px;
+    }
+
+    select {
+      color: #d96528;
+      padding: 10px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    button {
+      min-width: 122px;
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   h4 {
     color: #d96528;
-    margin: 10px 0;
+    margin: 20px 0 0;
   }
 
   h2 {
@@ -37,7 +54,7 @@ export const Featured = styled.section`
 
   h2 span:after,
   h2 span:before {
-    content: " ";
+    content: ' ';
     display: block;
     height: 1px;
     width: 1000px;
@@ -81,10 +98,6 @@ export const Featured = styled.section`
       div {
         padding: 40px 50px;
       }
-    }
-
-    img {
-      width: 100%;
     }
   }
 `

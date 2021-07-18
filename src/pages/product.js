@@ -1,48 +1,42 @@
-import React, { useEffect, useState, useContext } from "react"
-import StarRatings from "react-star-ratings"
-import { reactLocalStorage } from "reactjs-localstorage"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { Store } from "../data/store"
+import React, { useEffect, useState, useContext } from 'react'
+import { reactLocalStorage } from 'reactjs-localstorage'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { Store } from '../data/store'
+import { StoreContext } from '../context/store'
 import {
   ItemContain,
   QuantityInput,
   UpdateNumButton,
-  Review,
-} from "../components/product-styles"
-import { Dollar } from "../helpers/currency-filter"
-import FeaturedProducts from "../components/featuredproducts"
-import { CartContext } from "../context/cart"
+} from '../components/product-styles'
+import { formatPrice } from '../helpers/currency-filter'
+import FeaturedProducts from '../components/featuredproducts'
+import { CartContext } from '../context/cart'
+import AddToCart from '../components/addToCart'
 
 const Product = ({ location }) => {
-  const [item, updateItem] = useState(Store)
+  const [item, updateItem] = useState({})
+  const [store, updateStore] = useContext(StoreContext)
   const [quantity, updateQuantity] = useState(1)
   const [cart, updateCart] = useContext(CartContext)
+  const [dropdownItem, updateDropdownItem] = useState(item?.prices?.[0]?.id)
 
   useEffect(() => {
-    const ID = location.pathname.split("/")[2]
-    updateItem(Store.find(el => el.id === ID))
-  }, [])
+    const id = location.pathname.split('/')[2]
+    updateItem(store[id])
+    updateDropdownItem(store[id]?.prices?.[0]?.id)
+  }, [store])
 
-  const addToCart = () => {
-    const tempCart = [...cart]
-    let itemFound = false
+  const onSelectChange = e => {
+    updateDropdownItem(e.target.value)
+  }
 
-    tempCart.forEach(el => {
-      if (el.id === item.id) {
-        el.quantity += quantity
-        itemFound = true
-      }
-    })
-
-    if (!itemFound) {
-      // Item doesn't exist in the cart yet, so add it
-      const tempItem = item
-      tempItem.quantity = quantity
-      tempCart.push(tempItem)
-    }
-    updateCart(tempCart)
-    reactLocalStorage.setObject("cart", tempCart)
+  if (!item?.id) {
+    return (
+      <Layout>
+        <h2>Item not found!</h2>
+      </Layout>
+    )
   }
 
   return (
@@ -50,25 +44,34 @@ const Product = ({ location }) => {
       <SEO title="Product" />
       <ItemContain>
         <section className="img">
-          <img src={item.img} alt=""></img>
+          <img src={item?.images?.[0]} alt=""></img>
         </section>
         <section className="product-info">
           <h1>{item.name}</h1>
-          <StarRatings
-            rating={item.starrating}
-            numberOfStars={5}
-            starDimension="18px"
-            starSpacing="0"
-          ></StarRatings>
-          <h4 className="price">{Dollar(item.price)}</h4>
+          {item?.prices?.[0]?.length > 1 ? (
+            <h4 className="price">
+              {formatPrice(item?.prices[0].unit_amount)}
+            </h4>
+          ) : (
+            <>
+              {item?.prices?.length > 1 && (
+                <select
+                  value={dropdownItem}
+                  onChange={onSelectChange}
+                  name="priceSelect"
+                >
+                  {item.prices.map(price => (
+                    <option key={price.id} value={price.id}>
+                      {formatPrice(price.unit_amount, price.currency)}{' '}
+                      {price.nickname}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </>
+          )}
           <p>{item.description}</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
-            velit dolores repudiandae animi quidem, eveniet quod dolor facilis
-            dicta eligendi ullam error. Assumenda in fugiat natus enim similique
-            nam itaque.
-          </p>
-          <p style={{ display: "flex" }}>
+          <p style={{ display: 'flex' }}>
             <UpdateNumButton onClick={() => updateQuantity(quantity - 1)}>
               -
             </UpdateNumButton>
@@ -81,36 +84,16 @@ const Product = ({ location }) => {
               +
             </UpdateNumButton>
           </p>
-          <p>
-            Available in additional colors:
-            <strong>
-              <span style={{ color: item.color }}> {item.color}</span>
-            </strong>
-          </p>
-          <p>
-            <button className="button purchase" onClick={addToCart}>
-              Add to Cart
-            </button>
-          </p>
+
+          <br />
+          <AddToCart
+            selectedId={dropdownItem}
+            product={item}
+            quantity={quantity}
+          />
         </section>
       </ItemContain>
       <hr />
-      <Review>
-        <h2>Reviews</h2>
-        <StarRatings
-          rating={item.starrating}
-          numberOfStars={5}
-          starDimension="18px"
-          starSpacing="0"
-        ></StarRatings>
-        <p>{item.review}</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iusto
-          placeat consequatur voluptas sit mollitia ratione autem, atque sequi
-          odio laborum, recusandae quia distinctio voluptatibus sint, quae
-          aliquid possimus exercitationem.
-        </p>
-      </Review>
       <FeaturedProducts />
     </Layout>
   )

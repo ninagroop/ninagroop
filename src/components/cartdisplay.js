@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react"
-import getStripe from "../utils/stripejs"
-import { Link } from "gatsby"
-import { Dollar } from "../helpers/currency-filter"
-import { CartContext } from "../context/cart"
+import React, { useContext, useState } from 'react'
+import getStripe from '../utils/stripejs'
+import { Link } from 'gatsby'
+import { formatPrice } from '../helpers/currency-filter'
+import { CartContext } from '../context/cart'
 import {
   Table,
   TR,
@@ -11,44 +11,46 @@ import {
   ProductName,
   ProductImg,
   Payment,
-} from "./cartdisplay-styles"
-import { CartTotal } from "../helpers/cart-total"
-import { StoreContext } from "../context/store"
+} from './cartdisplay-styles'
+import { CartTotal } from '../helpers/cart-total'
+import { StoreContext } from '../context/store'
 
 const VariantRows = ({ variants, removeFromCart }) =>
   variants.map(variant => {
     if (variant.quantity < 1) return null
     return (
       <TR key={variant.id}>
-        <TD></TD>
+        <TD className="variant">{variant?.nickname}</TD>
         <TD>
-          <h4 className="price">{Dollar(variant.unit_amount / 100)}</h4>
+          <h4 className="price">{formatPrice(variant?.unit_amount)}</h4>
         </TD>
         <TD>
           <strong>{variant.quantity}</strong>
         </TD>
-        <TD>{Dollar((variant.quantity * variant.unit_amount) / 100)}</TD>
+        <TD>{formatPrice(variant?.unit_amount)}</TD>
         <TD
           className="remove"
           onClick={e => {
             removeFromCart(variant.id)
           }}
         >
-          {" "}
+          {' '}
           Remove
         </TD>
       </TR>
     )
   })
 
-const getSubtotalOfAllVariants = ({ cart }) => {
+export const getSubtotalOfAllVariants = ({ cart }) => {
   let subtotal = 0
   cart.forEach(item => {
     item.prices.forEach(price => {
-      subtotal += price.unit_amount * price.quantity
+      if (price.quantity >= 1) {
+        subtotal += price.unit_amount * price.quantity
+      }
     })
   })
-  return subtotal / 100
+  return subtotal
 }
 
 const getMappedCart = ({ cart }) => {
@@ -63,7 +65,7 @@ const getMappedCart = ({ cart }) => {
   return mappedCart
 }
 
-const CartTable = () => {
+const CartDisplay = () => {
   const [cart, updateCart] = useContext(CartContext)
   const [loading, setLoading] = useState(false)
   const [store, updateStore] = useContext(StoreContext)
@@ -71,7 +73,7 @@ const CartTable = () => {
   const removeFromCart = id => {
     // in stripe's products API, we have prod_ for products
     let _cart = [].concat(cart)
-    if (id.match("prod_")?.length > 0) {
+    if (id.match('prod_')?.length > 0) {
       _cart = cart.filter(item => item.id !== id)
       // ... and price_ for price variants, here we remove only the variant
     } else {
@@ -96,24 +98,24 @@ const CartTable = () => {
 
     const stripe = await getStripe()
     const { error } = await stripe.redirectToCheckout({
-      mode: "payment",
-      lineItems: getMappedCart({cart}),
-      successUrl: `${window.location.origin}/checkout-success/`,
+      mode: 'payment',
+      lineItems: getMappedCart({ cart }),
+      successUrl: `${window.location.origin}/cart?checkout=success`,
       cancelUrl: `${window.location.origin}/cart`,
     })
 
     if (error) {
-      console.warn("Error:", error)
+      console.warn('Error:', error)
       setLoading(false)
     }
   }
 
-  if (getSubtotalOfAllVariants({cart}) === 0) {
+  if (getSubtotalOfAllVariants({ cart }) === 0) {
     return (
       <section className="center">
         <p>Your cart is empty, fill it up!</p>
         <button className="pay-with-stripe">
-          <Link style={{ color: "white" }} to="/">
+          <Link style={{ color: 'white' }} to="/">
             Back Home
           </Link>
         </button>
@@ -147,8 +149,8 @@ const CartTable = () => {
             // there are multiple price variants
             if (item?.prices?.length > 1) {
               return (
-                <>
-                  <TR key={item.id}>
+                <React.Fragment key={item.id}>
+                  <TR>
                     <TD>
                       <ProductImg src={item.images[0]} alt={item.name} />
                       <ProductName>{item.name}</ProductName>
@@ -162,7 +164,7 @@ const CartTable = () => {
                     removeFromCart={removeFromCart}
                     variants={item.prices}
                   />
-                </>
+                </React.Fragment>
               )
               // there is one price variant
             } else {
@@ -175,14 +177,14 @@ const CartTable = () => {
                     </TD>
                     <TD>
                       <h4 className="price">
-                        {Dollar(item.prices[0]?.unit_amount / 100)}
+                        {formatPrice(item.prices[0]?.unit_amount)}
                       </h4>
                     </TD>
                     <TD>
                       <strong>{subtotal}</strong>
                     </TD>
                     <TD>
-                      {Dollar(subtotal * (item.prices[0]?.unit_amount / 100))}
+                      {formatPrice(subtotal * item.prices[0]?.unit_amount)}
                     </TD>
                     <TD
                       className="remove"
@@ -213,17 +215,21 @@ const CartTable = () => {
           </div>
           <div className="num">
             <p>
-              <strong>{Dollar(getSubtotalOfAllVariants({ cart }))}</strong>
+              <strong>{formatPrice(getSubtotalOfAllVariants({ cart }))}</strong>
             </p>
             <p>Free Shipping</p>
-            <p className="emph">{Dollar(getSubtotalOfAllVariants({ cart }))}</p>
+            <p className="emph">
+              {formatPrice(getSubtotalOfAllVariants({ cart }))}
+            </p>
           </div>
         </div>
         <div></div>
         <div className="checkout">
-          {getSubtotalOfAllVariants({cart}) > 0 && (
+          {getSubtotalOfAllVariants({ cart }) > 0 && (
             <form onSubmit={handleSubmit}>
-              <button className="pay-with-stripe checkout" type="submit">Checkout</button>
+              <button className="pay-with-stripe checkout" type="submit">
+                Checkout
+              </button>
             </form>
           )}
         </div>
@@ -232,4 +238,4 @@ const CartTable = () => {
   )
 }
 
-export default CartTable
+export default CartDisplay

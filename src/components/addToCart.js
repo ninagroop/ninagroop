@@ -1,13 +1,11 @@
-import React, { useEffect, useState, useContext } from "react"
-import { reactLocalStorage } from "reactjs-localstorage"
-import { Store } from "../data/store"
-import { CartContext } from "../context/cart"
-import { StoreContext } from "../context/store"
+import React, { useState, useContext } from 'react'
+import { reactLocalStorage } from 'reactjs-localstorage'
+import { CartContext } from '../context/cart'
+import { StoreContext } from '../context/store'
 
-const AddToCart = ({ product, selectedId }) => {
-  const [store, updateStore] = useContext(StoreContext)
+const AddToCart = ({ product, selectedId, quantity }) => {
   const [cart, updateCart] = useContext(CartContext)
-  const [quantity, updateQuantity] = useState(1)
+  const [store] = useContext(StoreContext)
 
   const addToCart = () => {
     const tempCart = [...cart]
@@ -26,6 +24,7 @@ const AddToCart = ({ product, selectedId }) => {
           }
         })
     })
+
     if (!itemFound) {
       // Item doesn't exist in the cart yet, so add it
       const tempItem = store[product.id]
@@ -38,7 +37,7 @@ const AddToCart = ({ product, selectedId }) => {
       tempCart.push(tempItem)
     }
     updateCart(tempCart)
-    reactLocalStorage.setObject("cart", tempCart)
+    reactLocalStorage.setObject('cart', tempCart)
   }
 
   return (

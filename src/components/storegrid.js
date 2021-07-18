@@ -1,42 +1,45 @@
-import React, { useState } from "react"
-import { CSSTransition } from "react-transition-group"
-import { Dollar } from "../helpers/currency-filter"
-import StarRatings from "react-star-ratings"
-import { StyledGroup, Item, Aside } from "./storegrid-styles"
-import PropTypes from "prop-types"
+import React, { useEffect, useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
+import { formatPrice } from '../helpers/currency-filter'
+import { StyledGroup, Item, Aside } from './storegrid-styles'
+import PropTypes from 'prop-types'
 
 const StoreGrid = ({ products }) => {
   const min = 0
-  const max = 200
+  const max = 150
   const [filteredProducts, updateFilteredProducts] = useState(products)
   const [priceRange, updatePriceRange] = useState(max)
 
+  useEffect(() => {
+    updateFilteredProducts(products)
+  }, [products])
+
   const updateProducts = newPrice => {
     updatePriceRange(newPrice)
-    updateFilteredProducts(products.filter(item => item.price < newPrice))
+    updateFilteredProducts(
+      products.filter(item => {
+        return item?.prices?.[0]?.unit_amount < parseFloat(newPrice) * 100
+      })
+    )
   }
 
   return (
     <div className="storegrid">
       <StyledGroup className="content">
-        {filteredProducts.map(item => (
+        {filteredProducts?.map(item => (
           <CSSTransition key={item.id} timeout={100} classNames="items">
             <Item>
               <div className="img-contain">
                 <a href={`product/${item.id}`}>
-                  <img src={item.img} alt=""></img>
+                  <img src={item?.images?.[0]} alt=""></img>
                 </a>
               </div>
-              <StarRatings
-                rating={item.starrating}
-                numberOfStars={5}
-                starDimension="18px"
-                starSpacing="0"
-              ></StarRatings>
               <h3>{item.name}</h3>
-              <h4 className="price">{Dollar(item.price)}</h4>
+              <h4 className="price">
+                {formatPrice(item?.prices?.[0]?.unit_amount)}
+              </h4>
               <a href={`product/${item.id}`}>
-                <button className="multi-item">View Item ></button>
+                <button className="multi-item">View Item</button>
               </a>
             </Item>
           </CSSTransition>
@@ -51,7 +54,7 @@ const StoreGrid = ({ products }) => {
           suscipit itaque?
         </p>
         <h3>Filter by Price:</h3>
-        <p style={{ marginTop: "5px" }}>
+        <p style={{ marginTop: '5px' }}>
           Max Price <strong>${priceRange}</strong>
         </p>
         <input

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const ItemContain = styled.section`
   margin-left: 8%;
@@ -6,6 +6,13 @@ export const ItemContain = styled.section`
   display: grid;
   justify-content: space-around;
   grid-template-columns: 1fr 2fr;
+
+  select {
+    color: #d96528;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+  }
 
   @media screen and (max-width: 650px) {
     margin-left: 0 !important;
@@ -26,11 +33,4 @@ export const UpdateNumButton = styled.button`
   color: white;
   font-size: 20px;
   width: 45px;
-`
-
-export const Review = styled.div`
-  @media screen and (max-width: 650px) {
-    width: 90%;
-    margin-left: 4%;
-  }
 `

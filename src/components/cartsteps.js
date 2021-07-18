@@ -1,17 +1,17 @@
-import React, { useContext } from "react"
-import { CartContext } from "../context/cart"
-import { CartUIContext } from "../context/cartUI"
-import { Section, H2, H4 } from "./cartsteps-styles"
+import React, { useContext } from 'react'
+import { CartContext } from '../context/cart'
+import { CartUIContext } from '../context/cartUI'
+import { Section, H2, H4 } from './cartsteps-styles'
 
 const CartSteps = () => {
-  const [cartUIStatus, updateCartUI] = useContext(CartUIContext)
-  const [cart, updateCart] = useContext(CartContext)
+  const [cartUIStatus] = useContext(CartUIContext)
+  const [cart, updateCart, getTotalCount] = useContext(CartContext)
   return (
     <Section>
       <div className="shopping">
         <H2
           className={
-            cartUIStatus === "idle" && cart.length === 0 ? "active" : null
+            cartUIStatus === 'idle' && getTotalCount() === 0 ? 'active' : null
           }
         >
           01
@@ -21,7 +21,7 @@ const CartSteps = () => {
       <div className="checkout">
         <H2
           className={
-            cartUIStatus === "idle" && cart.length > 0 ? "active" : null
+            cartUIStatus === 'idle' && getTotalCount() > 0 ? 'active' : null
           }
         >
           02
@@ -29,9 +29,7 @@ const CartSteps = () => {
         <H4>Check out</H4>
       </div>
       <div className="order">
-        {/* TODO: make this a UI querystring and update context via url param when
-         stripe.redirectToCheckout successUrl redirects back to this page with querystring page  */}
-        <H2 className={cartUIStatus === "success" ? "active" : null}>03</H2>
+        <H2 className={cartUIStatus === 'success' ? 'active' : null}>03</H2>
         <H4>Order Complete</H4>
       </div>
     </Section>

@@ -1,9 +1,9 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const ProductImg = styled.img`
   float: left;
   margin-right: 15px;
-  width: 100px;
+  height: 50px;
 `
 
 export const Table = styled.table`
@@ -22,10 +22,14 @@ export const TH = styled.th`
 
 export const TD = styled.td`
   border-bottom: 1px solid #ccc;
+  &.variant {
+    text-align: left;
+    padding-left: 66px;
+  }
 `
 
 export const ProductName = styled.h3`
-  padding-top: 36px;
+  padding-top: 12px;
   text-align: left;
 `
 

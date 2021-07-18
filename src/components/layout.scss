@@ -8,8 +8,8 @@ $brandsecondary: #03c1c1;
 body {
   border: 10px solid #ccc;
   min-height: 100vh;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   word-spacing: 1px;
@@ -37,8 +37,8 @@ main {
 h1,
 h2,
 h3 {
-  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -72,8 +72,8 @@ button {
   cursor: pointer;
   color: black;
   font-weight: 700;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   transition: 0.3s all ease;
   &:hover {
     background: black;
@@ -111,8 +111,8 @@ button.pay-with-stripe {
   font-size: 20px;
   margin: 5px 0;
   font-weight: normal;
-  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
 }
 
 .remove {
@@ -134,8 +134,8 @@ label {
 }
 
 input {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   padding: 5px 10px;
 }
@@ -237,17 +237,17 @@ aside {
 
 /* --- range --- */
 
-input[type="range"].slider {
+input[type='range'].slider {
   -webkit-appearance: none;
   width: 100%;
   margin: 25px 0 5px;
 }
 
-input[type="range"].slider:focus {
+input[type='range'].slider:focus {
   outline: none;
 }
 
-input[type="range"].slider::-webkit-slider-runnable-track {
+input[type='range'].slider::-webkit-slider-runnable-track {
   width: 100%;
   height: 4.3px;
   cursor: pointer;
@@ -257,7 +257,7 @@ input[type="range"].slider::-webkit-slider-runnable-track {
   border: 0px solid rgba(1, 1, 1, 0);
 }
 
-input[type="range"].slider::-webkit-slider-thumb {
+input[type='range'].slider::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
   border: 1.9px solid $brandprimary;
   height: 17px;
@@ -269,11 +269,11 @@ input[type="range"].slider::-webkit-slider-thumb {
   margin-top: -6.35px;
 }
 
-input[type="range"].slider:focus::-webkit-slider-runnable-track {
+input[type='range'].slider:focus::-webkit-slider-runnable-track {
   background: $brandprimary;
 }
 
-input[type="range"].slider::-moz-range-track {
+input[type='range'].slider::-moz-range-track {
   width: 100%;
   height: 4.3px;
   cursor: pointer;
@@ -283,7 +283,7 @@ input[type="range"].slider::-moz-range-track {
   border: 0px solid rgba(1, 1, 1, 0);
 }
 
-input[type="range"].slider::-moz-range-thumb {
+input[type='range'].slider::-moz-range-thumb {
   box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
   border: 1.9px solid $brandprimary;
   height: 17px;
@@ -293,7 +293,7 @@ input[type="range"].slider::-moz-range-thumb {
   cursor: pointer;
 }
 
-input[type="range"].slider::-ms-track {
+input[type='range'].slider::-ms-track {
   width: 100%;
   height: 4.3px;
   cursor: pointer;
@@ -302,21 +302,21 @@ input[type="range"].slider::-ms-track {
   color: transparent;
 }
 
-input[type="range"].slider::-ms-fill-lower {
+input[type='range'].slider::-ms-fill-lower {
   background: $brandprimary;
   border: 0px solid rgba(1, 1, 1, 0);
   border-radius: 27.4px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
 
-input[type="range"].slider::-ms-fill-upper {
+input[type='range'].slider::-ms-fill-upper {
   background: $brandprimary;
   border: 0px solid rgba(1, 1, 1, 0);
   border-radius: 27.4px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
 }
 
-input[type="range"].slider::-ms-thumb {
+input[type='range'].slider::-ms-thumb {
   box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
   border: 1.9px solid $brandprimary;
   height: 17px;
@@ -327,10 +327,10 @@ input[type="range"].slider::-ms-thumb {
   height: 4.3px;
 }
 
-input[type="range"].slider:focus::-ms-fill-lower {
+input[type='range'].slider:focus::-ms-fill-lower {
   background: $brandprimary;
 }
 
-input[type="range"].slider:focus::-ms-fill-upper {
+input[type='range'].slider:focus::-ms-fill-upper {
   background: $brandprimary;
 }
