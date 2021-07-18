@@ -1,5 +1,7 @@
 # TODO: add the following
 
+# TODO: recommend usage of netlify dev / netlify build commands rather than npm / yarn
+
 1. Explain setup of stripe webhooks + local dev CLI for stripe https://stripe.com/docs/stripe-cli || webhooks https://dashboard.stripe.com/webhooks
 2. Add a build hook https://app.netlify.com/sites/rawelegance/settings/deploys#environment
 3. run `brew install stripe/stripe-cli/stripe`

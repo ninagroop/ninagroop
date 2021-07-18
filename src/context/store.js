@@ -59,7 +59,7 @@ const StoreProvider = ({ children }) => {
   }
 
   const getStoreArray = () => {
-    return Object.keys(store).map(productId => {
+    return Object.keys(store)?.map(productId => {
       return {
         id: productId,
         ...store[productId],
