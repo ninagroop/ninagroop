@@ -6,6 +6,8 @@ This is third generation fork of [Sarah Dresner](https://github.com/mikeesto)'s 
 
 This project is the first I'm aware of that uses the new (highly recommended) Stripe Products API. A great solution for those who want to go serverless and not have to deal with auth, this project leans entirely on the Stripe Product API for images, inventory management, and as the data store for the static generated site with the additional layer of not requiring static assets for products and the ability to auto-trigger a Netlify rebuild of the gatsby site when a user's Stripe product catalog changes.
 
+![Screen_Recording_2021-07-18_at_12 54 51_PM](https://user-images.githubusercontent.com/806536/126082527-2e2b7475-27f4-49d6-8a11-8ddba565495c.gif)
+
 ## Getting Started
 
 1. This project leans heavily on Netlify, so the easiest way to get up and running is to start with the [Netlify CLI](https://docs.netlify.com/cli/get-started/). That said, `netlify dev` is your friend for local dev, and `netlify build` is useful to validate the latest build before pushing.
