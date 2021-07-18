@@ -1,41 +1,41 @@
-import React, { useEffect, useState, useContext } from 'react'
-import { reactLocalStorage } from 'reactjs-localstorage'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import { StoreContext } from '../context/store'
+import React, { useEffect, useState, useContext } from 'react';
+import { reactLocalStorage } from 'reactjs-localstorage';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { StoreContext } from '../context/store';
 import {
   ItemContain,
   QuantityInput,
   UpdateNumButton,
-} from '../components/product-styles'
-import { formatPrice } from '../helpers/currency-filter'
-import FeaturedProducts from '../components/featuredproducts'
-import { CartContext } from '../context/cart'
-import AddToCart from '../components/addToCart'
+} from '../components/product-styles';
+import { formatPrice } from '../helpers/currency-filter';
+import FeaturedProducts from '../components/featuredproducts';
+import { CartContext } from '../context/cart';
+import AddToCart from '../components/addToCart';
 
 const Product = ({ location }) => {
-  const [item, updateItem] = useState({})
-  const [store, updateStore] = useContext(StoreContext)
-  const [quantity, updateQuantity] = useState(1)
-  const [cart, updateCart] = useContext(CartContext)
-  const [dropdownItem, updateDropdownItem] = useState(item?.prices?.[0]?.id)
+  const [item, updateItem] = useState({});
+  const [store, updateStore] = useContext(StoreContext);
+  const [quantity, updateQuantity] = useState(1);
+  const [cart, updateCart] = useContext(CartContext);
+  const [dropdownItem, updateDropdownItem] = useState(item?.prices?.[0]?.id);
 
   useEffect(() => {
-    const id = location.pathname.split('/')[2]
-    updateItem(store[id])
-    updateDropdownItem(store[id]?.prices?.[0]?.id)
-  }, [store])
+    const id = location.pathname.split('/')[2];
+    updateItem(store[id]);
+    updateDropdownItem(store[id]?.prices?.[0]?.id);
+  }, [store]);
 
   const onSelectChange = e => {
-    updateDropdownItem(e.target.value)
-  }
+    updateDropdownItem(e.target.value);
+  };
 
   if (!item?.id) {
     return (
       <Layout>
         <h2>Item not found!</h2>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -95,7 +95,7 @@ const Product = ({ location }) => {
       <hr />
       <FeaturedProducts />
     </Layout>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

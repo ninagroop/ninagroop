@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import getStripe from '../utils/stripejs'
-import AddToCart from './addToCart'
-import { formatPrice } from '../helpers/currency-filter'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import getStripe from '../utils/stripejs';
+import AddToCart from './addToCart';
+import { formatPrice } from '../helpers/currency-filter';
 
 const cardStyles = {
   display: 'flex',
@@ -15,14 +15,14 @@ const cardStyles = {
   backgroundColor: '#fff',
   borderRadius: '6px',
   maxWidth: '300px',
-}
+};
 
 const ProductCard = ({ product, showPriceDropdown }) => {
-  const [dropdownItem, updateDropdownItem] = useState(product.prices[0].id)
+  const [dropdownItem, updateDropdownItem] = useState(product.prices[0].id);
 
   const onSelectChange = e => {
-    updateDropdownItem(e.target.value)
-  }
+    updateDropdownItem(e.target.value);
+  };
 
   return (
     <div className="item" key={product.id}>
@@ -55,7 +55,7 @@ const ProductCard = ({ product, showPriceDropdown }) => {
       </Link>
       <AddToCart selectedId={dropdownItem} product={product} quantity={1} />
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;

@@ -1,24 +1,24 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ProductImg = styled.img`
   float: left;
   margin-right: 15px;
   height: 50px;
-`
+`;
 
 export const Table = styled.table`
   width: 100%;
   margin-top: 20px;
-`
+`;
 
 export const TR = styled.tr`
   text-align: center;
-`
+`;
 
 export const TH = styled.th`
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
-`
+`;
 
 export const TD = styled.td`
   border-bottom: 1px solid #ccc;
@@ -26,12 +26,12 @@ export const TD = styled.td`
     text-align: left;
     padding-left: 66px;
   }
-`
+`;
 
 export const ProductName = styled.h3`
   padding-top: 12px;
   text-align: left;
-`
+`;
 
 export const Payment = styled.section`
   .total {
@@ -73,4 +73,4 @@ export const Payment = styled.section`
     margin-bottom: 2rem;
     margin-right: 1rem;
   }
-`
+`;

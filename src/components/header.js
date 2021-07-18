@@ -1,18 +1,18 @@
-import React, { useState, useEffect, useContext } from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import { Head, Nav, CartTotal } from "./header-styles"
-import { CartContext } from "../context/cart"
-import { StoreContext } from "../context/store"
+import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import { Head, Nav, CartTotal } from './header-styles';
+import { CartContext } from '../context/cart';
+import { StoreContext } from '../context/store';
 
 const Header = ({ siteTitle }) => {
-  const [cart, updateCart, getTotalCount] = useContext(CartContext)
-  const [store, updateStore] = useContext(StoreContext)
-  const [cartCount, updateCartCount] = useState(0)
+  const [cart, updateCart, getTotalCount] = useContext(CartContext);
+  const [store, updateStore] = useContext(StoreContext);
+  const [cartCount, updateCartCount] = useState(0);
 
   useEffect(() => {
-    updateCartCount(cart.reduce((acc, next) => acc + next.quantity, 0))
-  }, [cart])
+    updateCartCount(cart.reduce((acc, next) => acc + next.quantity, 0));
+  }, [cart]);
 
   return (
     <Head>
@@ -40,11 +40,11 @@ const Header = ({ siteTitle }) => {
         </ul>
       </Nav>
     </Head>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
-export default Header
+export default Header;

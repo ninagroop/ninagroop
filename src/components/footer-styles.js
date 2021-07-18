@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Callout = styled.section`
   width: 100%;
@@ -22,7 +22,7 @@ export const Callout = styled.section`
     color: #c4c3ec;
     font-weight: bold;
   }
-`
+`;
 
 export const Blurb = styled.div`
   background: black;
@@ -30,4 +30,4 @@ export const Blurb = styled.div`
   padding: 10px 30px;
   color: white;
   text-align: center;
-`
+`;

@@ -1,26 +1,26 @@
-import React from "react"
-import { Boxes } from "./salesboxes-styles"
-import iconCal from "../images/icon-cal.svg"
-import iconPackage from "../images/icon-package.svg"
-import iconService from "../images/icon-service.svg"
+import React from 'react';
+import { Boxes } from './salesboxes-styles';
+import iconCal from '../images/icon-cal.svg';
+import iconPackage from '../images/icon-package.svg';
+import iconService from '../images/icon-service.svg';
 
 const data = [
   {
     icon: iconPackage,
-    heading: "Free Shipping Globally",
-    details: "Delivery in 4 Days",
+    heading: 'Free Shipping Globally',
+    details: 'Delivery in 4 Days',
   },
   {
     icon: iconCal,
-    heading: "24/7 Customer Service",
-    details: "Call us any time",
+    heading: '24/7 Customer Service',
+    details: 'Call us any time',
   },
   {
     icon: iconService,
-    heading: "Easy Online Returns",
-    details: "Send Within 30 Days",
+    heading: 'Easy Online Returns',
+    details: 'Send Within 30 Days',
   },
-]
+];
 
 const SalesBoxes = () => {
   return (
@@ -33,7 +33,7 @@ const SalesBoxes = () => {
         </div>
       ))}
     </Boxes>
-  )
-}
+  );
+};
 
-export default SalesBoxes
+export default SalesBoxes;

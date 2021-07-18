@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../context/cart'
-import { CartUIContext } from '../context/cartUI'
-import { Section, H2, H4 } from './cartsteps-styles'
+import React, { useContext } from 'react';
+import { CartContext } from '../context/cart';
+import { CartUIContext } from '../context/cartUI';
+import { Section, H2, H4 } from './cartsteps-styles';
 
 const CartSteps = () => {
-  const [cartUIStatus] = useContext(CartUIContext)
-  const [cart, updateCart, getTotalCount] = useContext(CartContext)
+  const [cartUIStatus] = useContext(CartUIContext);
+  const [cart, updateCart, getTotalCount] = useContext(CartContext);
   return (
     <Section>
       <div className="shopping">
@@ -33,7 +33,7 @@ const CartSteps = () => {
         <H4>Order Complete</H4>
       </div>
     </Section>
-  )
-}
+  );
+};
 
-export default CartSteps
+export default CartSteps;

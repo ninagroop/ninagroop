@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ItemContain = styled.section`
   margin-left: 8%;
@@ -18,14 +18,14 @@ export const ItemContain = styled.section`
     margin-left: 0 !important;
     width: 95% !important;
   }
-`
+`;
 
 export const QuantityInput = styled.input`
   width: 60px;
   font-size: 25px;
   margin: 0 10px;
   padding: 5px 10px;
-`
+`;
 
 export const UpdateNumButton = styled.button`
   background: black;
@@ -33,4 +33,4 @@ export const UpdateNumButton = styled.button`
   color: white;
   font-size: 20px;
   width: 45px;
-`
+`;

@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import { CSSTransition } from 'react-transition-group'
-import { formatPrice } from '../helpers/currency-filter'
-import { StyledGroup, Item, Aside } from './storegrid-styles'
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { formatPrice } from '../helpers/currency-filter';
+import { StyledGroup, Item, Aside } from './storegrid-styles';
+import PropTypes from 'prop-types';
 
 const StoreGrid = ({ products }) => {
-  const min = 0
-  const max = 150
-  const [filteredProducts, updateFilteredProducts] = useState(products)
-  const [priceRange, updatePriceRange] = useState(max)
+  const min = 0;
+  const max = 150;
+  const [filteredProducts, updateFilteredProducts] = useState(products);
+  const [priceRange, updatePriceRange] = useState(max);
 
   useEffect(() => {
-    updateFilteredProducts(products)
-  }, [products])
+    updateFilteredProducts(products);
+  }, [products]);
 
   const updateProducts = newPrice => {
-    updatePriceRange(newPrice)
+    updatePriceRange(newPrice);
     updateFilteredProducts(
       products.filter(item => {
-        return item?.prices?.[0]?.unit_amount < parseFloat(newPrice) * 100
+        return item?.prices?.[0]?.unit_amount < parseFloat(newPrice) * 100;
       })
-    )
-  }
+    );
+  };
 
   return (
     <div className="storegrid">
@@ -70,11 +70,11 @@ const StoreGrid = ({ products }) => {
         <span className="max">${max}</span>
       </Aside>
     </div>
-  )
-}
+  );
+};
 
 StoreGrid.propTypes = {
   products: PropTypes.array,
-}
+};
 
-export default StoreGrid
+export default StoreGrid;

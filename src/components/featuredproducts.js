@@ -1,16 +1,16 @@
-import React, { useContext } from 'react'
-import { Link } from 'gatsby'
-import { StoreContext } from '../context/store'
-import { Featured } from './featuredproducts-styles'
-import { formatPrice } from '../helpers/currency-filter'
-import ProductCard from './productCard'
+import React, { useContext } from 'react';
+import { Link } from 'gatsby';
+import { StoreContext } from '../context/store';
+import { Featured } from './featuredproducts-styles';
+import { formatPrice } from '../helpers/currency-filter';
+import ProductCard from './productCard';
 
 const FeaturedProducts = () => {
-  const [store, updateStore, getStoreArray] = useContext(StoreContext)
+  const [store, updateStore, getStoreArray] = useContext(StoreContext);
   // uses stripe metadata key `featured`
   const featuredData = getStoreArray()
     .filter(product => product?.metadata?.featured)
-    ?.slice(0, 3)
+    ?.slice(0, 3);
   return (
     <Featured>
       <h2>
@@ -22,7 +22,7 @@ const FeaturedProducts = () => {
         ))}
       </div>
     </Featured>
-  )
-}
+  );
+};
 
-export default FeaturedProducts
+export default FeaturedProducts;

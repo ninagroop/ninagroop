@@ -1,7 +1,7 @@
-import React from "react"
-import FooterLinks from "./footer-links"
-import { Callout, Blurb } from "./footer-styles"
-import CalloutImage from "../images/callout.jpg"
+import React from 'react';
+import FooterLinks from './footer-links';
+import { Callout, Blurb } from './footer-styles';
+import CalloutImage from '../images/callout.jpg';
 
 const Footer = () => {
   return (
@@ -15,14 +15,14 @@ const Footer = () => {
       <FooterLinks />
       <Blurb>
         <p>
-          This project was built with Gatsby &{" "}
+          This project was built with Gatsby &{' '}
           <a href="https://github.com/MichaelE1/ecommerce-gatsby">
             is open source on Github
           </a>
         </p>
       </Blurb>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

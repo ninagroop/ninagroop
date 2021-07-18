@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Section = styled.section`
   display: grid;
@@ -19,7 +19,7 @@ export const Section = styled.section`
       grid-column-gap: 30px !important;
     }
   }
-`
+`;
 
 export const H2 = styled.h2`
   width: 80px;
@@ -34,9 +34,9 @@ export const H2 = styled.h2`
     border: 1px solid #d96528;
     color: white;
   }
-`
+`;
 
 export const H4 = styled.h4`
   margin-top: 20px;
   color: #555;
-`
+`;

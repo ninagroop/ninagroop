@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 const Links = styled.section`
   width: 80%;
@@ -22,7 +22,7 @@ const Links = styled.section`
       padding: 40px !important;
     }
   }
-`
+`;
 
 const FooterLinks = () => {
   return (
@@ -45,7 +45,7 @@ const FooterLinks = () => {
         <input type="text" />
       </ul>
     </Links>
-  )
-}
+  );
+};
 
-export default FooterLinks
+export default FooterLinks;

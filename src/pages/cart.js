@@ -1,36 +1,36 @@
-import React, { useEffect, useContext } from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import { CometSpinLoader } from 'react-css-loaders'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import CartSteps from '../components/cartsteps'
-import CartDisplay from '../components/cartdisplay'
-import { CartUIContext, CartUIProvider } from '../context/cartUI'
-import SalesBoxes from '../components/salesboxes'
-import { CartContext } from '../context/cart'
+import React, { useEffect, useContext } from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { CometSpinLoader } from 'react-css-loaders';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import CartSteps from '../components/cartsteps';
+import CartDisplay from '../components/cartdisplay';
+import { CartUIContext, CartUIProvider } from '../context/cartUI';
+import SalesBoxes from '../components/salesboxes';
+import { CartContext } from '../context/cart';
 
 const Loading = styled.section`
   display: flex;
   justify-content: center;
-`
+`;
 
 const Success = styled.section`
   text-align: center;
-`
+`;
 
 const Page = ({ location }) => {
-  const [cartUIStatus, updateCartUI] = useContext(CartUIContext)
-  const [cart, updateCart] = useContext(CartContext)
+  const [cartUIStatus, updateCartUI] = useContext(CartUIContext);
+  const [cart, updateCart] = useContext(CartContext);
   useEffect(() => {
-    const urlSearchParams = new URLSearchParams(location?.search)
-    const params = Object.fromEntries(urlSearchParams?.entries())
+    const urlSearchParams = new URLSearchParams(location?.search);
+    const params = Object.fromEntries(urlSearchParams?.entries());
     if (params?.checkout === 'success') {
-      console.log('~got there')
-      updateCartUI('success')
-      updateCart([])
+      console.log('~got there');
+      updateCartUI('success');
+      updateCart([]);
     }
-  }, [cartUIStatus])
+  }, [cartUIStatus]);
   return (
     <>
       <CartSteps />
@@ -66,8 +66,8 @@ const Page = ({ location }) => {
 
       <SalesBoxes />
     </>
-  )
-}
+  );
+};
 
 const Cart = ({ location }) => {
   return (
@@ -77,7 +77,7 @@ const Cart = ({ location }) => {
         <Page location={location} />
       </CartUIProvider>
     </Layout>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

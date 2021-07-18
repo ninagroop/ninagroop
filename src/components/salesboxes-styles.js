@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Boxes = styled.section`
   margin: 70px 0;
@@ -50,4 +50,4 @@ export const Boxes = styled.section`
       margin-bottom: 10px;
     }
   }
-`
+`;

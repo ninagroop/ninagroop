@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Head = styled.header`
   display: flex;
@@ -17,7 +17,7 @@ export const Head = styled.header`
       border-right: none !important;
     }
   }
-`
+`;
 
 export const Nav = styled.nav`
   display: flex;
@@ -48,7 +48,7 @@ export const Nav = styled.nav`
       }
     }
   }
-`
+`;
 
 export const CartTotal = styled.div`
   position: absolute;
@@ -65,4 +65,4 @@ export const CartTotal = styled.div`
   font-size: 10px;
   padding: 6px 10px;
   font-weight: bold;
-`
+`;

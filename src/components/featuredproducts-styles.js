@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Featured = styled.section`
   margin-top: 10px;
@@ -100,4 +100,4 @@ export const Featured = styled.section`
       }
     }
   }
-`
+`;

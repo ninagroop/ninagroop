@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Hero } from "./textlockup-styles"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Hero } from './textlockup-styles';
 
 const Textlockup = ({
   image,
@@ -19,10 +19,10 @@ const Textlockup = ({
       <div className="collection">{collectionText}</div>
       <div className="details">{detailsText}</div>
     </Hero>
-  )
-}
+  );
+};
 
-export default Textlockup
+export default Textlockup;
 
 Textlockup.propTypes = {
   image: PropTypes.string,
@@ -30,4 +30,4 @@ Textlockup.propTypes = {
   saleText: PropTypes.string,
   collectionText: PropTypes.string,
   detailsText: PropTypes.string,
-}
+};

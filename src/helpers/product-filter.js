@@ -3,5 +3,5 @@ export const filterProducts = (filter, products) => {
     item =>
       item?.metadata?.[Object.keys(filter)?.[0]]?.toLowerCase() ===
       Object.values(filter)?.[0]?.toLowerCase()
-  )
-}
+  );
+};

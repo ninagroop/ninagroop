@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { reactLocalStorage } from 'reactjs-localstorage'
+import React, { useState, useEffect } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { reactLocalStorage } from 'reactjs-localstorage';
 
-const StoreContext = React.createContext({})
+const StoreContext = React.createContext({});
 
 const StoreProvider = ({ children }) => {
-  const [store, _updateStore] = useState([])
+  const [store, _updateStore] = useState([]);
 
   const data = useStaticQuery(graphql`
     query ProductPrices {
@@ -36,42 +36,42 @@ const StoreProvider = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   // Group prices by product
-  const products = {}
+  const products = {};
   for (const { node: price } of data.prices.edges) {
-    const product = price.product
+    const product = price.product;
     if (!products[product.id]) {
-      products[product.id] = Object.assign({}, product)
-      products[product.id].prices = []
+      products[product.id] = Object.assign({}, product);
+      products[product.id].prices = [];
     }
-    products[product.id].prices.push(Object.assign({}, price))
+    products[product.id].prices.push(Object.assign({}, price));
   }
 
   useEffect(() => {
-    updateStore(products)
-  }, [data])
+    updateStore(products);
+  }, [data]);
 
   const updateStore = val => {
-    _updateStore(val)
-    reactLocalStorage.setObject('store', val)
-  }
+    _updateStore(val);
+    reactLocalStorage.setObject('store', val);
+  };
 
   const getStoreArray = () => {
     return Object.keys(store)?.map(productId => {
       return {
         id: productId,
         ...store[productId],
-      }
-    })
-  }
+      };
+    });
+  };
 
   return (
     <StoreContext.Provider value={[store, updateStore, getStoreArray]}>
       {children}
     </StoreContext.Provider>
-  )
-}
+  );
+};
 
-export { StoreContext, StoreProvider }
+export { StoreContext, StoreProvider };

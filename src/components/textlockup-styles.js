@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const Hero = styled.div`
   display: grid;
@@ -18,15 +18,15 @@ export const Hero = styled.div`
     grid-area: 2 / 2 / 3 / 4;
     font-size: 6.5vmin;
     color: #d96528;
-    font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   .collection {
     grid-area: 3 / 3 / 4 / 4;
     font-size: 8.5vmin;
-    font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
   .details {
@@ -48,4 +48,4 @@ export const Hero = styled.div`
     grid-template-columns: 25px 25px 1fr !important;
     grid-template-rows: 6vmin 5.5vmin 10vmin 20px 1fr !important;
   }
-`
+`;

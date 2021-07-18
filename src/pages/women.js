@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import StoreGrid from '../components/storegrid'
-import { StoreContext } from '../context/store'
-import { filterProducts } from '../helpers/product-filter'
+import React, { useContext } from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import StoreGrid from '../components/storegrid';
+import { StoreContext } from '../context/store';
+import { filterProducts } from '../helpers/product-filter';
 
 const Women = () => {
-  const [store, updateStore, getStoreArray] = useContext(StoreContext)
+  const [store, updateStore, getStoreArray] = useContext(StoreContext);
   return (
     <Layout>
       <SEO title="Women" />
@@ -14,7 +14,7 @@ const Women = () => {
         products={filterProducts({ gender: 'Female' }, getStoreArray())}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default Women
+export default Women;

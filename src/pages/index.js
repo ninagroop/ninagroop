@@ -1,11 +1,11 @@
-import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import Textlockup from '../components/textlockup'
-import SalesBoxes from '../components/salesboxes'
-import Shoe from '../images/shoe.jpg'
-import Bag from '../images/bag.jpg'
-import FeaturedProducts from '../components/featuredproducts'
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Textlockup from '../components/textlockup';
+import SalesBoxes from '../components/salesboxes';
+import Shoe from '../images/shoe.jpg';
+import Bag from '../images/bag.jpg';
+import FeaturedProducts from '../components/featuredproducts';
 
 const IndexPage = () => (
   <Layout>
@@ -27,6 +27,6 @@ const IndexPage = () => (
       detailsText="All accessories"
     />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
