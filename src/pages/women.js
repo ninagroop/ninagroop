@@ -6,7 +6,8 @@ import { StoreContext } from '../context/store';
 import { filterProducts } from '../helpers/product-filter';
 
 const Women = () => {
-  const [store, updateStore, getStoreArray] = useContext(StoreContext);
+  const [store, updateStore, getStoreArray] = useContext(StoreContext); // eslint-disable-line no-unused-vars
+
   return (
     <Layout>
       <SEO title="Women" />

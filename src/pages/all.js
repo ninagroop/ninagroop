@@ -5,7 +5,7 @@ import StoreGrid from '../components/storegrid';
 import { StoreContext } from '../context/store';
 
 const All = () => {
-  const [store, updateStore, getStoreArray] = useContext(StoreContext);
+  const [store, updateStore, getStoreArray] = useContext(StoreContext); // eslint-disable-line no-unused-vars
   return (
     <Layout>
       <SEO title="All" />

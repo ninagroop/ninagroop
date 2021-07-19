@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
-import { Link } from 'gatsby';
 import { StoreContext } from '../context/store';
 import { Featured } from './featuredproducts-styles';
-import { formatPrice } from '../helpers/currency-filter';
 import ProductCard from './productCard';
 
 const FeaturedProducts = () => {
-  const [store, updateStore, getStoreArray] = useContext(StoreContext);
+  const [store, updateStore, getStoreArray] = useContext(StoreContext); // eslint-disable-line no-unused-vars
   // uses stripe metadata key `featured`
   const featuredData = getStoreArray()
     .filter(product => product?.metadata?.featured)

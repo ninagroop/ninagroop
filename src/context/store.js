@@ -51,7 +51,7 @@ const StoreProvider = ({ children }) => {
 
   useEffect(() => {
     updateStore(products);
-  }, [data]);
+  }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const updateStore = val => {
     _updateStore(val);

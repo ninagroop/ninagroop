@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { CometSpinLoader } from 'react-css-loaders';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import CartSteps from '../components/cartsteps';
@@ -10,27 +9,23 @@ import { CartUIContext, CartUIProvider } from '../context/cartUI';
 import SalesBoxes from '../components/salesboxes';
 import { CartContext } from '../context/cart';
 
-const Loading = styled.section`
-  display: flex;
-  justify-content: center;
-`;
-
 const Success = styled.section`
   text-align: center;
 `;
 
 const Page = ({ location }) => {
   const [cartUIStatus, updateCartUI] = useContext(CartUIContext);
-  const [cart, updateCart] = useContext(CartContext);
+  const [cart, updateCart] = useContext(CartContext); // eslint-disable-line no-unused-vars
+
   useEffect(() => {
     const urlSearchParams = new URLSearchParams(location?.search);
     const params = Object.fromEntries(urlSearchParams?.entries());
     if (params?.checkout === 'success') {
-      console.log('~got there');
       updateCartUI('success');
       updateCart([]);
     }
-  }, [cartUIStatus]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <>
       <CartSteps />

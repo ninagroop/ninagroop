@@ -3,12 +3,10 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Head, Nav, CartTotal } from './header-styles';
 import { CartContext } from '../context/cart';
-import { StoreContext } from '../context/store';
 
 const Header = ({ siteTitle }) => {
-  const [cart, updateCart, getTotalCount] = useContext(CartContext);
-  const [store, updateStore] = useContext(StoreContext);
-  const [cartCount, updateCartCount] = useState(0);
+  const [cart, updateCart, getTotalCount] = useContext(CartContext); // eslint-disable-line no-unused-vars
+  const [cartCount, updateCartCount] = useState(0); // eslint-disable-line no-unused-vars
 
   useEffect(() => {
     updateCartCount(cart.reduce((acc, next) => acc + next.quantity, 0));
