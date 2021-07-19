@@ -12,8 +12,6 @@ import {
   ProductImg,
   Payment,
 } from './cartdisplay-styles';
-import { CartTotal } from '../helpers/cart-total';
-import { StoreContext } from '../context/store';
 
 const VariantRows = ({ variants, removeFromCart }) =>
   variants.map(variant => {
@@ -67,8 +65,7 @@ const getMappedCart = ({ cart }) => {
 
 const CartDisplay = () => {
   const [cart, updateCart] = useContext(CartContext);
-  const [loading, setLoading] = useState(false);
-  const [store, updateStore] = useContext(StoreContext);
+  const [loading, setLoading] = useState(false); // eslint-disable-line no-unused-vars
 
   const removeFromCart = id => {
     // in stripe's products API, we have prod_ for products
@@ -169,7 +166,7 @@ const CartDisplay = () => {
               // there is one price variant
             } else {
               return (
-                <>
+                <React.Fragment key={item.id}>
                   <TR key={item.id}>
                     <TD>
                       <ProductImg src={item.images[0]} alt={item.name} />
@@ -195,7 +192,7 @@ const CartDisplay = () => {
                       Remove
                     </TD>
                   </TR>
-                </>
+                </React.Fragment>
               );
             }
           })}

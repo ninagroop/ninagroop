@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { reactLocalStorage } from 'reactjs-localstorage';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { StoreContext } from '../context/store';
@@ -10,21 +9,19 @@ import {
 } from '../components/product-styles';
 import { formatPrice } from '../helpers/currency-filter';
 import FeaturedProducts from '../components/featuredproducts';
-import { CartContext } from '../context/cart';
 import AddToCart from '../components/addToCart';
 
 const Product = ({ location }) => {
   const [item, updateItem] = useState({});
-  const [store, updateStore] = useContext(StoreContext);
+  const [store] = useContext(StoreContext);
   const [quantity, updateQuantity] = useState(1);
-  const [cart, updateCart] = useContext(CartContext);
   const [dropdownItem, updateDropdownItem] = useState(item?.prices?.[0]?.id);
 
   useEffect(() => {
     const id = location.pathname.split('/')[2];
     updateItem(store[id]);
     updateDropdownItem(store[id]?.prices?.[0]?.id);
-  }, [store]);
+  }, [store]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const onSelectChange = e => {
     updateDropdownItem(e.target.value);
@@ -54,6 +51,7 @@ const Product = ({ location }) => {
           ) : (
             <>
               {item?.prices?.length > 1 && (
+                // eslint-disable-next-line jsx-a11y/no-onchange
                 <select
                   value={dropdownItem}
                   onChange={onSelectChange}
@@ -77,6 +75,7 @@ const Product = ({ location }) => {
             <QuantityInput
               type="number"
               value={quantity}
+              // eslint-disable-next-line jsx-a11y/no-onchange
               onChange={event => updateQuantity(event.target.value)}
             />
             <UpdateNumButton onClick={() => updateQuantity(quantity + 1)}>

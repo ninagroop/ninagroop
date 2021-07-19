@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import getStripe from '../utils/stripejs';
 import AddToCart from './addToCart';
 import { formatPrice } from '../helpers/currency-filter';
-
-const cardStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-around',
-  alignItems: 'flex-start',
-  padding: '1rem',
-  marginBottom: '1rem',
-  boxShadow: '5px 5px 25px 0 rgba(46,61,73,.2)',
-  backgroundColor: '#fff',
-  borderRadius: '6px',
-  maxWidth: '300px',
-};
 
 const ProductCard = ({ product, showPriceDropdown }) => {
   const [dropdownItem, updateDropdownItem] = useState(product.prices[0].id);
@@ -37,6 +23,7 @@ const ProductCard = ({ product, showPriceDropdown }) => {
         </h4>
       )}
       {showPriceDropdown && product?.prices?.length > 1 && (
+        // eslint-disable-next-line jsx-a11y/no-onchange
         <select
           value={dropdownItem}
           onChange={onSelectChange}

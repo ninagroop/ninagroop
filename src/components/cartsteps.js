@@ -5,7 +5,7 @@ import { Section, H2, H4 } from './cartsteps-styles';
 
 const CartSteps = () => {
   const [cartUIStatus] = useContext(CartUIContext);
-  const [cart, updateCart, getTotalCount] = useContext(CartContext);
+  const [cart, updateCart, getTotalCount] = useContext(CartContext); // eslint-disable-line no-unused-vars
   return (
     <Section>
       <div className="shopping">
