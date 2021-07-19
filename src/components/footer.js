@@ -6,21 +6,21 @@ import CalloutImage from '../images/callout.jpg';
 const Footer = () => {
   return (
     <footer>
-      <Callout image={CalloutImage}>
+      {/* <Callout image={CalloutImage}>
         <h2>
           "The surprising styles of Skyline Ivy are advanced for all seasons."
         </h2>
         <p>Hansel Andersen</p>
-      </Callout>
-      <FooterLinks />
-      <Blurb>
+      </Callout> */}
+      {/* <FooterLinks /> */}
+      {/* <Blurb>
         <p>
           This project was built with Gatsby &{' '}
           <a href="https://github.com/MichaelE1/ecommerce-gatsby">
             is open source on Github
           </a>
         </p>
-      </Blurb>
+      </Blurb> */}
     </footer>
   );
 };

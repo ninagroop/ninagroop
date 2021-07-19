@@ -1,12 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { reactLocalStorage } from 'reactjs-localstorage';
 import { CartContext } from '../context/cart';
 import { StoreContext } from '../context/store';
 
-const AddToCart = ({ product, selectedId, quantity }) => {
+const AddToCart = ({ product, selectedId }) => {
+  const [store, updateStore] = useContext(StoreContext);
   const [cart, updateCart] = useContext(CartContext);
-  const [store] = useContext(StoreContext);
-
+  const [quantity, updateQuantity] = useState(1);
+
   const addToCart = () => {
     const tempCart = [...cart];
     let itemFound = false;
@@ -24,7 +25,6 @@ const AddToCart = ({ product, selectedId, quantity }) => {
           }
         });
     });
-
     if (!itemFound) {
       // Item doesn't exist in the cart yet, so add it
       const tempItem = store[product.id];
