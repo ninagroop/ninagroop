@@ -1,6 +1,6 @@
-const React = require("react")
-const { CartProvider } = require("./src/context/cart")
-const { StoreProvider } = require("./src/context/store")
+const React = require('react');
+const { CartProvider } = require('./src/context/cart');
+const { StoreProvider } = require('./src/context/store');
 
 const RootLayout = ({ children }) => {
   return (
@@ -9,9 +9,9 @@ const RootLayout = ({ children }) => {
         <StoreProvider>{children}</StoreProvider>
       </CartProvider>
     </>
-  )
-}
+  );
+};
 
 exports.wrapRootElement = ({ element }) => {
-  return <RootLayout>{element}</RootLayout>
-}
+  return <RootLayout>{element}</RootLayout>;
+};
