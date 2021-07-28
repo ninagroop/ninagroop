@@ -16,6 +16,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-manifest": "^2.2.6",
+    "gatsby-plugin-netlify-cms": "^5.10.0",
     "gatsby-plugin-offline": "^2.2.7",
     "gatsby-plugin-react-helmet": "^3.1.4",
     "gatsby-plugin-sass": "^2.1.12",
