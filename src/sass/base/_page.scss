@@ -32,11 +32,11 @@ html {
 
 .main-body {
   background-color: _palette(bg);
-
   background-image: linear-gradient(
-      to top,
-      transparentize(_palette(bg), 0.55),
-      transparentize(_palette(bg), 0.55)
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.7) 60%,
+      rgba(255, 255, 255, 0.7) 100%
     ),
     url('../images/shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg');
 
