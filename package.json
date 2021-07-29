@@ -5,6 +5,9 @@
   "version": "0.1.0",
   "author": "Michael Esteban",
   "dependencies": {
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/utils": "^4.11.2",
     "@stripe/stripe-js": "^1.11.0",
     "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.10.6",

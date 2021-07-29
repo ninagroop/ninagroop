@@ -119,7 +119,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Montserrat\:300,600`],
+        fonts: [
+          `Liu Jian Mao Cao\:400`,
+          `Source Sans Pro\:300,600,300italic,600italic`,
+          `Raleway\:200,700`,
+        ],
         display: 'swap',
       },
     },

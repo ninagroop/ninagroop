@@ -25,8 +25,6 @@ export const Nav = styled.nav`
   margin-top: 30px;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   padding: 8px 0;
 
   ul {
@@ -37,13 +35,12 @@ export const Nav = styled.nav`
       letter-spacing: 0.1em;
       font-size: 13px;
       padding: 0 20px;
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
       position: relative;
+      font-size: 1.125rem;
       a {
-        color: black;
+        border-bottom: none;
         &:hover {
-          color: #c14103;
+          color: #fff;
         }
       }
     }
