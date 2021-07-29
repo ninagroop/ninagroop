@@ -17,6 +17,11 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          nav {
+            title
+            slug
+            showCartIndicator
+          }
         }
       }
     }
@@ -26,7 +31,10 @@ const Layout = ({ children }) => {
     <>
       <div className={'main-body'}>
         <div id="page-wrapper">
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header
+            nav={data.site.siteMetadata.nav}
+            siteTitle={data.site.siteMetadata.title}
+          />
           <main>
             {/* <SideBar fullMenu={fullMenu} /> */}
             {children}

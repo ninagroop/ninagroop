@@ -5,7 +5,6 @@ export const Head = styled.header`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 40px 40px 0;
 
   @media screen and (max-width: 850px) {
     h1 {
@@ -21,14 +20,12 @@ export const Head = styled.header`
 
 export const Nav = styled.nav`
   display: flex;
-  width: 80vw;
-  margin-top: 30px;
   justify-content: center;
   align-items: center;
   padding: 8px 0;
-
   ul {
     padding-left: 0;
+    margin: 0;
     li {
       display: inline;
       text-transform: uppercase;

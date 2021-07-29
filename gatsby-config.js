@@ -7,6 +7,25 @@ module.exports = {
     title: `Nina Groop`,
     description: `A clever tagline for Nina's site`,
     author: `Nina Groop`,
+    nav: [
+      {
+        title: 'Home',
+        slug: '/',
+      },
+      {
+        title: 'Blog',
+        slug: '/blog',
+      },
+      {
+        title: 'About',
+        slug: '/about',
+      },
+      {
+        title: 'Cart',
+        slug: '/cart',
+        showCartIndicator: true,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

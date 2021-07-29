@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Head, Nav, CartTotal } from './header-styles';
 import { CartContext } from '../context/cart';
-
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
@@ -13,21 +12,34 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Slide from '@material-ui/core/Slide';
 
 const useStyles = makeStyles({
   list: {
     width: 250,
-    color: '#fff',
+    // color: '#fff',
   },
   fullList: {
     width: 'auto',
   },
   paper: {
-    background: '#000',
+    // background: '#000',
+  },
+  icon: {},
+  appBar: {
+    background: '#fff',
+    color: '#000',
+    boxShadow: 'none',
+    // '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14)',
   },
 });
 
-const SwipeableTemporaryDrawer = () => {
+const SwipeableTemporaryDrawer = ({ siteTitle, nav, getTotalCount }) => {
   const classes = useStyles();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -51,24 +63,15 @@ const SwipeableTemporaryDrawer = () => {
       className={classes.list}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              <MenuIcon />
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              <MenuIcon />
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+        {nav.map(item => (
+          <Link to={item.slug}>
+            <ListItem button key={item.title}>
+              {item.showCartIndicator && getTotalCount() > 0 ? (
+                <CartTotal>{getTotalCount()}</CartTotal>
+              ) : null}
+              {item.title}
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
@@ -76,7 +79,9 @@ const SwipeableTemporaryDrawer = () => {
 
   return (
     <div>
-      <Button onClick={toggleDrawer()}>Toggle Sidebar</Button>
+      <Button className="hidden-desktop" onClick={toggleDrawer()}>
+        <MenuIcon />
+      </Button>
       <SwipeableDrawer
         classes={{ paper: classes.paper }}
         anchor={'right'}
@@ -90,7 +95,56 @@ const SwipeableTemporaryDrawer = () => {
   );
 };
 
-const Header = ({ siteTitle }) => {
+const HideOnScroll = props => {
+  const { children } = props;
+  const trigger = useScrollTrigger();
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+};
+
+const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
+  const classes = useStyles();
+  return (
+    <>
+      <HideOnScroll {...rest}>
+        <AppBar className={classes.appBar}>
+          <Toolbar>
+            <h2 className="brand navbar-heading">{siteTitle}</h2>
+            <div className="hidden-desktop">
+              <Nav>
+                <ul>
+                  {nav.map(item => (
+                    <li>
+                      {item.showCartIndicator && getTotalCount() > 0 ? (
+                        <CartTotal>{getTotalCount()}</CartTotal>
+                      ) : null}
+                      <Link to={item.slug}>{item.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </Nav>
+            </div>
+            <div className="hidden-mobile">
+              <SwipeableTemporaryDrawer
+                siteTitle={siteTitle}
+                nav={nav}
+                getTotalCount={getTotalCount}
+              />
+            </div>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
+      <Toolbar />
+    </>
+  );
+};
+
+const Header = ({ siteTitle, nav }) => {
+  console.log('~nav', nav);
   const [cart, updateCart, getTotalCount] = useContext(CartContext); // eslint-disable-line no-unused-vars
   const [cartCount, updateCartCount] = useState(0); // eslint-disable-line no-unused-vars
 
@@ -100,44 +154,17 @@ const Header = ({ siteTitle }) => {
 
   return (
     <>
-      <SwipeableTemporaryDrawer />
+      <HideAppBar
+        siteTitle={siteTitle}
+        nav={nav}
+        getTotalCount={getTotalCount}
+      />
       <Head>
-        <h1>{siteTitle}</h1>
-        <Nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            {/* <li>
-            <Link to="/all">All</Link>
-          </li>
-          <li>
-            <Link to="/women">Women</Link>
-          </li>
-          <li>
-            <Link to="/men">Men</Link>
-          </li> */}
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              {getTotalCount() > 0 ? (
-                <CartTotal>{getTotalCount()}</CartTotal>
-              ) : null}
-              <Link to="/cart">Cart</Link>
-            </li>
-          </ul>
-        </Nav>
+        {/* TODO: make show only for home page */}
+        <h1 className="brand">{siteTitle}</h1>
       </Head>
     </>
   );
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
 };
 
 export default Header;

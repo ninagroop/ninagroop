@@ -41,11 +41,10 @@ $font: (
   ),
   family-heading: (
     Raleway,
-    // 'Bebas Neue',
-      Helvetica,
+    Helvetica,
     sans-serif,
   ),
-  weight: 300,
+  weight: 400,
   weight-bold: 600,
   weight-heading: 400,
   weight-heading-bold: 700,
@@ -54,16 +53,13 @@ $font: (
 
 // Palette.
 $palette: (
-  //   bg: #00000079,
-    //   fg: #ffffff,
-    //   fg-bold: #ffffff,
-    bg: #ffffff,
-  fg: #00000079,
-  fg-bold: #00000079,
+  bg: #ffffff,
+  fg: #b46e1e,
+  fg-bold: #313131,
   fg-light: rgba(0, 0, 0, 0.35),
   border: rgba(0, 0, 0, 0.125),
   border-bg: rgba(0, 0, 0, 0.025),
   border2: rgba(0, 0, 0, 0.25),
   border2-bg: rgba(0, 0, 0, 0.075),
-  accent: #4c5c96
+  accent: #865b33,
 );

@@ -62,7 +62,6 @@
 
 // Layout.
 
-@import 'layout/header';
 @import 'layout/banner';
 @import 'layout/wrapper';
 @import 'layout/footer';
@@ -91,6 +90,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+.brand {
+  font-family: 'Liu Jian Mao Cao', Helvetica, Arial, sans-serif;
+  font-weight: _font(weight-heading-bold);
+  letter-spacing: _font(kern-heading);
+  text-transform: none;
+}
+
+.navbar-heading {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .hidden-desktop {
+    display: none;
+  }
 }
 
 main {
