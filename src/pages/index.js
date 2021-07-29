@@ -28,6 +28,50 @@ const IndexPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       <Bio />
+      <br />
+      <br />
+
+      <h4
+        style={{
+          textAlign: 'center',
+          textTransform: 'uppercase',
+          fontWeight: 'bold',
+          fontSize: '1.7em',
+          // color: 'rgba(255,255,255,0.8)',
+          color: 'rgba(0,0,0,0.8)',
+          paddingTop: '20px',
+          background: 'none',
+          // textShadow: '0 0 30px black, 0 0 5px rgba(0,0,0,0.85)',
+          minWidth: '80vw',
+        }}
+      >
+        Guidance. Resilience. Hope.
+      </h4>
+      <br />
+      <br />
+      <br />
+      <br />
+      <section className="main-heading">
+        <h4
+          style={{
+            fontSize: '1.1em',
+            // background: 'rgba(255,255,255,0.8)',
+            color: 'rgba(0,0,0,0.8)',
+            paddingTop: '20px',
+          }}
+        >
+          Every day the sun rises and sets and every night the moon offers its
+          changed face while the stars sing... All of creation and your very own
+          life are a sacred text that never stops speaking. The first lesson it
+          teaches is to listen. The wisdom you need is as close as your own
+          heart, as unfailing as ocean waves.
+        </h4>
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="article-body">
         <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
@@ -44,9 +88,7 @@ const IndexPage = ({ data, location }) => {
                   <header>
                     <h2>
                       <Link to={post.fields.slug} itemProp="url">
-                        <span className="main-heading" itemProp="headline">
-                          {title}
-                        </span>
+                        <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
                     <small>{post.frontmatter.date}</small>

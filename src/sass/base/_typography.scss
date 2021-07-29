@@ -115,7 +115,6 @@ h6 {
   font-weight: _font(weight-heading-bold);
   letter-spacing: _font(kern-heading);
   margin: 0 0 (_size(element-margin) * 0.5) 0;
-  text-transform: uppercase;
 
   a {
     color: inherit;
@@ -133,24 +132,30 @@ h6 {
   }
 }
 
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
 h2 {
   font-size: 1.2em;
 }
 
 h3 {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 h4 {
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 h5 {
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 h6 {
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 @include breakpoint('<=small') {

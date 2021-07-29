@@ -48,19 +48,22 @@ $font: (
   weight: 300,
   weight-bold: 600,
   weight-heading: 400,
-  weight-heading-bold: 400,
+  weight-heading-bold: 700,
   kern-heading: 0.1em,
 );
 
 // Palette.
 $palette: (
-  bg: #00000079,
-  fg: #ffffff,
-  fg-bold: #ffffff,
-  fg-light: rgba(255, 255, 255, 0.35),
-  border: rgba(255, 255, 255, 0.125),
-  border-bg: rgba(255, 255, 255, 0.025),
-  border2: rgba(255, 255, 255, 0.25),
-  border2-bg: rgba(255, 255, 255, 0.075),
-  accent: #4c5c96,
+  //   bg: #00000079,
+    //   fg: #ffffff,
+    //   fg-bold: #ffffff,
+    bg: #ffffff,
+  fg: #00000079,
+  fg-bold: #00000079,
+  fg-light: rgba(0, 0, 0, 0.35),
+  border: rgba(0, 0, 0, 0.125),
+  border-bg: rgba(0, 0, 0, 0.025),
+  border2: rgba(0, 0, 0, 0.25),
+  border2-bg: rgba(0, 0, 0, 0.075),
+  accent: #4c5c96
 );
