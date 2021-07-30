@@ -37,6 +37,9 @@ const useStyles = makeStyles({
     boxShadow: 'none',
     // '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14)',
   },
+  toolbar: {
+    justifyContent: 'space-between',
+  },
 });
 
 const SwipeableTemporaryDrawer = ({ siteTitle, nav, getTotalCount }) => {
@@ -112,7 +115,7 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
     <>
       <HideOnScroll {...rest}>
         <AppBar className={classes.appBar}>
-          <Toolbar>
+          <Toolbar className={classes.toolbar}>
             <h2 className="brand navbar-heading">{siteTitle}</h2>
             <div className="hidden-desktop">
               <Nav>
@@ -161,7 +164,7 @@ const Header = ({ siteTitle, nav }) => {
       />
       <Head>
         {/* TODO: make show only for home page */}
-        <h1 className="brand">{siteTitle}</h1>
+        <h1 className="brand main-title">{siteTitle}</h1>
       </Head>
     </>
   );
