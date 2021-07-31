@@ -11,7 +11,7 @@ collections:
     folder: 'content/blog'
     create: true
     slug: 'index'
-    media_folder: 'static/img'
+    media_folder: '/static/img'
     public_folder: '/img'
     path: '{{title}}/index'
     editor:
