@@ -38,14 +38,6 @@ module.exports = {
       },
     },
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads',
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -55,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/src/images`,
         name: `images`,
       },
     },
@@ -153,18 +145,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
-            options: {},
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `uploads`,
+            },
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
@@ -173,9 +167,9 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: `gatsby-remark-copy-linked-files`,
             options: {
-              destinationDir: 'static',
+              destinationDir: `static`,
             },
           },
         ],
