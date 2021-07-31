@@ -53,6 +53,8 @@ export const Payment = styled.section`
     float: right;
   }
 
+  // TODO: add styles here to fix cart
+
   @media screen and (min-width: 700px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

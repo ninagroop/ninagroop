@@ -2,6 +2,7 @@ const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // Create dynamic routing for products
+// This is handled by `gatsby-source-stripe`
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions;
   if (page.path === `/product/`) {
