@@ -1,7 +1,6 @@
 ---
 title: Home
-tagline: Some tagline words
-homequote: Quote for home
+tagline: Tagline words
+homeQuote: Quote on the home page
 ---
-
-Some example content
+Body text content
