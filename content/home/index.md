@@ -10,3 +10,9 @@ homequote: All of creation and your very own life are a sacred text that never
 ## An Important Section for Nina to Provide
 
 An interesting section that inspires people to become a client beyond general motivational words of intrigue, but actual nuts and bolts about who she is with a link to "About" to learn more
+
+
+
+
+
+## Featured Blog Posts (selected with a checkbox, doesn't show all)
