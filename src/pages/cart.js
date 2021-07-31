@@ -28,38 +28,40 @@ const Page = ({ location }) => {
 
   return (
     <>
-      <CartSteps />
-      <hr />
-      <h1 className="center">Your Cart</h1>
+      <h1 className="main-heading">Your Cart</h1>
 
-      {cartUIStatus === 'idle' ? <CartDisplay /> : null}
+      <div className="article-body">
+        <CartSteps />
+        <hr />
+        {cartUIStatus === 'idle' ? <CartDisplay /> : null}
 
-      {cartUIStatus === 'success' ? (
-        <Success>
-          <h2>Success!</h2>
-          <p>
-            Thank you for your purchase. You'll be receiving your items in 4
-            business days.
-          </p>
-          <p>Forgot something?</p>
-          <button className="pay-with-stripe">
-            <Link style={{ color: 'white' }} to="/">
-              Back to Home
-            </Link>
-          </button>
-        </Success>
-      ) : null}
+        {cartUIStatus === 'success' ? (
+          <Success>
+            <h2>Success!</h2>
+            <p>
+              Thank you for your purchase. You'll be receiving your items in 4
+              business days.
+            </p>
+            <p>Forgot something?</p>
+            <button className="pay-with-stripe">
+              <Link style={{ color: 'white' }} to="/">
+                Back to Home
+              </Link>
+            </button>
+          </Success>
+        ) : null}
 
-      {cartUIStatus === 'failure' ? (
-        <section>
-          <p>
-            Oops, something went wrong. Redirecting you to your cart to try
-            again.
-          </p>
-        </section>
-      ) : null}
+        {cartUIStatus === 'failure' ? (
+          <section>
+            <p>
+              Oops, something went wrong. Redirecting you to your cart to try
+              again.
+            </p>
+          </section>
+        ) : null}
 
-      <SalesBoxes />
+        <SalesBoxes />
+      </div>
     </>
   );
 };

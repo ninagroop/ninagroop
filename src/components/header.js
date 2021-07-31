@@ -116,7 +116,9 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
       <HideOnScroll {...rest}>
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.toolbar}>
-            <h2 className="brand navbar-heading">{siteTitle}</h2>
+            <a href="/" className="brand navbar-heading">
+              {siteTitle}
+            </a>
             <div className="hidden-desktop">
               <Nav>
                 <ul>
@@ -147,7 +149,6 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
 };
 
 const Header = ({ siteTitle, nav }) => {
-  console.log('~nav', nav);
   const [cart, updateCart, getTotalCount] = useContext(CartContext); // eslint-disable-line no-unused-vars
   const [cartCount, updateCartCount] = useState(0); // eslint-disable-line no-unused-vars
 

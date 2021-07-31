@@ -54,7 +54,7 @@ const IndexPage = ({ data, location }) => {
       <section className="main-heading">
         <h4
           style={{
-            fontSize: '1.1em',
+            fontWeight: '400',
             // background: 'rgba(255,255,255,0.8)',
             color: 'rgba(0,0,0,0.8)',
             paddingTop: '20px',
@@ -73,7 +73,19 @@ const IndexPage = ({ data, location }) => {
       <br />
       <br />
       <div className="article-body">
-        <ol style={{ listStyle: `none` }}>
+        <h2>An Important Section for Nina to Provide</h2>
+        <p>
+          An interesting section that inspires people to become a client beyond
+          general motivational words of intrigue, but actual nuts and bolts
+          about who she is with a link to "about" to learn more
+        </p>
+        <br />
+        <br />
+        <h2>
+          Featured Blog Posts (selected with a checkbox, doesn't show all)
+        </h2>
+        <hr />
+        <ol className="blogs-featured">
           {posts.map(post => {
             const image = getImage(post?.frontmatter?.featuredimage);
             const title = post.frontmatter.title || post.fields.slug;
@@ -91,7 +103,6 @@ const IndexPage = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
                   </header>
                   <section>
                     <p

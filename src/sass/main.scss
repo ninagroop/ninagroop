@@ -102,11 +102,40 @@ body {
 .main-title {
   font-size: 3.5rem;
   margin-top: 5rem;
+  margin-bottom: 7rem;
 }
 
 .navbar-heading {
   font-size: 1.6em;
   margin: 0;
+  border-bottom: none;
+}
+
+.blogs-featured {
+  list-style: none;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 0 0;
+  padding-left: 0;
+  li {
+    float: left;
+    width: 33%;
+    padding-left: 0;
+    padding-right: 40px;
+    &:nth-child(3) {
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .blogs-featured {
+    li {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -122,19 +151,17 @@ body {
 }
 
 main {
-  // padding: 0;
   width: 100%;
-  // padding: 0 2vw;
-  // background: rgba(255, 255, 255, 0.9);
   color: black;
 }
 
-main .main-heading {
+.main-heading {
   background: rgba(255, 255, 255, 0.8);
   color: black;
   display: inline-block;
   padding: 20px 4vw;
   display: inline-block;
+  margin-bottom: 3em;
 }
 
 .article-body {
@@ -143,17 +170,11 @@ main .main-heading {
 }
 
 @media screen and (min-width: 1000px) {
-  main {
-    // padding: 4vw;
-    width: 100%;
-    // margin-left: 10vw;
-  }
   .article-body {
     padding: 30px 15vw;
     width: 100%;
-    // margin-left: 10vw;
   }
-  main .main-heading {
+  .main-heading {
     padding: 0 0 0 15vw;
     max-width: 85vw;
   }
@@ -163,7 +184,7 @@ main .main-heading {
   .article-body {
     padding: 30px 20vw;
   }
-  main .main-heading {
+  .main-heading {
     padding: 0 0 0 20vw;
     max-width: 80vw;
   }

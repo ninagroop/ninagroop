@@ -29,7 +29,6 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 className="main-heading" itemProp="headline">
             {post.frontmatter.title}
           </h1>
-          <p>{post.frontmatter.date}</p>
         </header>
         <section
           className="article-body"
@@ -96,7 +95,7 @@ export const pageQuery = graphql`
         featuredimage {
           childImageSharp {
             gatsbyImageData(
-              width: 600
+              width: 1400
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )

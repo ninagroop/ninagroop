@@ -38,61 +38,63 @@ const Product = ({ location }) => {
   return (
     <Layout>
       <SEO title="Product" />
-      <ItemContain>
-        <section className="img">
-          <img src={item?.images?.[0]} alt=""></img>
-        </section>
-        <section className="product-info">
-          <h1>{item.name}</h1>
-          {item?.prices?.[0]?.length > 1 ? (
-            <h4 className="price">
-              {formatPrice(item?.prices[0].unit_amount)}
-            </h4>
-          ) : (
-            <>
-              {item?.prices?.length > 1 && (
+      <div className="article-body">
+        <ItemContain>
+          <section className="img">
+            <img src={item?.images?.[0]} alt=""></img>
+          </section>
+          <section className="product-info">
+            <h1>{item.name}</h1>
+            {item?.prices?.[0]?.length > 1 ? (
+              <h4 className="price">
+                {formatPrice(item?.prices[0].unit_amount)}
+              </h4>
+            ) : (
+              <>
+                {item?.prices?.length > 1 && (
+                  // eslint-disable-next-line jsx-a11y/no-onchange
+                  <select
+                    value={dropdownItem}
+                    onChange={onSelectChange}
+                    name="priceSelect"
+                  >
+                    {item.prices.map(price => (
+                      <option key={price.id} value={price.id}>
+                        {formatPrice(price.unit_amount, price.currency)}{' '}
+                        {price.nickname}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </>
+            )}
+            <p>{item.description}</p>
+            <p style={{ display: 'flex' }}>
+              <UpdateNumButton onClick={() => updateQuantity(quantity - 1)}>
+                -
+              </UpdateNumButton>
+              <QuantityInput
+                type="number"
+                value={quantity}
                 // eslint-disable-next-line jsx-a11y/no-onchange
-                <select
-                  value={dropdownItem}
-                  onChange={onSelectChange}
-                  name="priceSelect"
-                >
-                  {item.prices.map(price => (
-                    <option key={price.id} value={price.id}>
-                      {formatPrice(price.unit_amount, price.currency)}{' '}
-                      {price.nickname}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </>
-          )}
-          <p>{item.description}</p>
-          <p style={{ display: 'flex' }}>
-            <UpdateNumButton onClick={() => updateQuantity(quantity - 1)}>
-              -
-            </UpdateNumButton>
-            <QuantityInput
-              type="number"
-              value={quantity}
-              // eslint-disable-next-line jsx-a11y/no-onchange
-              onChange={event => updateQuantity(event.target.value)}
-            />
-            <UpdateNumButton onClick={() => updateQuantity(quantity + 1)}>
-              +
-            </UpdateNumButton>
-          </p>
+                onChange={event => updateQuantity(event.target.value)}
+              />
+              <UpdateNumButton onClick={() => updateQuantity(quantity + 1)}>
+                +
+              </UpdateNumButton>
+            </p>
 
-          <br />
-          <AddToCart
-            selectedId={dropdownItem}
-            product={item}
-            quantity={quantity}
-          />
-        </section>
-      </ItemContain>
-      <hr />
-      <FeaturedProducts />
+            <br />
+            <AddToCart
+              selectedId={dropdownItem}
+              product={item}
+              quantity={quantity}
+            />
+          </section>
+        </ItemContain>
+        <hr />
+        <FeaturedProducts />
+      </div>
     </Layout>
   );
 };
