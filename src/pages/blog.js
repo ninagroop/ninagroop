@@ -26,7 +26,7 @@ const BlogIndex = ({ data, location }) => {
       <h1 className="main-heading">Blog Posts</h1>
 
       <div className="article-body">
-        <ol style={{ listStyle: `none` }}>
+        <ol className="blogs-featured blogs-all">
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug;
 

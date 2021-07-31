@@ -9,6 +9,26 @@ import Bag from '../images/bag.jpg';
 import FeaturedProducts from '../components/featuredproducts';
 import Bio from '../components/bio';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import styled from 'styled-components';
+
+export const Tagline = styled.h2`
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.7em;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  background: none;
+  min-width: 80vw;
+`;
+
+export const Callout = styled.h4`
+  font-weight: 400;
+  padding-top: 20px;
+  @media screen and (max-width: 1000px) {
+    font-size: 1em;
+  }
+`;
 
 const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -17,45 +37,23 @@ const IndexPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
-      <Bio />
-      <br />
-      <br />
+      {/* <Bio /> */}
 
-      <h4
-        style={{
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          fontWeight: 'bold',
-          fontSize: '1.7em',
-          // color: 'rgba(255,255,255,0.8)',
-          color: 'rgba(0,0,0,0.8)',
-          paddingTop: '20px',
-          background: 'none',
-          // textShadow: '0 0 30px black, 0 0 5px rgba(0,0,0,0.85)',
-          minWidth: '80vw',
-        }}
-      >
-        Guidance. Resilience. Hope.
-      </h4>
+      <Tagline>
+        <>Guidance. Resilience. Hope.</>
+      </Tagline>
+
       <br />
       <br />
       <br />
       <br />
       <section className="main-heading">
-        <h4
-          style={{
-            fontWeight: '400',
-            // background: 'rgba(255,255,255,0.8)',
-            color: 'rgba(0,0,0,0.8)',
-            paddingTop: '20px',
-          }}
-        >
-          Every day the sun rises and sets and every night the moon offers its
-          changed face while the stars sing... All of creation and your very own
-          life are a sacred text that never stops speaking. The first lesson it
-          teaches is to listen. The wisdom you need is as close as your own
-          heart, as unfailing as ocean waves.
-        </h4>
+        <Callout>
+          All of creation and your very own life are a sacred text that never
+          stop speaking. The rhythms of the Earth and the arc of your story are
+          an open invitation to listen. The wisdom you need is as close as your
+          own heart, as unfailing as ocean waves.
+        </Callout>
       </section>
       <br />
       <br />
@@ -106,10 +104,12 @@ const IndexPage = ({ data, location }) => {
                       />
                     </section>
                     {image && (
-                      <GatsbyImage
-                        image={image}
-                        alt={post.frontmatter.author}
-                      />
+                      <Link to={post.fields.slug} itemProp="url">
+                        <GatsbyImage
+                          image={image}
+                          alt={post.frontmatter.author}
+                        />
+                      </Link>
                     )}
                   </article>
                 </li>

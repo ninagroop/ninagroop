@@ -22,20 +22,16 @@ import Slide from '@material-ui/core/Slide';
 const useStyles = makeStyles({
   list: {
     width: 250,
-    // color: '#fff',
   },
   fullList: {
     width: 'auto',
   },
-  paper: {
-    // background: '#000',
-  },
+  paper: {},
   icon: {},
   appBar: {
     background: '#fff',
     color: '#000',
     boxShadow: 'none',
-    // '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14)',
   },
   toolbar: {
     justifyContent: 'space-between',
@@ -165,7 +161,7 @@ const Header = ({ siteTitle, nav }) => {
       />
       <Head>
         {/* TODO: make show only for home page */}
-        <h1 className="brand main-title">{siteTitle}</h1>
+        <h1 className="brand brand-title">{siteTitle}</h1>
       </Head>
     </>
   );

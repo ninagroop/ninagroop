@@ -7,9 +7,6 @@ export const Head = styled.header`
   align-items: center;
 
   @media screen and (max-width: 850px) {
-    h1 {
-      margin: 0;
-    }
     nav ul li {
       padding: 0 5px !important;
       border-left: none !important;

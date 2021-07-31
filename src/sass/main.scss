@@ -92,25 +92,6 @@ body {
   box-sizing: border-box;
 }
 
-.brand {
-  font-family: 'Liu Jian Mao Cao', Helvetica, Arial, sans-serif;
-  font-weight: _font(weight-heading-bold);
-  letter-spacing: _font(kern-heading);
-  text-transform: none;
-}
-
-.main-title {
-  font-size: 3.5rem;
-  margin-top: 5rem;
-  margin-bottom: 7rem;
-}
-
-.navbar-heading {
-  font-size: 1.6em;
-  margin: 0;
-  border-bottom: none;
-}
-
 .blogs-featured {
   list-style: none;
   display: block;
@@ -125,6 +106,12 @@ body {
     &:nth-child(3) {
       padding-right: 0;
     }
+  }
+}
+
+.blogs-all {
+  li {
+    width: 100%;
   }
 }
 
@@ -151,57 +138,8 @@ body {
 }
 
 main {
+  color: _palette(body-text);
   width: 100%;
-  color: black;
-}
-
-.main-heading {
-  background: rgba(255, 255, 255, 0.8);
-  color: black;
-  display: inline-block;
-  padding: 20px 4vw;
-  display: inline-block;
-  margin-bottom: 3em;
-}
-
-.article-body {
-  background-color: transparentize(#fff, 0.2);
-  padding: 4vw;
-}
-
-@media screen and (min-width: 1000px) {
-  .article-body {
-    padding: 30px 15vw;
-    width: 100%;
-  }
-  .main-heading {
-    padding: 0 0 0 15vw;
-    max-width: 85vw;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .article-body {
-    padding: 30px 20vw;
-  }
-  .main-heading {
-    padding: 0 0 0 20vw;
-    max-width: 80vw;
-  }
-}
-
-h1,
-h2,
-h3 {
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-p {
-  margin: 20px 0;
 }
 
 *,
@@ -209,14 +147,6 @@ p {
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-a,
-a:active,
-a:visited {
-  color: $brandprimary;
-  text-decoration: none;
-  transition: 0.3s all ease;
 }
 
 button {
