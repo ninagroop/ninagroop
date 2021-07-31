@@ -1,8 +1,8 @@
 ---
 title: Home
-tagline: Tagline words
-homeQuote: Quote on the home page
+tagline: Guidance. Resilience. Hope
 path: /
-homequote: New quote on the home page
+homequote: All of creation and your very own life are a sacred text that never stop speaking. The rhythms of the Earth and the arc of your story are  an open invitation to listen. The wisdom you need is as close as your  own heart, as unfailing as ocean waves.
 ---
+
 Body text content

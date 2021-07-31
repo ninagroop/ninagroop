@@ -48,7 +48,14 @@ collections:
         editor:
           preview: false
         fields:
+          - { label: 'Path', name: 'path', widget: 'string', hidden: true }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Tagline', name: 'tagline', widget: 'markdown' }
-          - { label: 'Home Quote', name: 'homeQuote', widget: 'markdown' }
+          - { label: 'Home Quote', name: 'homequote', widget: 'markdown' }
+          - {
+              label: 'Featured Image',
+              name: 'featuredimage',
+              widget: image,
+              required: false,
+            }

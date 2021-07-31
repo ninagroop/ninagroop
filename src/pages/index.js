@@ -32,28 +32,22 @@ export const Callout = styled.h4`
 
 const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const posts = data.allMarkdownRemark.nodes;
+  const posts = data.posts.nodes;
+  const home = data.home;
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       {/* <Bio /> */}
 
-      <Tagline>
-        <>Guidance. Resilience. Hope.</>
-      </Tagline>
+      <Tagline>{home?.frontmatter?.tagline}</Tagline>
 
       <br />
       <br />
       <br />
       <br />
       <section className="main-heading">
-        <Callout>
-          All of creation and your very own life are a sacred text that never
-          stop speaking. The rhythms of the Earth and the arc of your story are
-          an open invitation to listen. The wisdom you need is as close as your
-          own heart, as unfailing as ocean waves.
-        </Callout>
+        <Callout>{home?.frontmatter?.homequote}</Callout>
       </section>
       <br />
       <br />
@@ -61,14 +55,13 @@ const IndexPage = ({ data, location }) => {
       <br />
       <br />
       <div className="article-body">
-        <h2>An Important Section for Nina to Provide</h2>
-        <p>
-          An interesting section that inspires people to become a client beyond
-          general motivational words of intrigue, but actual nuts and bolts
-          about who she is with a link to "about" to learn more
-        </p>
-        <br />
-        <br />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: home?.html,
+          }}
+          itemProp="description"
+        />
+
         <h2>
           Featured Blog Posts (selected with a checkbox, doesn't show all)
         </h2>
@@ -130,7 +123,31 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    home: markdownRemark(frontmatter: { path: { eq: "/" } }) {
+      id
+      excerpt(pruneLength: 160)
+      html
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        tagline
+        homequote
+        description
+        featuredpost
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 1400
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         excerpt
         fields {
