@@ -38,6 +38,14 @@ module.exports = {
       },
     },
     {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -47,8 +55,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/src/img`,
         name: `images`,
-        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -73,7 +81,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-image`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -145,6 +152,7 @@ module.exports = {
         display: 'swap',
       },
     },
+    `gatsby-plugin-image`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -153,9 +161,7 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
+            options: {},
           },
           {
             resolve: 'gatsby-remark-images',
