@@ -197,15 +197,6 @@ export const pageQuery = graphql`
         homequote
         description
         featuredpost
-        featuredimage {
-          childImageSharp {
-            gatsbyImageData(
-              width: 1400
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
-          }
-        }
       }
     }
     posts: allMarkdownRemark(

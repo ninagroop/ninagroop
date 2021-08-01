@@ -122,6 +122,7 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
+                  filter: { frontmatter: { templatekey: { eq: "blog-post" } } },
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   nodes {
@@ -150,7 +151,7 @@ module.exports = {
       options: {
         fonts: [
           `Liu Jian Mao Cao\:400`,
-          `Source Sans Pro\:300,600,300italic,600italic`,
+          `Montserrat\:200,600,200italic,600italic`,
           `Raleway\:200,400,700`,
         ],
         display: 'swap',
