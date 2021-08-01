@@ -62,9 +62,6 @@ const IndexPage = ({ data, location }) => {
           itemProp="description"
         />
 
-        <h2>
-          Featured Blog Posts (selected with a checkbox, doesn't show all)
-        </h2>
         <hr />
         <ol className="blogs-featured">
           {posts

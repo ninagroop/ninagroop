@@ -8,17 +8,15 @@ import Seo from '../components/seo';
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const featuredImage =
+    post?.frontmatter?.featuredimage || data?.home?.frontmatter?.featuredImage;
   const { previous, next } = data;
   return (
-    <Layout
-      location={location}
-      title={siteTitle}
-      featuredImage={post?.frontmatter?.featuredimage}
-    >
+    <Layout location={location} title={siteTitle} featuredImage={featuredImage}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        featuredImage={post.frontmatter?.featuredimage}
+        featuredImage={featuredImage}
       />
       <article
         className="blog-post"
