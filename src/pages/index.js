@@ -200,7 +200,7 @@ export const pageQuery = graphql`
         featuredimage {
           childImageSharp {
             gatsbyImageData(
-              width: 1900
+              width: 1400
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )
