@@ -3,6 +3,11 @@ require('dotenv').config({
 });
 
 module.exports = {
+  // fixes build timeouts as seen here
+  // https://app.netlify.com/sites/ninagroop/deploys/61069faf422fca6e41ac7160
+  flags: {
+    FAST_DEV: true,
+  },
   siteMetadata: {
     title: `Nina Groop`,
     description: `A clever tagline for Nina's site`,
