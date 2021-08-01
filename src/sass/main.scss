@@ -92,23 +92,6 @@ body {
   box-sizing: border-box;
 }
 
-.blogs-featured {
-  list-style: none;
-  display: block;
-  overflow: hidden;
-  margin: 0 0 0 0;
-  padding-left: 0;
-  li {
-    float: left;
-    width: 33%;
-    padding-left: 0;
-    padding-right: 40px;
-    &:nth-child(3) {
-      padding-right: 0;
-    }
-  }
-}
-
 .blogs-all {
   li {
     width: 100%;

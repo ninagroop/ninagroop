@@ -10,13 +10,7 @@ import React from 'react';
 import '../sass/main.scss';
 import Footer from './footer';
 import Header from './header';
-import {
-  StaticImage,
-  GatsbyImage,
-  getImage,
-  getSrc,
-  getSrcSet,
-} from 'gatsby-plugin-image';
+import { getImage, getSrc } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 export const MainBody = styled.div`
@@ -65,7 +59,7 @@ const Layout = ({ children, featuredImage }) => {
           featuredimage {
             childImageSharp {
               gatsbyImageData(
-                width: 1400
+                width: 1900
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
