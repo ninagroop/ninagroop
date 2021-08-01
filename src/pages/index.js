@@ -38,7 +38,7 @@ export const PostGrid = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
-    grid-row-gap: 0px;
+    grid-row-gap: 20px;
   }
   li {
     position: relative;
