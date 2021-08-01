@@ -61,58 +61,56 @@ const BlogIndex = ({ data, location }) => {
       <div className="article-body">
         <PostGrid>
           <ol className="blogs-featured">
-            {posts
-              .filter(post => !post?.frontmatter?.path)
-              .map(post => {
-                const image = getImage(post?.frontmatter?.featuredimage);
-                const title = post.frontmatter.title || post.fields.slug;
-                return (
-                  <li key={post.fields.slug}>
-                    <article
-                      className="post-list-item"
-                      itemScope
-                      itemType="http://schema.org/Article"
-                    >
-                      <div className="featured-post-wrapper">
-                        {image ? (
-                          <Link to={post.fields.slug} itemProp="url">
-                            <GatsbyImage
-                              image={image}
-                              alt={post.frontmatter.author}
-                            />
-                          </Link>
-                        ) : (
-                          <BlankTile bgColor={stringToColor(title)}>
-                            <Link
-                              className="blank-tile"
-                              to={post.fields.slug}
-                              itemProp="url"
-                            />
-                          </BlankTile>
-                        )}
-                        <div className="featured-footer">
-                          <header>
-                            <h4>
-                              <Link to={post.fields.slug} itemProp="url">
-                                <span itemProp="headline">{title}</span>
-                              </Link>
-                            </h4>
-                          </header>
-                          <section className="featured-description">
-                            <p
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  post.frontmatter.description || post.excerpt,
-                              }}
-                              itemProp="description"
-                            />
-                          </section>
-                        </div>
+            {posts.map(post => {
+              const image = getImage(post?.frontmatter?.featuredimage);
+              const title = post.frontmatter.title || post.fields.slug;
+              return (
+                <li key={post.fields.slug}>
+                  <article
+                    className="post-list-item"
+                    itemScope
+                    itemType="http://schema.org/Article"
+                  >
+                    <div className="featured-post-wrapper">
+                      {image ? (
+                        <Link to={post.fields.slug} itemProp="url">
+                          <GatsbyImage
+                            image={image}
+                            alt={post.frontmatter.author}
+                          />
+                        </Link>
+                      ) : (
+                        <BlankTile bgColor={stringToColor(title)}>
+                          <Link
+                            className="blank-tile"
+                            to={post.fields.slug}
+                            itemProp="url"
+                          />
+                        </BlankTile>
+                      )}
+                      <div className="featured-footer">
+                        <header>
+                          <h4>
+                            <Link to={post.fields.slug} itemProp="url">
+                              <span itemProp="headline">{title}</span>
+                            </Link>
+                          </h4>
+                        </header>
+                        <section className="featured-description">
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                post.frontmatter.description || post.excerpt,
+                            }}
+                            itemProp="description"
+                          />
+                        </section>
                       </div>
-                    </article>
-                  </li>
-                );
-              })}
+                    </div>
+                  </article>
+                </li>
+              );
+            })}
           </ol>
         </PostGrid>
       </div>
@@ -129,7 +127,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    home: markdownRemark(frontmatter: { path: { eq: "/" } }) {
+    home: markdownRemark(frontmatter: { templatekey: { eq: "index-page" } }) {
       id
       frontmatter {
         featuredimage {
@@ -144,14 +142,16 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { templatekey: { eq: "blog-post" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         excerpt
         fields {
           slug
         }
         frontmatter {
-          path
           date(formatString: "MMMM DD, YYYY")
           title
           description

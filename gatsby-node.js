@@ -18,10 +18,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
 
   // Get all markdown blog posts sorted by date
+  // note that we filter by `templatekey` here, other collections
+  // will need their own query if added
   const result = await graphql(
     `
       {
         allMarkdownRemark(
+          filter: { frontmatter: { templatekey: { eq: "blog-post" } } }
           sort: { fields: [frontmatter___date], order: ASC }
           limit: 1000
         ) {

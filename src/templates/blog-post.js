@@ -81,7 +81,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(
+      frontmatter: { templatekey: { eq: "blog-post" } }
+      id: { eq: $id }
+    ) {
       id
       excerpt(pruneLength: 160)
       html
@@ -101,7 +104,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: markdownRemark(
+      frontmatter: { templatekey: { eq: "blog-post" } }
+      id: { eq: $previousPostId }
+    ) {
       fields {
         slug
       }
@@ -109,7 +115,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: markdownRemark(
+      frontmatter: { templatekey: { eq: "blog-post" } }
+      id: { eq: $nextPostId }
+    ) {
       fields {
         slug
       }

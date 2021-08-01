@@ -142,7 +142,6 @@ const IndexPage = ({ data, location }) => {
                         {image && (
                           <Link to={post.fields.slug} itemProp="url">
                             <GatsbyImage
-                              aspectRatio={1}
                               image={image}
                               alt={post.frontmatter.author}
                             />
@@ -187,7 +186,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    home: markdownRemark(frontmatter: { path: { eq: "/" } }) {
+    home: markdownRemark(frontmatter: { templatekey: { eq: "index-page" } }) {
       id
       excerpt(pruneLength: 160)
       html
@@ -210,6 +209,7 @@ export const pageQuery = graphql`
       }
     }
     posts: allMarkdownRemark(
+      filter: { frontmatter: { templatekey: { eq: "blog-post" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {

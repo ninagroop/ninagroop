@@ -1,4 +1,5 @@
 ---
+templatekey: blog-post
 title: New Hot Feature
 date: 2021-07-31T08:27:38.749Z
 description: Fiery, just to spice things up a bit

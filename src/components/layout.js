@@ -53,7 +53,7 @@ const Layout = ({ children, featuredImage }) => {
           }
         }
       }
-      home: markdownRemark(frontmatter: { path: { eq: "/" } }) {
+      home: markdownRemark(frontmatter: { templatekey: { eq: "index-page" } }) {
         id
         frontmatter {
           featuredimage {
