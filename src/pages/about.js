@@ -9,24 +9,21 @@ import { graphql } from 'gatsby';
 
 const AboutPage = ({ data, ...rest }) => {
   console.log('~data', data);
-  console.log('~rest', rest);
+  const about = data.about;
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title={about.frontmatter.title} />
       <header>
         <h1 className="main-heading" itemProp="headline">
-          About
+          {about.frontmatter.title}
         </h1>
       </header>
       <div className="article-body">
-        <p>
-          Nina's self-promotional text that she loathes but is required to
-          provide.
-        </p>
-        <p>
-          But we'll get it in there... with her kicking and screaming every step
-          of the way.
-        </p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: about.html,
+          }}
+        />
         <FeaturedProducts />
       </div>
     </Layout>

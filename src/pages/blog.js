@@ -45,7 +45,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="Blog" />
         <Bio />
         <p>No blog posts found.</p>
       </Layout>
@@ -54,9 +54,9 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Blog" />
       <Bio />
-      <h1 className="main-heading">Blog Posts</h1>
+      <h1 className="main-heading">Blog</h1>
 
       <div className="article-body">
         <PostGrid>

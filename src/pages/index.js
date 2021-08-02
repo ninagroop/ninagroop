@@ -30,7 +30,7 @@ const Callout = styled.h4`
   }
 `;
 
-const PostGrid = styled.div`
+export const PostGrid = styled.div`
   .blogs-featured {
     list-style: none;
     padding-left: 0;
