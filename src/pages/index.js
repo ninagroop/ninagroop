@@ -11,18 +11,18 @@ import Bio from '../components/bio';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
-export const Tagline = styled.h2`
+const Tagline = styled.h2`
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.7em;
+  font-size: 2rem;
   color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   background: none;
   min-width: 80vw;
 `;
 
-export const Callout = styled.h4`
+const Callout = styled.h4`
   font-weight: 400;
   padding-top: 20px;
   @media screen and (max-width: 1000px) {
@@ -30,7 +30,7 @@ export const Callout = styled.h4`
   }
 `;
 
-export const PostGrid = styled.div`
+const PostGrid = styled.div`
   .blogs-featured {
     list-style: none;
     padding-left: 0;

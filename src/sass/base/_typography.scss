@@ -11,7 +11,7 @@ textarea {
   line-height: 1.65;
 
   @include breakpoint('<=xlarge') {
-    font-size: 13pt;
+    font-size: 14pt;
   }
 
   @include breakpoint('<=large') {
@@ -222,10 +222,6 @@ h1,
 h2,
 h3 {
   font-weight: normal;
-}
-
-h1 {
-  font-size: 40px;
 }
 
 @include breakpoint('<=small') {

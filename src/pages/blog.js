@@ -8,7 +8,7 @@ import { PostGrid } from '../pages/index';
 import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
-export const BlankTile = styled.div`
+const BlankTile = styled.div`
   a {
     display: block;
     width: 100%;
@@ -80,7 +80,7 @@ const BlogIndex = ({ data, location }) => {
                           />
                         </Link>
                       ) : (
-                        <BlankTile bgColor={stringToColor(title)}>
+                        <BlankTile bgColor={stringToColor(post?.fields?.slug)}>
                           <Link
                             className="blank-tile"
                             to={post.fields.slug}

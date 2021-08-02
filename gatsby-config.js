@@ -5,9 +5,9 @@ require('dotenv').config({
 module.exports = {
   // fixes build timeouts as seen here
   // https://app.netlify.com/sites/ninagroop/deploys/61069faf422fca6e41ac7160
-  flags: {
-    FAST_DEV: true,
-  },
+  // flags: {
+  //   FAST_DEV: true,
+  // },
   siteMetadata: {
     title: `Nina Groop`,
     description: `A clever tagline for Nina's site`,
@@ -52,7 +52,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/home`,
+        name: `index`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/about`,
         name: `index`,
       },
     },
@@ -151,7 +158,7 @@ module.exports = {
       options: {
         fonts: [
           `Liu Jian Mao Cao\:400`,
-          `Montserrat\:200,600,200italic,600italic`,
+          `Montserrat\:200,400,600,200italic,400italic,600italic`,
           `Raleway\:200,400,700`,
         ],
         display: 'swap',

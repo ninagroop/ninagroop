@@ -65,10 +65,12 @@ const SwipeableTemporaryDrawer = ({ siteTitle, nav, getTotalCount }) => {
         {nav.map(item => (
           <Link to={item.slug}>
             <ListItem button key={item.title}>
-              {item.showCartIndicator && getTotalCount() > 0 ? (
-                <CartTotal>{getTotalCount()}</CartTotal>
-              ) : null}
-              {item.title}
+              <ListItemText>
+                {item.showCartIndicator && getTotalCount() > 0 ? (
+                  <CartTotal>{getTotalCount()}</CartTotal>
+                ) : null}
+                {item.title}
+              </ListItemText>
             </ListItem>
           </Link>
         ))}
