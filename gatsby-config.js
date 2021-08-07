@@ -52,14 +52,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/home`,
-        name: `index`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/about`,
+        path: `${__dirname}/content`,
         name: `index`,
       },
     },

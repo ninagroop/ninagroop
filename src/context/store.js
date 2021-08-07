@@ -19,7 +19,7 @@ const StoreProvider = ({ children }) => {
             active
             currency
             unit_amount
-            nickname
+            # nickname
             product {
               id
               name
@@ -30,8 +30,8 @@ const StoreProvider = ({ children }) => {
               # }
               metadata {
                 # @TODO: call out explicit key enums in README
-                gender
-                color
+                # gender
+                # color
                 featured
               }
               images
