@@ -74,10 +74,7 @@ const BlogIndex = ({ data, location }) => {
                     <div className="featured-post-wrapper">
                       {image ? (
                         <Link to={post.fields.slug} itemProp="url">
-                          <GatsbyImage
-                            image={image}
-                            alt={post.frontmatter.author}
-                          />
+                          <GatsbyImage image={image} alt={title} />
                         </Link>
                       ) : (
                         <BlankTile bgColor={stringToColor(post?.fields?.slug)}>

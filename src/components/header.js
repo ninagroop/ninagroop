@@ -63,7 +63,7 @@ const SwipeableTemporaryDrawer = ({ siteTitle, nav, getTotalCount }) => {
     >
       <List>
         {nav.map(item => (
-          <Link to={item.slug}>
+          <Link key={item.slug} to={item.slug}>
             <ListItem button key={item.title}>
               <ListItemText>
                 {item.showCartIndicator && getTotalCount() > 0 ? (
@@ -121,7 +121,7 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
               <Nav>
                 <ul>
                   {nav.map(item => (
-                    <li>
+                    <li key={item.slug}>
                       {item.showCartIndicator && getTotalCount() > 0 ? (
                         <CartTotal>{getTotalCount()}</CartTotal>
                       ) : null}
