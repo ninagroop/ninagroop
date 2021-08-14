@@ -8,7 +8,6 @@ import FeaturedProducts from '../components/featuredproducts';
 import { graphql } from 'gatsby';
 
 const AboutPage = ({ data, ...rest }) => {
-  console.log('~data', data);
   const about = data.about;
   return (
     <Layout>
