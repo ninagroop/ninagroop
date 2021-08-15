@@ -9,6 +9,14 @@ import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 const BlankTile = styled.div`
+  @media screen and (max-width: 600px) {
+    min-height: calc(100vw - 8vw);
+  }
+
+  @media screen and (max-width: 800px) {
+    min-height: calc(50vw - 6vw);
+  }
+
   a {
     display: block;
     width: 100%;
