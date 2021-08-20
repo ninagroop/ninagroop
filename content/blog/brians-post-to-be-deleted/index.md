@@ -6,11 +6,10 @@ description: short description of this post for abbreviated summary views
 featuredpost: true
 featuredimage: tim-marshall-y74zvfz5msu-unsplash.jpg
 ---
+
 youtube XWIvfE01J0k
 
-
-
-featuredProducts count:7 featured:true
+<featured-products id="prod_JxZxiQjWAhhMpc"></featured-products>
 
 \
 Silence is Golden.

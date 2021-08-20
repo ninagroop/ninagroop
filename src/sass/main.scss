@@ -95,7 +95,7 @@ body {
 }
 
 @media screen and (max-width: 999px) {
-  .blogs-featured {
+  .featured-block {
     li {
       width: 100%;
       padding-left: 0;
@@ -126,6 +126,11 @@ main {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+a.btn {
+  text-decoration: none;
+  border-bottom: none;
 }
 
 button {

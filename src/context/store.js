@@ -34,6 +34,18 @@ const StoreProvider = ({ children }) => {
                 # color
                 featured
               }
+              localFiles {
+                id
+                childImageSharp {
+                  gatsbyImageData(
+                    transformOptions: { fit: COVER }
+                    width: 600
+                    aspectRatio: 1
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
               images
             }
           }
@@ -52,6 +64,8 @@ const StoreProvider = ({ children }) => {
     }
     products[product.id].prices.push(Object.assign({}, price));
   }
+
+  console.log('~data', data);
 
   useEffect(() => {
     updateStore(products);

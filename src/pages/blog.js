@@ -4,33 +4,9 @@ import { Link, graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import { PostGrid } from '../pages/index';
+import { FeatureGridStyled } from '../components/postGrid';
 import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-
-const BlankTile = styled.div`
-  @media screen and (max-width: 600px) {
-    min-height: calc(100vw - 8vw);
-  }
-
-  @media screen and (max-width: 800px) {
-    min-height: calc(50vw - 6vw);
-  }
-
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: ' ';
-    background-color: ${props => props.bgColor};
-    transition: opacity 0.3s;
-    opacity: 0.4;
-    &:hover {
-      opacity: 0.25;
-    }
-  }
-`;
 
 const stringToColor = str => {
   var hash = 0;
@@ -67,38 +43,38 @@ const BlogIndex = ({ data, location }) => {
       <h1 className="main-heading">Blog</h1>
 
       <div className="article-body">
-        <PostGrid>
-          <ol className="blogs-featured">
+        <FeatureGridStyled>
+          <ol className="featured-block">
             {posts.map(post => {
               const image = getImage(post?.frontmatter?.featuredimage);
               const title = post.frontmatter.title || post.fields.slug;
               return (
-                <li key={post.fields.slug}>
-                  <article
-                    className="post-list-item"
-                    itemScope
-                    itemType="http://schema.org/Article"
+                <li
+                  key={post.fields.slug}
+                  style={{
+                    backgroundColor: image
+                      ? 'none'
+                      : stringToColor(post?.fields?.slug),
+                  }}
+                  className={`${
+                    !image ? 'blank-tile-item' : 'featured-post-wrapper'
+                  }`}
+                >
+                  <Link
+                    className={`${!image ? 'blank-tile-wrapper' : ''}`}
+                    to={post.fields.slug}
+                    itemProp="url"
                   >
-                    <div className="featured-post-wrapper">
-                      {image ? (
-                        <Link to={post.fields.slug} itemProp="url">
-                          <GatsbyImage image={image} alt={title} />
-                        </Link>
-                      ) : (
-                        <BlankTile bgColor={stringToColor(post?.fields?.slug)}>
-                          <Link
-                            className="blank-tile"
-                            to={post.fields.slug}
-                            itemProp="url"
-                          />
-                        </BlankTile>
-                      )}
+                    <article
+                      className="post-list-item"
+                      itemScope
+                      itemType="http://schema.org/Article"
+                    >
+                      {image ? <GatsbyImage image={image} alt={title} /> : null}
                       <div className="featured-footer">
                         <header>
                           <h4>
-                            <Link to={post.fields.slug} itemProp="url">
-                              <span itemProp="headline">{title}</span>
-                            </Link>
+                            <span itemProp="headline">{title}</span>
                           </h4>
                         </header>
                         <section className="featured-description">
@@ -111,13 +87,13 @@ const BlogIndex = ({ data, location }) => {
                           />
                         </section>
                       </div>
-                    </div>
-                  </article>
+                    </article>
+                  </Link>
                 </li>
               );
             })}
           </ol>
-        </PostGrid>
+        </FeatureGridStyled>
       </div>
     </Layout>
   );

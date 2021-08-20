@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import { renderAst } from '../components/render-ast';
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
@@ -18,6 +19,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
         featuredImage={featuredImage}
       />
+
       <article
         className="blog-post"
         itemScope
@@ -28,11 +30,9 @@ const BlogPostTemplate = ({ data, location }) => {
             {post.frontmatter.title}
           </h1>
         </header>
-        <section
-          className="article-body"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section className="article-body" itemProp="articleBody">
+          {renderAst(post.htmlAst)}
+        </section>
         <hr />
         <footer>
           <Bio />
@@ -88,6 +88,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      htmlAst
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

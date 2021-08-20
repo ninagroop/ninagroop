@@ -6,6 +6,7 @@ import Shoe from '../images/shoe.jpg';
 import Bag from '../images/bag.jpg';
 import FeaturedProducts from '../components/featuredproducts';
 import { graphql } from 'gatsby';
+import { renderAst } from '../components/render-ast';
 
 const AboutPage = ({ data, ...rest }) => {
   const about = data.about;
@@ -17,14 +18,7 @@ const AboutPage = ({ data, ...rest }) => {
           {about.frontmatter.title}
         </h1>
       </header>
-      <div className="article-body">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: about.html,
-          }}
-        />
-        <FeaturedProducts />
-      </div>
+      <div className="article-body">{renderAst(about.htmlAst)}</div>
     </Layout>
   );
 };
@@ -40,7 +34,7 @@ export const pageQuery = graphql`
     }
     about: markdownRemark(frontmatter: { title: { eq: "About" } }) {
       id
-      html
+      htmlAst
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

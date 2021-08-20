@@ -28,38 +28,48 @@ CMS.registerEditorComponent({
 
 CMS.registerEditorComponent({
   // Internal id of the component
-  id: 'featuredProducts',
+  id: 'featuredproducts',
   // Visible label
   label: 'Products',
   // Fields the user need to fill out when adding an instance of the component
   fields: [
-    { name: 'count', label: 'Products to Show', widget: 'string' },
+    {
+      name: 'count',
+      label: 'Products to Show',
+      widget: 'number',
+      value_type: 'int',
+      default: 3,
+    },
     { name: 'featured', label: 'Featured Only', widget: 'boolean' },
+    {
+      name: 'id',
+      label: 'Product ID',
+      widget: 'string',
+    },
   ],
   // Pattern to identify a block as being an instance of this component
-  pattern: /^featuredProducts (\S+)$/,
+  pattern: /^\<featured\-products (.*)\>\<\/featured\-products\>$/,
   // Function to extract data elements from the regexp match
-  fromBlock: function(match) {
-    console.log('~match', match);
-    debugger;
+  fromBlock: function(attrs) {
+    const count = attrs[1].match(/count=\"(.*?)\"/)?.[1];
+    const featured =
+      attrs[1].match(/featured=\"(.*?)\"/)?.[1] === 'true' || false;
+    const id = attrs[1].match(/id=\"(.*?)\"/)?.[1];
     return {
-      // TOOD: pull from dynamic regex match
-      // count: match[1],
-      count: '3',
-      featured: true,
+      count,
+      featured,
+      id,
     };
   },
   // Function to create a text block from an instance of this component
   toBlock: function(obj) {
-    return `featuredProducts count:${obj.count} featured:${obj.featured}`;
+    return `<featured-products id="${obj.id ?? ''}" count="${obj.count ??
+      ''}" featured="${obj.featured}"></featured-products>`;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: function(obj) {
-    return (
-      '<img src="http://img.youtube.com/vi/' +
-      obj.id +
-      '/maxresdefault.jpg" alt="Youtube Video"/>'
-    );
+    return `<featured-products id="${obj.id ?? ''}" count="${obj.count ??
+      ''}" featured="${obj.featured}"></featured-products>`;
   },
 });

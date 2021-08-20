@@ -10,6 +10,7 @@ import FeaturedProducts from '../components/featuredproducts';
 import Bio from '../components/bio';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
+import { renderAst } from '../components/render-ast';
 
 const Tagline = styled.h2`
   text-align: center;
@@ -30,64 +31,8 @@ const Callout = styled.h4`
   }
 `;
 
-export const PostGrid = styled.div`
-  .blogs-featured {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-  }
-  li {
-    position: relative;
-    padding-left: 0;
-  }
-  .featured-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.35) 0%,
-      rgba(255, 255, 255, 0.7) 60%,
-      rgba(255, 255, 255, 0.7) 100%
-    );
-    padding: 10px;
-    h4 a {
-      letter-spacing: 0;
-      -webkit-line-clamp: 1;
-      color: #000;
-    }
-  }
-  .featured-description {
-    display: block;
-    height: 1px;
-    overflow: hidden;
-  }
-  picture {
-    transition: opacity 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-  @media screen and (max-width: 800px) {
-    .blogs-featured {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .blogs-featured {
-      grid-template-columns: 1fr;
-    }
-  }
-`;
-
 const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const posts = data.posts.nodes;
   const home = data.home;
 
   return (
@@ -110,65 +55,7 @@ const IndexPage = ({ data, location }) => {
       <br />
       <br />
       <div className="article-body">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: home?.html,
-          }}
-          itemProp="description"
-        />
-
-        <hr />
-        <PostGrid>
-          <ol className="blogs-featured">
-            {posts
-              .filter(
-                post =>
-                  post?.frontmatter?.featuredpost &&
-                  post?.frontmatter?.featuredimage
-              )
-              .map((post, idx) => {
-                if (idx > 2) return null;
-                const image = getImage(post?.frontmatter?.featuredimage);
-                const title = post.frontmatter.title || post.fields.slug;
-
-                return (
-                  <li key={post.fields.slug}>
-                    <article
-                      className="post-list-item"
-                      itemScope
-                      itemType="http://schema.org/Article"
-                    >
-                      <div className="featured-post-wrapper">
-                        {image && (
-                          <Link to={post.fields.slug} itemProp="url">
-                            <GatsbyImage image={image} alt={title} />
-                          </Link>
-                        )}
-                        <div className="featured-footer">
-                          <header>
-                            <h4>
-                              <Link to={post.fields.slug} itemProp="url">
-                                <span itemProp="headline">{title}</span>
-                              </Link>
-                            </h4>
-                          </header>
-                          <section className="featured-description">
-                            <p
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  post.frontmatter.description || post.excerpt,
-                              }}
-                              itemProp="description"
-                            />
-                          </section>
-                        </div>
-                      </div>
-                    </article>
-                  </li>
-                );
-              })}
-          </ol>
-        </PostGrid>
+        <div itemProp="description">{renderAst(home.htmlAst)}</div>
       </div>
     </Layout>
   );
@@ -186,7 +73,7 @@ export const pageQuery = graphql`
     home: markdownRemark(frontmatter: { templatekey: { eq: "index-page" } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      htmlAst
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -194,33 +81,6 @@ export const pageQuery = graphql`
         homequote
         description
         featuredpost
-      }
-    }
-    posts: allMarkdownRemark(
-      filter: { frontmatter: { templatekey: { eq: "blog-post" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-          featuredpost
-          featuredimage {
-            childImageSharp {
-              gatsbyImageData(
-                width: 600
-                aspectRatio: 1
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
-        }
       }
     }
   }

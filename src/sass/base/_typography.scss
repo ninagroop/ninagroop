@@ -186,6 +186,7 @@ h6 {
 .article-body {
   background-color: transparentize(#fff, 0.2);
   padding: 4vw;
+  overflow: hidden;
 }
 
 .main-heading {
@@ -203,7 +204,7 @@ h6 {
     width: 100%;
   }
   .main-heading {
-    padding: 0 0 0 15vw;
+    padding: 0 20px 0 15vw;
     max-width: 85vw;
   }
 }
@@ -213,7 +214,7 @@ h6 {
     padding: 30px 20vw;
   }
   .main-heading {
-    padding: 0 0 0 20vw;
+    padding: 0 20px 0 20vw;
     max-width: 80vw;
   }
 }
