@@ -4,7 +4,7 @@ title: About
 # ​​
 
 ![](nina-bio.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
-Words change lives—the ones we think, the ones we say, the ones said to us, and the ones we write. Words and thoughts shape us.
+Words change lives—the ones we think, the ones we say, the ones said to us, and the ones we write. 
 
 In college, a professor wrote seven words on my final paper of a half-semester, required writing course and changed the trajectory of my life. “You could be a professional writer someday” was all it took. I transferred schools and switched majors. I set out to become a journalist, but became an editor instead, because priorities change lives too. More than I wanted to be a journalist, I wanted to be a mom someday, with the flexibility to be with my kids as much as possible. Editing seemed more compatible with that goal, and it served me well.
 
