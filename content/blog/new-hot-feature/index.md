@@ -1,69 +1,9 @@
 ---
 templatekey: blog-post
-title: New Hot Feature
+title: What Now Has to Say
 date: 2021-07-31T08:27:38.749Z
-description: Fiery, just to spice things up a bit
+description: Sunrise. The now is one breath at a time.
 featuredpost: true
-featuredimage: mark-harpur-huovkwxedfy-unsplash.jpg
+featuredimage: soumyadip-sarkar-5tgejafbmki-unsplash.jpg
 ---
-
-In Praise of Fire\
-by John O’Donohue\
-From "To Bless the Space Between Us"\
-\
-I found this for Hoop Camp Fire Ceremony and read just before the Twin Firehoops Workshop\
-\
-Let us praise the grace & risk of fire.\
-\
-In the beginning\
-The Word was red,\
-And the Sound was Thunder,\
-And the Wound in the Unseen\
-Spilled forth the Red Weather of Being.\
-\
-[]()\
-In the name of Fire,\
-The Flame,\
-And the Light:\
-Praise the pure presence of Fire\
-That burns from within\
-Without thought of Time.\
-\
-The hunger of Fire has no need\
-For the reliquary of the Future;\
-It adores the eros of now,\
-Where the memory of the Earth\
-In flames that lick and drink the Air\
-Is made to release\
-\
-Its long enduring forms\
-In a powder of ashes\
-Left for the wind to decipher.\
-\
-As air intensifies the hunger of fire,\
-May the thought of death\
-Breathe new urgency\
-Into our love of life.\
-\
-As fire cleanses dross\
-May the flame of passion\
-Burn away what is false.\
-\
-As short as the time\
-From Spark to Flame,\
-So brief may the distance be\
-Between heart and being.\
-\
-May we discover\
-Beneath our fear\
-Embers of anger\
-To kindle justice.\
-\
-May courage\
-Cause our lives to flame,\
-In the name of the Fire,\
-And the flame\
-And the Light.\
-\
-© John O’Donohue. All rights reserved\
-For more about author, go to www.johnodonahue.com
+Some mornings I wake up and wish for certainty. I want life to make me promises, and instead life says, “Trust me.” I want life to be about knowing, but it insists on being about living. It’s about Now. I am continually learning to welcome the moment and let it speak. You may not be where you want to be or where you expected to be or where others expect you to be, and that is okay. Breathe. Where you are is exactly right, because Now has something to say. Now has its own light to shed and its own shadow to cast. It’s all for you. One step at a time. One breath at a time. This is your path. Trust it. Embody your life and you will live into what you long to know.
