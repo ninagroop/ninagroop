@@ -1,20 +1,15 @@
 ---
 title: About
 ---
+# ​​
 
-# ​​The Snapshot
+![](nina-bio.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
+Words change lives—the ones we think, the ones we say, the ones said to us, and the ones we write. Words and thoughts shape us.
 
-![](nina-bio.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
-I am a writer and a reader who is obsessed with wandering in the woods and listening to birds. Every person I meet says they tell me things they don’t tell other people. I joke that I am a walking confessional and empathy is my superpower. There is nothing I love more than understanding my own heart and helping others understand theirs. I also love strong coffee (with cream, no sugar), ridiculous memes, and snuggling with my cats.
+In college, a professor wrote seven words on my final paper of a half-semester, required writing course and changed the trajectory of my life. “You could be a professional writer someday” was all it took. I transferred schools and switched majors. I set out to become a journalist, but became an editor instead, because priorities change lives too. More than I wanted to be a journalist, I wanted to be a mom someday, with the flexibility to be with my kids as much as possible. Editing seemed more compatible with that goal, and it served me well.
 
-# The Big Picture
+Many years and four sons later, I am both an editor and a writer, but I see that neither is confined to words on a page. I love the art of writing, but more than that, I love the art of living. With our beliefs, hopes, and dreams, we write the story of our lives, and with our choices, we edit them. That process—the writing and the editing—goes on our whole life long. At times we may forget the power we have to write and edit, and then we may need some help—from friends and loved ones, from books, from a therapist, from a coach. Sometimes unwelcome change comes our way and edits our lives for us, and there too, we may need some assistance, imagining how to write the pages after that, reimagining a future.
 
-I have lived most of my life with alcoholics, and I am years into recovery from codependency. I’ll be living out that recovery for the rest of my life. For twenty-five years I was married to an emotionally abusive man with a hair-trigger temper who went in and out of active addiction. That marriage produced four beautiful boys and zero regret; it made me and unmade again and again until I had the courage to leave. I am who I am because of it.
+For more than two decades as an editor, I helped uncover what authors were really trying to say, refining their thoughts and words to clarify their message. As a coach, I am here to help you uncover what your heart is saying and then give you the tools to live it. 
 
-I learned afterwards that the writer’s block I experienced during my marriage wasn’t made of child raising and emotional survival. Plenty of busy parents make their living as writers, and writing often helps us survive emotionally. Instead, it was the denial I used to keep myself afloat that robbed me of my words. It’s hard to write when you’re keeping secrets from yourself.
-<div style="float:right;"><featured-products id="prod_JxZxiQjWAhhMpc"></featured-products></div>
-I have left denial and secret keeping behind. When I write, when I speak, and when I coach—and every minute in-between—I tell the truth, because the truth leads us into our own hearts and takes us places we haven’t yet imagined. Vulnerability and transparency connect us and help us find our way.
-
-I am interested in helping people uncover the truth they’re not telling themselves and understand the ways they’re participating in their sense of powerlessness. I lived for a long time in a prison of my own making, and I want to help others see their options. The only time we’re powerless is when we believe we are.
-
-Mindfulness, gratitude, and joy open doors into a future you didn’t know to dream of.
+When I am not writing, editing, coaching, or speaking, I am probably hiking, reading, or hanging with my boys or friends. I love the beach, the woods, live music, and strong coffee, preferably made with my French press. Also, I adore my cats.
