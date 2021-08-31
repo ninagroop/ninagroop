@@ -7,22 +7,22 @@ import Bag from '../images/bag.jpg';
 import { graphql } from 'gatsby';
 import { renderAst } from '../components/render-ast';
 
-const AboutPage = ({ data, ...rest }) => {
-  const about = data.about;
+const CoachingPage = ({ data, ...rest }) => {
+  const coaching = data.coaching;
   return (
     <Layout>
-      <Seo title={about.frontmatter.title} />
+      <Seo title={coaching.frontmatter.title} />
       <header>
         <h1 className="main-heading" itemProp="headline">
-          {about.frontmatter.title}
+          {coaching.frontmatter.title}
         </h1>
       </header>
-      <div className="article-body">{renderAst(about.htmlAst)}</div>
+      <div className="article-body">{renderAst(coaching.htmlAst)}</div>
     </Layout>
   );
 };
 
-export default AboutPage;
+export default CoachingPage;
 
 export const pageQuery = graphql`
   query {
@@ -31,7 +31,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    about: markdownRemark(frontmatter: { title: { eq: "About" } }) {
+    coaching: markdownRemark(frontmatter: { title: { eq: "Coaching" } }) {
       id
       htmlAst
       frontmatter {

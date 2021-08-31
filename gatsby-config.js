@@ -26,6 +26,10 @@ module.exports = {
         slug: '/about',
       },
       {
+        title: 'Coaching',
+        slug: '/coaching',
+      },
+      {
         title: 'Contact',
         slug: '/contact',
       },

@@ -96,3 +96,29 @@ collections:
               widget: image,
               required: false,
             }
+      - file: 'content/coaching/index.md'
+        name: 'coaching'
+        label: 'Coaching'
+        folder: 'content/coaching'
+        create: true
+        slug: 'index'
+        media_folder: ''
+        public_folder: ''
+        path: '{{title}}/index'
+        editor:
+          preview: false
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templatekey',
+              widget: 'hidden',
+              default: 'page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Featured Image',
+              name: 'featuredimage',
+              widget: image,
+              required: false,
+            }
