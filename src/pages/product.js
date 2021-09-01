@@ -89,7 +89,7 @@ const Product = ({ location }) => {
             <AddToCart
               selectedId={dropdownItem}
               product={item}
-              quantity={quantity}
+              __quantity={quantity}
             />
           </section>
         </ItemContain>

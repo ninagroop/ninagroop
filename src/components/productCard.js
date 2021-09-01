@@ -66,7 +66,7 @@ const ProductCard = ({ product, showPriceDropdown }) => {
         <Link className="btn" to={`/product/${product.id}`}>
           <button className="multi-item">View Item</button>
         </Link>
-        <AddToCart selectedId={dropdownItem} product={product} quantity={1} />
+        <AddToCart selectedId={dropdownItem} product={product} __quantity={1} />
       </article>
     </li>
   );

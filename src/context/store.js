@@ -20,6 +20,10 @@ const StoreProvider = ({ children }) => {
             currency
             unit_amount
             # nickname
+            recurring {
+              interval
+              interval_count
+            }
             product {
               id
               name

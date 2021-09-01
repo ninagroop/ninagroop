@@ -1,16 +1,57 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { reactLocalStorage } from 'reactjs-localstorage';
+import getStripe from '../utils/stripejs';
 import { CartContext } from '../context/cart';
 import { StoreContext } from '../context/store';
 
-const AddToCart = ({ product, selectedId }) => {
+const AddToCart = ({ product, selectedId, __quantity }) => {
   const [store] = useContext(StoreContext);
   const [cart, updateCart] = useContext(CartContext);
-  const [quantity] = useState(1);
+  const [quantity, updateQuantity] = useState(__quantity || 1);
+  const [loading, setLoading] = useState(false); // eslint-disable-line no-unused-vars
 
-  const addToCart = () => {
+  useEffect(() => {
+    updateQuantity(__quantity);
+  }, [__quantity]);
+
+  const hasRecurrence = () => {
+    return (
+      product?.prices?.map(price => price?.recurring !== null)?.indexOf(true) >
+      -1
+    );
+  };
+
+  const addToCart = async () => {
     const tempCart = [...cart];
     let itemFound = false;
+
+    // product is recurring, must immediately check out
+    if (hasRecurrence()) {
+      setLoading(true);
+
+      const stripe = await getStripe();
+      const payload = [
+        {
+          price: product?.prices?.filter(price => price?.id === selectedId)?.[0]
+            ?.id,
+          quantity: quantity,
+        },
+      ];
+
+      const { recurringError } = await stripe.redirectToCheckout({
+        mode: 'subscription',
+        lineItems: payload,
+        successUrl: `${window.location.origin}/cart?checkout=success`,
+        cancelUrl: `${window.location.origin}/cart`,
+      });
+
+      if (recurringError) {
+        console.warn('Error:', recurringError);
+        setLoading(false);
+      }
+
+      return;
+    }
 
     tempCart.forEach(el => {
       el.prices &&
@@ -41,9 +82,15 @@ const AddToCart = ({ product, selectedId }) => {
   };
 
   return (
-    <button className="button purchase" onClick={addToCart}>
-      Add to Cart
-    </button>
+    <>
+      <button
+        disabled={loading}
+        className="button purchase"
+        onClick={addToCart}
+      >
+        {hasRecurrence() ? <>Buy Now</> : <>Add to Cart</>}
+      </button>
+    </>
   );
 };
 
