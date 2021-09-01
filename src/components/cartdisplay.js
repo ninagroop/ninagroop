@@ -12,6 +12,7 @@ import {
   ProductImg,
   Payment,
 } from './cartdisplay-styles';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const VariantRows = ({ variants, removeFromCart }) =>
   variants.map(variant => {
@@ -144,12 +145,20 @@ const CartDisplay = () => {
               return null;
             }
             // there are multiple price variants
+            const productImg = item?.localFiles?.[0];
             if (item?.prices?.length > 1) {
               return (
                 <React.Fragment key={item.id}>
                   <TR>
                     <TD>
-                      <ProductImg src={item.images[0]} alt={item.name} />
+                      {productImg && (
+                        <ProductImg>
+                          <GatsbyImage
+                            image={getImage(productImg)}
+                            alt={item.name}
+                          />
+                        </ProductImg>
+                      )}
                       <ProductName>{item.name}</ProductName>
                     </TD>
                     <TD></TD>
@@ -169,7 +178,14 @@ const CartDisplay = () => {
                 <React.Fragment key={item.id}>
                   <TR key={item.id}>
                     <TD>
-                      <ProductImg src={item.images[0]} alt={item.name} />
+                      {productImg && (
+                        <ProductImg>
+                          <GatsbyImage
+                            image={getImage(productImg)}
+                            alt={item.name}
+                          />
+                        </ProductImg>
+                      )}
                       <ProductName>{item.name}</ProductName>
                     </TD>
                     <TD>

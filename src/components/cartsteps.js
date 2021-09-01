@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/cart';
 import { CartUIContext } from '../context/cartUI';
-import { Section, H2, H4 } from './cartsteps-styles';
+import { Section, h2, h4 } from './cartsteps-styles';
 
 const CartSteps = () => {
   const [cartUIStatus] = useContext(CartUIContext);
@@ -9,28 +9,40 @@ const CartSteps = () => {
   return (
     <Section>
       <div className="shopping">
-        <H2
+        <h2
           className={
-            cartUIStatus === 'idle' && getTotalCount() === 0 ? 'active' : null
+            cartUIStatus === 'idle' && getTotalCount() === 0
+              ? 'active checkout-circle'
+              : 'checkout-circle'
           }
         >
           01
-        </H2>
-        <H4>Shopping Cart</H4>
+        </h2>
+        <h4 className="checkout-title">Shopping Cart</h4>
       </div>
       <div className="checkout">
-        <H2
+        <h2
           className={
-            cartUIStatus === 'idle' && getTotalCount() > 0 ? 'active' : null
+            cartUIStatus === 'idle' && getTotalCount() > 0
+              ? 'active checkout-circle'
+              : 'checkout-circle'
           }
         >
           02
-        </H2>
-        <H4>Check out</H4>
+        </h2>
+        <h4 className="checkout-title">Check out</h4>
       </div>
       <div className="order">
-        <H2 className={cartUIStatus === 'success' ? 'active' : null}>03</H2>
-        <H4>Order Complete</H4>
+        <h2
+          className={
+            cartUIStatus === 'success'
+              ? 'active checkout-circle'
+              : 'checkout-circle'
+          }
+        >
+          03
+        </h2>
+        <h4 className="checkout-title">Order Complete</h4>
       </div>
     </Section>
   );

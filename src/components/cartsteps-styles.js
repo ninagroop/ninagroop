@@ -4,11 +4,12 @@ export const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 100px;
+  grid-column-gap: 2vw;
   grid-row-gap: 0px;
   text-align: center;
+  align-items: center;
   width: 80%;
-  margin: 20px auto 0;
+  margin: 5vw auto 0;
 
   div {
     display: flex;
@@ -18,25 +19,14 @@ export const Section = styled.section`
     @media screen and (max-width: 600px) {
       grid-column-gap: 30px !important;
     }
+
+    @media screen and (max-width: 500px) {
+      &:first-child {
+        transform: scale(0.7);
+      }
+      &:last-child {
+        transform: scale(0.7);
+      }
+    }
   }
-`;
-
-export const H2 = styled.h2`
-  width: 80px;
-  height: 80px;
-  border-radius: 1000px;
-  border: 1px solid #ccc;
-  padding-top: 21px;
-  color: #555;
-
-  &.active {
-    background: #d96528;
-    border: 1px solid #d96528;
-    color: white;
-  }
-`;
-
-export const H4 = styled.h4`
-  margin-top: 20px;
-  color: #555;
 `;

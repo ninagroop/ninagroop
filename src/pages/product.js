@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { StoreContext } from '../context/store';
@@ -41,7 +42,7 @@ const Product = ({ location }) => {
       <div className="article-body">
         <ItemContain>
           <section className="img">
-            <img src={item?.images?.[0]} alt=""></img>
+            <GatsbyImage image={getImage(item.localFiles[0])} alt={item.name} />
           </section>
           <section className="product-info">
             <h1>{item.name}</h1>

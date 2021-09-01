@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const ItemContain = styled.section`
-  margin-left: 8%;
-  width: 80%;
+  width: 100%;
   display: grid;
   justify-content: space-around;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5vw;
 
   select {
     color: #d96528;
@@ -30,7 +30,7 @@ export const QuantityInput = styled.input`
 export const UpdateNumButton = styled.button`
   background: black;
   border-color: black;
-  color: white;
-  font-size: 20px;
-  width: 45px;
+  color: white !important;
+  font-size: 1rem;
+  font-weight: normal;
 `;

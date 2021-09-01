@@ -3,13 +3,13 @@ import { TransitionGroup } from 'react-transition-group';
 
 export const StyledGroup = styled(TransitionGroup)`
   height: 100%;
-  width: 100% !important;
+  width: 100%;
 `;
 
 export const Item = styled.div`
   max-height: 500px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   flex-direction: column;
   margin: 20px 0;

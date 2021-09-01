@@ -34,6 +34,10 @@ module.exports = {
         slug: '/contact',
       },
       {
+        title: 'Store',
+        slug: '/store',
+      },
+      {
         title: 'Cart',
         slug: '/cart',
         showCartIndicator: true,

@@ -76,6 +76,9 @@ export const FeatureGridStyled = styled.div`
     .featured-block {
       grid-template-columns: 1fr;
     }
+    .blank-tile-wrapper {
+      min-height: calc(100vw - 4vw);
+    }
   }
 `;
 

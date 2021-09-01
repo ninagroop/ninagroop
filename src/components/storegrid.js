@@ -3,6 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import { formatPrice } from '../helpers/currency-filter';
 import { StyledGroup, Item, Aside } from './storegrid-styles';
 import PropTypes from 'prop-types';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const StoreGrid = ({ products }) => {
   const min = 0;
@@ -30,15 +31,19 @@ const StoreGrid = ({ products }) => {
           <CSSTransition key={item.id} timeout={100} classNames="items">
             <Item>
               <div className="img-contain">
-                <a href={`product/${item.id}`}>
-                  <img src={item?.images?.[0]} alt=""></img>
+                <a className="no-text" href={`/product/${item.id}`}>
+                  <GatsbyImage
+                    image={getImage(item.localFiles[0])}
+                    alt={item.name}
+                  />
                 </a>
               </div>
+              <br />
               <h3>{item.name}</h3>
               <h4 className="price">
                 {formatPrice(item?.prices?.[0]?.unit_amount)}
               </h4>
-              <a href={`product/${item.id}`}>
+              <a className="no-text" href={`/product/${item.id}`}>
                 <button className="multi-item">View Item</button>
               </a>
             </Item>

@@ -146,16 +146,17 @@ button.purchase {
   font-size: 16px;
   border: none;
   &:hover {
-    background: #c14103;
+    background: lighten(saturate($brandprimary, 80%), 13%);
   }
 }
 
 button.pay-with-stripe {
   background: black;
+  color: white !important;
   font-size: 16px;
   border: none;
   &:hover {
-    background: #c14103;
+    background: $brandprimary;
   }
 
   &:disabled {
@@ -168,6 +169,28 @@ button.pay-with-stripe {
   font-size: 20px;
   margin: 5px 0;
   font-weight: normal;
+}
+
+.checkout-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 1000px;
+  border: 1px solid #ccc;
+  padding-top: 21px;
+  color: #555;
+  font-size: 1.5rem;
+
+  &.active {
+    background: $brandprimary;
+    border: 1px solid $brandprimary;
+    color: white;
+  }
+}
+
+.checkout-title {
+  margin-top: 20px;
+  color: #555;
+  font-size: 1.2rem;
 }
 
 .remove {
@@ -199,16 +222,21 @@ input {
 /*------------  Store Grid   -----------*/
 
 .storegrid {
-  width: 95%;
+  width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 0px;
+  h3 {
+    font-size: inherit;
+    font-weight: bold;
+    text-transform: none;
+    text-align: center;
+  }
 }
 
 .img-contain {
-  max-height: 200px;
   display: flex;
   align-content: center;
   align-items: center;

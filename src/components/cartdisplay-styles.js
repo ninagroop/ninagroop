@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-export const ProductImg = styled.img`
+export const ProductImg = styled.div`
   float: left;
   margin-right: 15px;
   height: 50px;
+  width: 50px;
 `;
 
 export const Table = styled.table`
@@ -29,6 +30,9 @@ export const TD = styled.td`
 `;
 
 export const ProductName = styled.h3`
+  font-size: inherit;
+  text-transform: none;
+  font-weight: bold;
   padding-top: 12px;
   text-align: left;
 `;
