@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
-import { FeatureGridStyled } from '../components/postGrid';
+import { FeatureGridStyled, Tile } from '../components/postGrid';
 import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
@@ -49,16 +49,11 @@ const BlogIndex = ({ data, location }) => {
               const image = getImage(post?.frontmatter?.featuredimage);
               const title = post.frontmatter.title || post.fields.slug;
               return (
-                <li
+                <Tile
                   key={post.fields.slug}
-                  style={{
-                    backgroundColor: image
-                      ? 'none'
-                      : stringToColor(post?.fields?.slug),
-                  }}
-                  className={`${
-                    !image ? 'blank-tile-item' : 'featured-post-wrapper'
-                  }`}
+                  backgroundColor={
+                    !image ? stringToColor(post?.fields?.slug) : null
+                  }
                 >
                   <Link
                     className={`${!image ? 'blank-tile-wrapper' : ''}`}
@@ -89,7 +84,7 @@ const BlogIndex = ({ data, location }) => {
                       </div>
                     </article>
                   </Link>
-                </li>
+                </Tile>
               );
             })}
           </ol>

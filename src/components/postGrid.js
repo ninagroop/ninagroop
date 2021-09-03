@@ -23,8 +23,6 @@ export const FeatureGridStyled = styled.div`
     position: relative;
     padding-left: 0;
   }
-  .blank-tile-item {
-  }
   .blank-tile-item,
   .featured-post-wrapper {
     position: relative;
@@ -32,14 +30,6 @@ export const FeatureGridStyled = styled.div`
     &:hover {
       opacity: 0.7;
     }
-  }
-  .blank-tile-wrapper {
-    display: block;
-    width: 100%;
-    min-width: 100%;
-    height: 100%;
-    min-height: 100%;
-    border-bottom: none;
   }
   .featured-footer {
     position: absolute;
@@ -94,6 +84,35 @@ export const FeatureGridStyled = styled.div`
     .blank-tile-wrapper {
       min-height: calc(100vw - 4vw);
     }
+  }
+`;
+
+export const Tile = styled.li`
+  position: relative;
+  padding-left: 0;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    opacity: 0.6;
+    background-color: ${props => props?.backgroundColor ?? 'none'};
+  }
+  & > a {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: block;
+    border-bottom: none;
+    position: ${props => (props?.backgroundColor ? 'absolute' : 'inherit')};
   }
 `;
 
