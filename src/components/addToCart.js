@@ -34,7 +34,7 @@ const AddToCart = ({ product, selectedId, __quantity }) => {
         {
           price: product?.prices?.filter(price => price?.id === selectedId)?.[0]
             ?.id,
-          quantity: quantity,
+          quantity: parseInt(quantity),
         },
       ];
 

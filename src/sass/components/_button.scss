@@ -6,10 +6,7 @@ input[type='button'],
 button,
 .button {
   @include vendor('appearance', 'none');
-  @include vendor(
-    'transition',
-    'background-color #{_duration(transition)} ease-in-out'
-  );
+  @include vendor('transition', 'background-color #{_duration(transition)}');
   background-color: transparent;
   border-radius: _size(border-radius);
   border: 0;
@@ -18,12 +15,12 @@ button,
   cursor: pointer;
   display: inline-block;
   font-family: _font(family-heading);
-  font-size: 0.8em;
+  font-size: 1rem;
   font-weight: _font(weight-heading-bold);
-  height: 3.75em;
+  height: 3.2rem;
   letter-spacing: _font(kern-heading);
-  line-height: 3.75em;
-  padding: 0 2.25em;
+  line-height: 3.2rem;
+  padding: 0 1.2rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;

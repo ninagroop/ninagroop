@@ -16,7 +16,6 @@ export const Featured = styled.section`
 
     select {
       color: #d96528;
-      padding: 10px;
       margin: 10px 0;
       font-weight: bold;
     }

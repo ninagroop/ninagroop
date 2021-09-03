@@ -168,7 +168,8 @@ button.pay-with-stripe {
   color: $brandprimary;
   font-size: 20px;
   margin: 5px 0;
-  font-weight: normal;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .checkout-circle {
@@ -233,6 +234,7 @@ input {
     font-weight: bold;
     text-transform: none;
     text-align: center;
+    margin: 0;
   }
 }
 

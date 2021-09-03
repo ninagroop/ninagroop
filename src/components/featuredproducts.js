@@ -4,28 +4,55 @@ import { Featured } from './featuredproducts-styles';
 import { FeatureGridStyled } from './postGrid';
 import ProductCard from './productCard';
 
-const FeaturedProducts = ({ featured = true, count = 3, id = null }) => {
+const FeaturedProducts = ({
+  featured = true,
+  count = 3,
+  id = null,
+  filter = null,
+  heading = null,
+}) => {
   const [store, updateStore, getStoreArray] = useContext(StoreContext); // eslint-disable-line no-unused-vars
+  const pageProductId = window?.location?.pathname?.split('/')?.[2];
+
   // uses stripe metadata key `featured`
   const featuredData = getStoreArray()
     .filter(product => {
+      // never show the current product
+      if (pageProductId === product?.id) {
+        return false;
+      }
       if (featured && product?.metadata?.featured) {
         return true;
       }
       if (id && product.id === id) {
         return true;
       }
-      return false;
+      if (filter) {
+        let found = false;
+        Object.keys(filter)?.forEach(filterKey => {
+          if (product?.metadata?.[filterKey] === filter[filterKey]) {
+            found = true;
+          }
+        });
+        if (found) return true;
+      }
     })
     ?.slice(0, count);
   return (
-    <FeatureGridStyled count={id ? 1 : count}>
-      <ol className="featured-block">
-        {featuredData.map(product => (
-          <ProductCard key={product?.id} showPriceDropdown product={product} />
-        ))}
-      </ol>
-    </FeatureGridStyled>
+    <>
+      {heading}
+      <FeatureGridStyled count={id ? 1 : count}>
+        <ol className="featured-block">
+          {featuredData.map(product => (
+            <ProductCard
+              key={product?.id}
+              showPriceDropdown
+              product={product}
+            />
+          ))}
+        </ol>
+      </FeatureGridStyled>
+    </>
   );
 };
 

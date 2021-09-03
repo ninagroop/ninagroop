@@ -52,7 +52,7 @@ export const FeatureGridStyled = styled.div`
       rgba(255, 255, 255, 0.7) 60%,
       rgba(255, 255, 255, 0.7) 100%
     );
-    padding: 10px 10px 20px;
+    padding: 10px;
     h4 {
       margin: 0;
       a {
@@ -66,6 +66,21 @@ export const FeatureGridStyled = styled.div`
     display: block;
     height: 1px;
     overflow: hidden;
+  }
+  select {
+    margin: 20px 0 0;
+  }
+  .footer-actions {
+    margin-top: 20px;
+    display: flex;
+    & > a,
+    & > button {
+      flex: 1 1;
+      margin: 5px;
+    }
+    a > button {
+      width: 100%;
+    }
   }
   @media screen and (max-width: 800px) {
     .featured-block {

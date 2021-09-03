@@ -16,7 +16,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const VariantRows = ({ variants, removeFromCart }) =>
   variants.map(variant => {
-    if (variant.quantity < 1) return null;
+    if (!(variant.quantity > 0)) return null;
     return (
       <TR key={variant.id}>
         <TD className="variant">{variant?.nickname}</TD>

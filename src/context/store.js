@@ -19,7 +19,7 @@ const StoreProvider = ({ children }) => {
             active
             currency
             unit_amount
-            # nickname
+            nickname
             recurring {
               interval
               interval_count
@@ -37,6 +37,8 @@ const StoreProvider = ({ children }) => {
                 # gender
                 # color
                 featured
+                hidequantity
+                category
               }
               localFiles {
                 id
@@ -68,8 +70,6 @@ const StoreProvider = ({ children }) => {
     }
     products[product.id].prices.push(Object.assign({}, price));
   }
-
-  console.log('~data', data);
 
   useEffect(() => {
     updateStore(products);

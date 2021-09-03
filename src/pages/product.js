@@ -46,6 +46,17 @@ const Product = ({ location }) => {
           </section>
           <section className="product-info">
             <h1>{item.name}</h1>
+            {item?.metadata?.category === 'coaching' && (
+              <>
+                (Text from Nina about encouraging folks to sign up for a free
+                consult)
+                <br />
+                [[ link to calend.ly ]]
+              </>
+            )}
+            <br />
+            <br />
+            <p>{item.description}</p>
             {item?.prices?.[0]?.length > 1 ? (
               <h4 className="price">
                 {formatPrice(item?.prices[0].unit_amount)}
@@ -59,33 +70,36 @@ const Product = ({ location }) => {
                     onChange={onSelectChange}
                     name="priceSelect"
                   >
-                    {item.prices.map(price => (
-                      <option key={price.id} value={price.id}>
-                        {formatPrice(price.unit_amount, price.currency)}{' '}
-                        {price.nickname}
-                      </option>
-                    ))}
+                    {item.prices.map(price => {
+                      return (
+                        <option key={price.id} value={price.id}>
+                          {price.nickname ? price.nickname + ' - ' : ''}
+                          {formatPrice(price.unit_amount, price.currency)}{' '}
+                        </option>
+                      );
+                    })}
                   </select>
                 )}
               </>
             )}
-            <p>{item.description}</p>
-            <p style={{ display: 'flex' }}>
-              <UpdateNumButton onClick={() => updateQuantity(quantity - 1)}>
-                -
-              </UpdateNumButton>
-              <QuantityInput
-                type="number"
-                value={quantity}
-                // eslint-disable-next-line jsx-a11y/no-onchange
-                onChange={event => updateQuantity(event.target.value)}
-              />
-              <UpdateNumButton onClick={() => updateQuantity(quantity + 1)}>
-                +
-              </UpdateNumButton>
-            </p>
-
             <br />
+            {item?.metadata?.hidequantity !== 'true' && (
+              <p style={{ display: 'flex' }}>
+                <UpdateNumButton onClick={() => updateQuantity(quantity - 1)}>
+                  -
+                </UpdateNumButton>
+                <QuantityInput
+                  type="number"
+                  value={quantity}
+                  // eslint-disable-next-line jsx-a11y/no-onchange
+                  onChange={event => updateQuantity(event.target.value)}
+                />
+                <UpdateNumButton onClick={() => updateQuantity(quantity + 1)}>
+                  +
+                </UpdateNumButton>
+              </p>
+            )}
+
             <AddToCart
               selectedId={dropdownItem}
               product={item}
@@ -93,8 +107,14 @@ const Product = ({ location }) => {
             />
           </section>
         </ItemContain>
+
         <hr />
-        <FeaturedProducts />
+
+        <FeaturedProducts
+          heading={<h3>Related Products</h3>}
+          featured={false}
+          filter={{ category: item?.metadata?.category }}
+        />
       </div>
     </Layout>
   );

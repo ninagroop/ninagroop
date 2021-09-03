@@ -9,7 +9,6 @@ export const ItemContain = styled.section`
 
   select {
     color: #d96528;
-    padding: 10px;
     margin: 10px 0;
     font-weight: bold;
   }
@@ -33,4 +32,7 @@ export const UpdateNumButton = styled.button`
   color: white !important;
   font-size: 1rem;
   font-weight: normal;
+  &:hover {
+    color: black !important;
+  }
 `;

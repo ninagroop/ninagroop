@@ -36,8 +36,6 @@ const ProductCard = ({ product, showPriceDropdown }) => {
           </Link>
         </div>
 
-        <br />
-
         {product?.prices?.length === 1 && (
           <h4>
             {formatPrice(
@@ -56,17 +54,23 @@ const ProductCard = ({ product, showPriceDropdown }) => {
           >
             {product.prices.map(price => (
               <option key={price.id} value={price.id}>
+                {price.nickname ? price.nickname + ' - ' : ''}
                 {formatPrice(price.unit_amount, price.currency)}{' '}
-                {price.nickname}
               </option>
             ))}
           </select>
         )}
 
-        <Link className="btn" to={`/product/${product.id}`}>
-          <button className="multi-item">View Item</button>
-        </Link>
-        <AddToCart selectedId={dropdownItem} product={product} __quantity={1} />
+        <div className="footer-actions">
+          <Link className="btn" to={`/product/${product.id}`}>
+            <button className="multi-item">View Item</button>
+          </Link>
+          <AddToCart
+            selectedId={dropdownItem}
+            product={product}
+            __quantity={1}
+          />
+        </div>
       </article>
     </li>
   );
