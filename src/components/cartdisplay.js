@@ -26,7 +26,7 @@ const VariantRows = ({ variants, removeFromCart }) =>
         <TD>
           <strong>{variant.quantity}</strong>
         </TD>
-        <TD>{formatPrice(variant?.unit_amount)}</TD>
+        <TD>{formatPrice(variant?.unit_amount * variant.quantity)}</TD>
         <TD
           className="remove"
           onClick={e => {
@@ -34,7 +34,7 @@ const VariantRows = ({ variants, removeFromCart }) =>
           }}
         >
           {' '}
-          Remove
+          <a onClick={() => false}>Remove</a>
         </TD>
       </TR>
     );
@@ -113,8 +113,8 @@ const CartDisplay = () => {
       <section className="center">
         <p>Your cart is empty, fill it up!</p>
         <button className="pay-with-stripe">
-          <Link style={{ color: 'white' }} to="/">
-            Back Home
+          <Link style={{ color: 'white' }} to="/store">
+            Back to Store
           </Link>
         </button>
       </section>

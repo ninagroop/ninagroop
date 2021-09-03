@@ -11,12 +11,14 @@ import {
 import { formatPrice } from '../helpers/currency-filter';
 import FeaturedProducts from '../components/featuredproducts';
 import AddToCart from '../components/addToCart';
+import { Link } from 'gatsby';
 
 const Product = ({ location }) => {
   const [item, updateItem] = useState({});
   const [store] = useContext(StoreContext);
   const [quantity, updateQuantity] = useState(1);
   const [dropdownItem, updateDropdownItem] = useState(item?.prices?.[0]?.id);
+  const [showCheckoutLink, updateShowCheckoutLink] = useState(false);
 
   useEffect(() => {
     const id = location.pathname.split('/')[2];
@@ -100,7 +102,18 @@ const Product = ({ location }) => {
               </p>
             )}
 
+            {showCheckoutLink && (
+              <>
+                <Link className="btn" to={`/cart`}>
+                  Added to cart. Checkout now? &rarr;
+                </Link>
+                <br />
+                <br />
+              </>
+            )}
+
             <AddToCart
+              onClick={() => updateShowCheckoutLink(true)}
               selectedId={dropdownItem}
               product={item}
               __quantity={quantity}

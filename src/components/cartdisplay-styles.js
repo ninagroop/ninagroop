@@ -35,6 +35,7 @@ export const ProductName = styled.h3`
   font-weight: bold;
   padding-top: 12px;
   text-align: left;
+  letter-spacing: 0;
 `;
 
 export const Payment = styled.section`

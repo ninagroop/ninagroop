@@ -4,7 +4,7 @@ import getStripe from '../utils/stripejs';
 import { CartContext } from '../context/cart';
 import { StoreContext } from '../context/store';
 
-const AddToCart = ({ product, selectedId, __quantity }) => {
+const AddToCart = ({ product, selectedId, onClick, __quantity }) => {
   const [store] = useContext(StoreContext);
   const [cart, updateCart] = useContext(CartContext);
   const [quantity, updateQuantity] = useState(__quantity || 1);
@@ -86,7 +86,10 @@ const AddToCart = ({ product, selectedId, __quantity }) => {
       <button
         disabled={loading}
         className="button purchase"
-        onClick={addToCart}
+        onClick={() => {
+          addToCart();
+          if (onClick) onClick();
+        }}
       >
         {hasRecurrence() ? <>Buy Now</> : <>Add to Cart</>}
       </button>

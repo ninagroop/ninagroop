@@ -6,7 +6,6 @@ import SEO from '../components/seo';
 import CartSteps from '../components/cartsteps';
 import CartDisplay from '../components/cartdisplay';
 import { CartUIContext, CartUIProvider } from '../context/cartUI';
-import SalesBoxes from '../components/salesboxes';
 import { CartContext } from '../context/cart';
 
 const Success = styled.section`
@@ -59,8 +58,6 @@ const Page = ({ location }) => {
             </p>
           </section>
         ) : null}
-
-        <SalesBoxes />
       </div>
     </>
   );
