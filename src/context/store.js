@@ -28,10 +28,6 @@ const StoreProvider = ({ children }) => {
               id
               name
               description
-              # @TODO: get local download of stripe images working
-              # localFiles {
-              #   id
-              # }
               metadata {
                 # @TODO: call out explicit key enums in README
                 # gender

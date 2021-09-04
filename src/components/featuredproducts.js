@@ -12,7 +12,11 @@ const FeaturedProducts = ({
   heading = null,
 }) => {
   const [store, updateStore, getStoreArray] = useContext(StoreContext); // eslint-disable-line no-unused-vars
-  const pageProductId = window?.location?.pathname?.split('/')?.[2];
+
+  let pageProductId;
+  if (typeof window !== 'undefined') {
+    pageProductId = window?.location?.pathname?.split('/')?.[2];
+  }
 
   // uses stripe metadata key `featured`
   const featuredData = getStoreArray()
