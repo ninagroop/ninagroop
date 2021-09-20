@@ -8,9 +8,9 @@ homequote: All of creation and your very own life are a sacred text that never
   unfailing as ocean waves.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 ---
-## Life Coaching to Help You Live a Life of Joy & Purpose
+## Do you want to live with joy & purpose?
 
-Every day we are writing the story of our lives—with our beliefs, hopes, dreams, and choices. At times we forget our power to write and edit, and then we may need some help to reconnect us to the truth, and to our own hearts. 
+Every day we use our beliefs, hopes, dreams, and choices to write the story of our lives. At times we forget the power we hold to write and edit and our own story, and then we may need some help to reconnect us to the truth, and to our own hearts. 
 
 The good news is that your past doesn’t dictate or even predict your future. It’s never too late to encounter your heart and renew your life to live with joy and purpose.
 
