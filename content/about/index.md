@@ -12,4 +12,4 @@ Many years and four sons later, I am both an editor and a writer, but I see that
 
 For more than two decades as an editor, I helped uncover what authors were really trying to say, refining their thoughts and words to clarify their message. [As a coach](/coaching), I will help you uncover what your heart is saying and then provide you the tools to live it.
 
-When I am not writing, editing, [coaching](/coaching), or speaking, I am probably hiking, reading, or spending time with my boys or friends. I love the beach, the woods, live music, and strong coffee, preferably made with my French press. Also, I adore my cats.
+When I am not writing, editing, [coaching](/coaching), or speaking, I am probably hiking, reading, or spending time with my boys or friends. I love the beach, the woods, live music, and strong coffee. Also, I adore my cats.
