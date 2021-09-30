@@ -12,9 +12,9 @@ featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 
 Every day we use our beliefs, hopes, dreams, and choices to write the story of our lives. But sometimes we forget the power we hold to write and edit our own story, and then we may need some help to reconnect us to the truth—and to our own hearts. 
 
-The good news is you always have the power to write a new future. Your past doesn’t dictate or even predict it. Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
+You always have the power to write a new future. Your past doesn’t dictate or even predict it. Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
 
-I’m a writer, editor, and life coach, and these three vocations go hand in hand. If you’re stuck, I’m here to help you uncover your hopes and dreams, see the possibilities, and write your next pages.
+Whether you're facing a major life transition or you're feeling stuck where you are, I’m here to help you uncover your hopes and dreams, see the possibilities, and write your next pages.
 
 ## Featured Blog Posts
 
