@@ -8,7 +8,7 @@ homequote: All of creation and your very own life are a sacred text that never
   unfailing as ocean waves.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 ---
-## Do you want to live with more joy and purpose?
+## Need help with your next chapter?
 
 Every day we use our beliefs, hopes, dreams, and choices to write the story of our lives. But sometimes we forget the power we hold to write and edit our own story, and then we may need some help to reconnect us to the truth—and to our own hearts. 
 
