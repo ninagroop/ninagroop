@@ -6,12 +6,12 @@ featuredimage: 1j1a6020.jpg
 
 * Do you feel stuck—in a job, in a toxic relationship, in unhealthy habits, or in negative thought patterns?
 * Do you feel powerless—in the workplace, in family dynamics, in the ability to make your life what you want it to be?
-* Do you feel lost—like you don't know what's next?
+* Do you feel lost and overwhelmed—like you don't know what's next or how to make sense of where you are?
 * Do you want to live with greater joy and purpose?
 * Do you want to encounter your authentic self and uncover your voice and dreams?
 
-If you answered yes to any of these questions, then coaching IS for you. Together we can turn the page and help you find the power to write your next chapter. 
+If you answered yes to any of these questions, then coaching IS for you. 
 
-Schedule your free, no-obligation introductory session to discover if coaching is right for you.
+Schedule your free, no-obligation introductory session to learn how we can work together to turn the page and help you write your next chapter.
 
 <div style="float:right;"><featured-products id="prod_JxZxiQjWAhhMpc"></featured-products></div>
