@@ -11,7 +11,7 @@ featuredimage: 1j1a6020.jpg
 * Do you want to live with greater joy and purpose?
 * Do you want to encounter your authentic self and uncover your voice and dreams?
 
-If you answered yes to any of these questions, then coaching IS for you. 
+If you answered yes to any of these questions, then coaching IS for you. Find your power. Live with joy. 
 
 Schedule your free, no-obligation introductory session to learn how we can work together to turn the page and help you write your next chapter.
 
