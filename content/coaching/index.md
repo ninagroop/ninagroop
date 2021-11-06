@@ -17,6 +17,4 @@ Schedule your free, no-obligation introductory session to learn how we can work 
 
 <div style="float:right;"><featured-products id="prod_JxZxiQjWAhhMpc"></featured-products></div>
 
-
-
-![](pxl_20211025_201814944.jpg)
+![](1j1a6020.jpg)
