@@ -12,7 +12,9 @@ featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 
 You always have the power to write a new future. Your past doesn’t dictate or even predict it. Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
 
-Whether you're facing a major life transition or you're feeling stuck where you are, I’m here to help you uncover your hopes and dreams, see the possibilities, and write your next pages.
+For more than two decades as an editor, I helped uncover what authors were really trying to say, refining their thoughts and words to clarify their message. [As a coach](/coaching), I will help you uncover what your heart is saying and then provide you the tools to live it.
+
+Whether you're facing a major life transition or you're feeling stuck where you are, I’m here to help you connect with your hopes and dreams, see the possibilities, and write your next pages.
 
 ## Featured Blog Posts
 
