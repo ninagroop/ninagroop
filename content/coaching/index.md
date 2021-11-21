@@ -4,6 +4,8 @@ featuredimage: 1j1a6020.jpg
 ---
 **Is Coaching for You?**
 
+![](1j1a6020.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
+
 * Do you feel stuck—in a job, in a toxic relationship, in unhealthy habits, or in negative thought patterns?
 * Do you feel powerless—in the workplace, in family dynamics, in the ability to make your life what you want it to be?
 * Do you feel lost and overwhelmed—like you don't know what's next or how to make sense of where you are?
@@ -17,4 +19,4 @@ Schedule your free, no-obligation introductory session to learn how we can work 
 
 <div style="float:right;"><featured-products id="prod_JxZxiQjWAhhMpc"></featured-products></div>
 
-![](1j1a6020.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
+
