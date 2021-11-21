@@ -17,4 +17,4 @@ Schedule your free, no-obligation introductory session to learn how we can work 
 
 <div style="float:right;"><featured-products id="prod_JxZxiQjWAhhMpc"></featured-products></div>
 
-![](1j1a6020.jpg)
+![](1j1a6020.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
