@@ -43,6 +43,7 @@ button,
 
   &.primary {
     background-color: _palette(accent);
+    color: white !important;
     box-shadow: none;
 
     &:hover {
