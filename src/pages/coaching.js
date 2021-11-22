@@ -6,6 +6,7 @@ import Shoe from '../images/shoe.jpg';
 import Bag from '../images/bag.jpg';
 import { graphql } from 'gatsby';
 import { renderAst } from '../components/render-ast';
+import { InlineWidget } from 'react-calendly';
 
 const CoachingPage = ({ data, ...rest }) => {
   const coaching = data.coaching;
@@ -17,7 +18,15 @@ const CoachingPage = ({ data, ...rest }) => {
           {coaching.frontmatter.title}
         </h1>
       </header>
-      <div className="article-body">{renderAst(coaching.htmlAst)}</div>
+      <div className="article-body">
+        {renderAst(coaching.htmlAst)}
+        <InlineWidget
+          styles={{
+            height: '500px',
+          }}
+          url="https://calendly.com/ninagroop"
+        />
+      </div>
     </Layout>
   );
 };
