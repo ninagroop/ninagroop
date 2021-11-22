@@ -15,7 +15,7 @@ export const FeatureGridStyled = styled.div`
       }},
       1fr
     );
-    grid-template-rows: 1fr;
+    grid-auto-rows: auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
   }
@@ -163,7 +163,9 @@ const PostGrid = ({ count = 3, featured = true, slug }) => {
             if (idx > count - 1) return null;
             const image = getImage(post?.frontmatter?.featuredimage);
             const title = post.frontmatter.title || post.fields.slug;
-
+            if (!image) {
+              return null;
+            }
             return (
               <li key={post.fields.slug}>
                 <article
@@ -173,7 +175,7 @@ const PostGrid = ({ count = 3, featured = true, slug }) => {
                 >
                   <div className="featured-post-wrapper">
                     <Link to={post.fields.slug} itemProp="url">
-                      {image && <GatsbyImage image={image} alt={title} />}
+                      <GatsbyImage image={image} alt={title} />
                       <div className="featured-footer">
                         <header>
                           <h4>

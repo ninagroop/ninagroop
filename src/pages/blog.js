@@ -48,15 +48,16 @@ const BlogIndex = ({ data, location }) => {
             {posts.map(post => {
               const image = getImage(post?.frontmatter?.featuredimage);
               const title = post.frontmatter.title || post.fields.slug;
+              if (!image) return null;
               return (
                 <Tile
                   key={post.fields.slug}
-                  backgroundColor={
-                    !image ? stringToColor(post?.fields?.slug) : null
-                  }
+                  // backgroundColor={
+                  //   !image ? stringToColor(post?.fields?.slug) : null
+                  // }
                 >
                   <Link
-                    className={`${!image ? 'blank-tile-wrapper' : ''}`}
+                    // className={`${!image ? 'blank-tile-wrapper' : ''}`}
                     to={post.fields.slug}
                     itemProp="url"
                   >
@@ -65,7 +66,7 @@ const BlogIndex = ({ data, location }) => {
                       itemScope
                       itemType="http://schema.org/Article"
                     >
-                      {image ? <GatsbyImage image={image} alt={title} /> : null}
+                      <GatsbyImage image={image} alt={title} />
                       <div className="featured-footer">
                         <header>
                           <h4>
