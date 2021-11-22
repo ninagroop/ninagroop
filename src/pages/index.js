@@ -11,6 +11,7 @@ import Bio from '../components/bio';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { renderAst } from '../components/render-ast';
+import { openPopupWidget } from 'react-calendly';
 
 const Tagline = styled.h2`
   text-align: center;

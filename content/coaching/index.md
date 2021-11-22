@@ -19,3 +19,5 @@ If you answered yes to any of these questions, then coaching IS for you. Gain in
 Schedule your free, no-obligation introductory session to learn how we can work together to turn the page and help you write your next chapter.
 
 <!-- <div style="float:right;"><featured-products id="prod_JxZxiQjWAhhMpc"></featured-products></div> -->
+
+<calendly-button align="left">Schedule Now</calendly-button>
