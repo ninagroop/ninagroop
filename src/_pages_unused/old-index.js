@@ -7,8 +7,8 @@ import Shoe from '../images/shoe.jpg';
 import Bag from '../images/bag.jpg';
 import FeaturedProducts from '../components/featuredproducts';
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Home" />
     <FeaturedProducts />
     <Textlockup

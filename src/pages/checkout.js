@@ -65,7 +65,7 @@ const Page = ({ location }) => {
 
 const Cart = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Cart" />
       <CartUIProvider>
         <Page location={location} />

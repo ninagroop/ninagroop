@@ -38,8 +38,8 @@ module.exports = {
         slug: '/store',
       },
       {
-        title: 'Cart',
-        slug: '/cart',
+        title: 'Checkout',
+        slug: '/checkout',
         showCartIndicator: true,
       },
     ],

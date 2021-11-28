@@ -107,7 +107,16 @@ const HideOnScroll = props => {
   );
 };
 
-const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
+const HideAppBar = ({ siteTitle, nav, getTotalCount, location, ...rest }) => {
+  const filteredNav = nav.filter(item => {
+    return ['/store', '/checkout', '/product'].indexOf(item.slug) > -1 &&
+      ['/store', '/checkout', '/product'].indexOf(
+        '/' + location.pathname?.split('/')?.[1]
+      ) < 0
+      ? false
+      : true;
+  });
+
   const classes = useStyles();
   return (
     <>
@@ -120,7 +129,7 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
             <div className="hidden-desktop">
               <Nav>
                 <ul>
-                  {nav.map(item => (
+                  {filteredNav.map(item => (
                     <li key={item.slug}>
                       {item.showCartIndicator && getTotalCount() > 0 ? (
                         <CartTotal>{getTotalCount()}</CartTotal>
@@ -134,8 +143,9 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
             <div className="hidden-mobile">
               <SwipeableTemporaryDrawer
                 siteTitle={siteTitle}
-                nav={nav}
+                nav={filteredNav}
                 getTotalCount={getTotalCount}
+                location={location}
               />
             </div>
           </Toolbar>
@@ -146,7 +156,7 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, ...rest }) => {
   );
 };
 
-const Header = ({ siteTitle, nav }) => {
+const Header = ({ siteTitle, nav, location }) => {
   const [cart, updateCart, getTotalCount] = useContext(CartContext); // eslint-disable-line no-unused-vars
   const [cartCount, updateCartCount] = useState(0); // eslint-disable-line no-unused-vars
 
@@ -160,6 +170,7 @@ const Header = ({ siteTitle, nav }) => {
         siteTitle={siteTitle}
         nav={nav}
         getTotalCount={getTotalCount}
+        location={location}
       />
       <Head>
         {/* TODO: make show only for home page */}

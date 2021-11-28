@@ -98,8 +98,8 @@ const CartDisplay = () => {
     const { error } = await stripe.redirectToCheckout({
       mode: 'payment',
       lineItems: getMappedCart({ cart }),
-      successUrl: `${window.location.origin}/cart?checkout=success`,
-      cancelUrl: `${window.location.origin}/cart`,
+      successUrl: `${window.location.origin}/checkout?checkout=success`,
+      cancelUrl: `${window.location.origin}/checkout`,
     });
 
     if (error) {

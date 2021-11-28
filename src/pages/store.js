@@ -4,10 +4,10 @@ import SEO from '../components/seo';
 import StoreGrid from '../components/storegrid';
 import { StoreContext } from '../context/store';
 
-const Store = () => {
+const Store = ({ location }) => {
   const [store, updateStore, getStoreArray] = useContext(StoreContext); // eslint-disable-line no-unused-vars
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Store" />
       <h1 className="main-heading">Store</h1>
       <div className="article-body">

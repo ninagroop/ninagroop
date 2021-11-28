@@ -7,10 +7,10 @@ import Bag from '../images/bag.jpg';
 import { graphql } from 'gatsby';
 import { renderAst } from '../components/render-ast';
 
-const AboutPage = ({ data, ...rest }) => {
+const AboutPage = ({ data, location }) => {
   const about = data.about;
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title={about.frontmatter.title} />
       <header>
         <h1 className="main-heading" itemProp="headline">

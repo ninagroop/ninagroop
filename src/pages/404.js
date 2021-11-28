@@ -5,10 +5,10 @@ import SEO from '../components/seo';
 // https://github.com/gatsbyjs/gatsby/issues/5329#issuecomment-484741119
 const browser = typeof window !== 'undefined' && window;
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ location }) => {
   return (
     browser && (
-      <Layout>
+      <Layout location={location}>
         <SEO title="404: Not found" />
         <h1>NOT FOUND</h1>
         <p>This page doesn&#39;t exist.</p>

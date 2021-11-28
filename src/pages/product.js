@@ -32,14 +32,14 @@ const Product = ({ location }) => {
 
   if (!item?.id) {
     return (
-      <Layout>
+      <Layout location={location}>
         <h2>Item not found!</h2>
       </Layout>
     );
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO title="Product" />
       <div className="article-body">
         <ItemContain>
@@ -104,7 +104,7 @@ const Product = ({ location }) => {
 
             {showCheckoutLink && (
               <>
-                <Link className="btn" to={`/cart`}>
+                <Link className="btn" to={`/checkout`}>
                   Added to cart. Checkout now? &rarr;
                 </Link>
                 <br />

@@ -6,10 +6,10 @@ import { graphql } from 'gatsby';
 import { renderAst } from '../components/render-ast';
 import CalendlyButton from '../components/calendlyButton';
 
-const CoachingPage = ({ data, ...rest }) => {
+const CoachingPage = ({ data, location }) => {
   const coaching = data.coaching;
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title={coaching.frontmatter.title} />
       <header>
         <h1 className="main-heading" itemProp="headline">

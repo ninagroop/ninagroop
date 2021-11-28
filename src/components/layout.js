@@ -40,7 +40,7 @@ export const MainBody = styled.div`
   }
 `;
 
-const Layout = ({ children, featuredImage }) => {
+const Layout = ({ children, featuredImage, location, ...rest }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -80,6 +80,7 @@ const Layout = ({ children, featuredImage }) => {
           <Header
             nav={data.site.siteMetadata.nav}
             siteTitle={data.site.siteMetadata.title}
+            location={location}
           />
           <main>{children}</main>
         </div>

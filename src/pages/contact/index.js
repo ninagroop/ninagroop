@@ -10,7 +10,7 @@ function encode(data) {
     .join('&');
 }
 
-const Contact = () => {
+const Contact = ({ location }) => {
   const [formState, setFormState] = useState({ isValidated: false });
 
   const handleChange = e =>
@@ -33,7 +33,7 @@ const Contact = () => {
       .catch(error => alert(error));
   };
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title="Contact" />
       <Bio />
       <h1 className="main-heading">Contact</h1>

@@ -50,7 +50,7 @@ const StoreGrid = ({ products }) => {
           </CSSTransition>
         ))}
       </StyledGroup>
-      <Aside>
+      {/* <Aside>
         <h3>Special Sale</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero
@@ -73,7 +73,7 @@ const StoreGrid = ({ products }) => {
         ></input>
         <span className="min">${min}</span>
         <span className="max">${max}</span>
-      </Aside>
+      </Aside> */}
     </div>
   );
 };

@@ -4,9 +4,9 @@ import Layout from '../../components/layout';
 import Bio from '../../components/bio';
 import Seo from '../../components/seo';
 
-const Thanks = () => {
+const Thanks = ({ location }) => {
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title="Contact - Thanks" />
       <Bio />
       <h1 className="main-heading">Thanks!</h1>
