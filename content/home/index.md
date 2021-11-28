@@ -8,7 +8,7 @@ homequote: All of creation and your very own life are a sacred text that never
   unfailing as ocean waves.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 ---
-## You always have the power to write a new future.
+## You have the power to write a new future.
 
 ![](homepage.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
