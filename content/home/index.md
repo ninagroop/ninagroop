@@ -9,7 +9,8 @@ homequote: All of creation and your very own life are a sacred text that never
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 ---
 ## You always have the power to write a new future.
-![](nina-bio.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
+
+![](homepage.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
 Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
 
