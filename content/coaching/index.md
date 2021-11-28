@@ -4,7 +4,7 @@ featuredimage: coachingpage.jpg
 ---
 **Is Coaching for You?**
 
-![](coachingpage.jpg)
+![]("#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
 * Do you feel stuck—in a job, in a toxic relationship, in unhealthy habits, or in negative thought patterns?
 * Do you feel powerless—in the workplace, in family dynamics, in the ability to make your life what you want it to be?
