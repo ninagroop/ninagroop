@@ -1,6 +1,6 @@
 ---
 title: Coaching
-featuredimage: 1j1a6020.jpg
+featuredimage: coachingpage.jpg
 ---
 
 **Is Coaching for You?**
