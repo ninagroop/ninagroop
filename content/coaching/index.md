@@ -4,7 +4,7 @@ featuredimage: coachingpage.jpg
 ---
 **Gain insight. Find your power. Live with joy.**
 
-![](nina-bio.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
+![](coachingpage.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
 * Do you want to encounter your authentic self and uncover your voice and dreams?
 * Do you want to live with greater joy and purpose?
