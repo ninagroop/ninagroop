@@ -26,6 +26,7 @@ const Tagline = styled.h2`
 const Callout = styled.h4`
   font-weight: 400;
   padding-top: 20px;
+  font-size: 1em;
   @media screen and (max-width: 1000px) {
     font-size: 1em;
   }
@@ -36,7 +37,11 @@ const IndexPage = ({ data, location }) => {
   const home = data.home;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      description={data.site.siteMetadata?.description}
+    >
       <SEO title="Home" />
       {/* <Bio /> */}
 
@@ -68,6 +73,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     home: markdownRemark(frontmatter: { templatekey: { eq: "index-page" } }) {

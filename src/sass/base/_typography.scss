@@ -4,7 +4,7 @@ body,
 input,
 select,
 textarea {
-  color: _palette(fg);
+  color: _font(color);
   font-family: _font(family);
   font-size: 14pt;
   font-weight: _font(weight);
@@ -173,9 +173,19 @@ h6 {
 }
 
 .brand-title {
-  font-size: 3.5rem;
+  font-size: 4.4rem;
   margin-top: 5rem;
-  margin-bottom: 7rem;
+  margin-bottom: 0.25rem;
+  text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.5),
+    0px -2px 0px rgba(255, 255, 255, 0.5), -2px 0px 0px rgba(255, 255, 255, 0.5),
+    0px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.brand-subtitle {
+  color: _palette(fg);
+  font-size: 1.6rem;
+  margin-top: 0.25rem;
+  margin-bottom: 4rem;
   text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.5),
     0px -2px 0px rgba(255, 255, 255, 0.5), -2px 0px 0px rgba(255, 255, 255, 0.5),
     0px 2px 0px rgba(255, 255, 255, 0.5);

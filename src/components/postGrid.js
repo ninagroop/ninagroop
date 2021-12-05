@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export const FeatureGridStyled = styled.div`
-  display: inline-block;
   .featured-block {
     list-style: none;
     padding-left: 0;
@@ -18,6 +17,43 @@ export const FeatureGridStyled = styled.div`
     grid-auto-rows: auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    &.vertical-tiles {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: initial;
+      grid-template-rows: 3;
+      grid-auto-rows: auto;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      width: 100%;
+      .featured-post-wrapper {
+        min-width: 100%;
+        height: 220px;
+        @media screen and (max-width: 800px) {
+          height: 160px;
+        }
+        @media screen and (max-width: 599px) {
+          height: 300px;
+        }
+        a {
+          padding: 15px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+      }
+      li:nth-child(1) .featured-post-wrapper {
+        background: linear-gradient(45deg, #63a9b6, transparent);
+      }
+      li:nth-child(2) .featured-post-wrapper {
+        background: linear-gradient(45deg, #dfc9a0, transparent);
+      }
+      li:nth-child(3) .featured-post-wrapper {
+        background: linear-gradient(45deg, #c97e9a, transparent);
+      }
+    }
   }
   li {
     position: relative;
@@ -38,13 +74,14 @@ export const FeatureGridStyled = styled.div`
     width: 100%;
     background: linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.35) 0%,
-      rgba(255, 255, 255, 0.7) 60%,
-      rgba(255, 255, 255, 0.7) 100%
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.85) 60%,
+      rgba(255, 255, 255, 0.9) 100%
     );
     padding: 10px;
     h4 {
       margin: 0;
+      font-size: 1em;
       a {
         letter-spacing: 0;
         -webkit-line-clamp: 1;
@@ -52,6 +89,15 @@ export const FeatureGridStyled = styled.div`
       }
     }
   }
+  @media screen and (max-width: 600px) {
+    .featured-footer {
+      padding: 50px 10px;
+      h4 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
   .featured-description {
     display: block;
     height: 1px;
@@ -202,5 +248,26 @@ const PostGrid = ({ count = 3, featured = true, slug }) => {
     </FeatureGridStyled>
   );
 };
+
+export const VerticalTilesGrid = ({ children }) => (
+  <FeatureGridStyled>
+    <ol class="featured-block vertical-tiles">
+      {children.map(item => {
+        if (item === '\n') return null;
+        return (
+          <li>
+            <article class="post-list-item">
+              <div class="featured-post-wrapper">
+                <a class="" href={item?.props?.href}>
+                  {item?.props?.children}
+                </a>
+              </div>
+            </article>
+          </li>
+        );
+      })}
+    </ol>
+  </FeatureGridStyled>
+);
 
 export default PostGrid;

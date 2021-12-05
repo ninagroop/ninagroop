@@ -10,7 +10,7 @@ module.exports = {
   // },
   siteMetadata: {
     title: `Nina Groop`,
-    description: `A clever tagline for Nina's site`,
+    description: `Life Coach, Author, Speaker`,
     author: `Nina Groop`,
     nav: [
       {

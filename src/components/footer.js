@@ -1,27 +1,52 @@
 import React from 'react';
-import FooterLinks from './footer-links';
-import { Callout, Blurb } from './footer-styles';
-import CalloutImage from '../images/callout.jpg';
+import styled from 'styled-components';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const Footer = () => {
+export const StyledFooter = styled.footer`
+  background: white;
+  .article-body {
+    background: white;
+    padding: 70px 20vw;
+  }
+  .footer-block {
+    float: left;
+    width: 50%;
+  }
+`;
+
+const Footer = ({ siteTitle, footerImage, footerBioText }) => {
   return (
-    <footer>
-      {/* <Callout image={CalloutImage}>
-        <h2>
-          "The surprising styles of Skyline Ivy are advanced for all seasons."
-        </h2>
-        <p>Hansel Andersen</p>
-      </Callout> */}
-      {/* <FooterLinks /> */}
-      {/* <Blurb>
-        <p>
-          This project was built with Gatsby &{' '}
-          <a href="https://github.com/MichaelE1/ecommerce-gatsby">
-            is open source on Github
-          </a>
-        </p>
-      </Blurb> */}
-    </footer>
+    <StyledFooter>
+      <div className="article-body">
+        <div class="footer-block">
+          <h5>About Nina</h5>
+          <p>{footerBioText}</p>
+          <GatsbyImage
+            image={getImage(footerImage)}
+            alt="Nina Groop Bio Image"
+          />
+        </div>
+        <div class="footer-block">
+          TODO: Brian has a bunch todo here
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />© {new Date().getFullYear()} {siteTitle}
+          {` | `}
+          Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </div>
+      </div>
+    </StyledFooter>
   );
 };
 

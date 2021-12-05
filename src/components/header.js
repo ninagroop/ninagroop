@@ -156,7 +156,7 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, location, ...rest }) => {
   );
 };
 
-const Header = ({ siteTitle, nav, location }) => {
+const Header = ({ siteTitle, siteDescription, description, nav, location }) => {
   const [cart, updateCart, getTotalCount] = useContext(CartContext); // eslint-disable-line no-unused-vars
   const [cartCount, updateCartCount] = useState(0); // eslint-disable-line no-unused-vars
 
@@ -175,6 +175,7 @@ const Header = ({ siteTitle, nav, location }) => {
       <Head>
         {/* TODO: make show only for home page */}
         <h1 className="brand brand-title">{siteTitle}</h1>
+        <h2 className="brand brand-subtitle">{siteDescription}</h2>
       </Head>
     </>
   );

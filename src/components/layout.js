@@ -46,6 +46,7 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
       site {
         siteMetadata {
           title
+          description
           nav {
             title
             slug
@@ -65,6 +66,16 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
               )
             }
           }
+          footerbioimage {
+            childImageSharp {
+              gatsbyImageData(
+                width: 250
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+          footerbiotext
         }
       }
     }
@@ -80,13 +91,18 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
           <Header
             nav={data.site.siteMetadata.nav}
             siteTitle={data.site.siteMetadata.title}
+            siteDescription={data.site.siteMetadata.description}
             location={location}
           />
           <main>{children}</main>
         </div>
       </MainBody>
 
-      <Footer />
+      <Footer
+        footerImage={data?.home?.frontmatter?.footerbioimage}
+        siteTitle={data.site.siteMetadata.title}
+        footerBioText={data?.home?.frontmatter?.footerbiotext}
+      />
     </>
   );
 };

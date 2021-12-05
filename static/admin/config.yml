@@ -70,6 +70,17 @@ collections:
               widget: image,
               required: false,
             }
+          - {
+              label: 'Footer Bio Image',
+              name: 'footerbioimage',
+              widget: image,
+              required: false,
+            }
+          - {
+              label: 'Footer Bio Text',
+              name: 'footerbiotext',
+              widget: 'markdown',
+            }
       - file: 'content/about/index.md'
         name: 'about'
         label: 'About'

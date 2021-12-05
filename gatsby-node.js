@@ -111,6 +111,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       description: String
       date: Date @dateformat
       featuredimage: File @fileByRelativePath
+      footerbioimage: File @fileByRelativePath
       featuredpost: Boolean
     }
     type Fields {

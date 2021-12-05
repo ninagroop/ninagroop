@@ -3,6 +3,7 @@ import rehypeReact from 'rehype-react';
 import FeaturedProducts from '../components/featuredproducts';
 import PostGrid from '../components/postGrid';
 import CalendlyButton from '../components/calendlyButton';
+import { VerticalTilesGrid } from '../components/postGrid';
 
 export const renderAst = new rehypeReact({
   createElement,
@@ -29,6 +30,9 @@ export const renderAst = new rehypeReact({
     },
     'calendly-button': ({ children, ...rest }) => {
       return <CalendlyButton {...rest}>{children}</CalendlyButton>;
+    },
+    'vertical-tiles-grid': ({ children, ...rest }) => {
+      return <VerticalTilesGrid {...rest} children={children} />;
     },
   },
 }).Compiler;
