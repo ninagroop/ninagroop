@@ -13,7 +13,7 @@ footerbiotext: Nina is an awesome person, and she's going to TELL you all about
 ---
 ## You have the power to write a new future.
 
-![](nina-bio.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
+![](newhomepage.jpg)
 
 Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
 
