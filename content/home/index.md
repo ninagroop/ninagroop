@@ -8,12 +8,12 @@ homequote: All of creation and your very own life are a sacred text that never
   unfailing as ocean waves.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio-1.jpg
-footerbiotext: Nina is an awesome person, and she's going to TELL you all about it in one sentence
+footerbiotext: Nina is an awesome person, and she's going to TELL you all about
+  it in one sentence
 ---
-
 ## You have the power to write a new future.
 
-![](homepage.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
+![](newhomepage.jpg)
 
 Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
 
