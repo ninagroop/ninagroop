@@ -28,13 +28,14 @@ export const FeatureGridStyled = styled.div`
       grid-row-gap: 20px;
       width: 100%;
       .featured-post-wrapper {
+        position: relative;
         min-width: 100%;
         height: 220px;
         @media screen and (max-width: 800px) {
           height: 160px;
         }
         @media screen and (max-width: 599px) {
-          height: 300px;
+          height: auto;
         }
         a {
           padding: 15px;
@@ -42,6 +43,18 @@ export const FeatureGridStyled = styled.div`
           width: 100%;
           height: 100%;
           border: none;
+        }
+        .img-wrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 50%;
+          overflow: hidden;
+          @media screen and (max-width: 600px) {
+            width: 100%;
+            position: relative;
+          }
         }
       }
       li:nth-child(1) .featured-post-wrapper {
@@ -249,25 +262,27 @@ const PostGrid = ({ count = 3, featured = true, slug }) => {
   );
 };
 
-export const VerticalTilesGrid = ({ children }) => (
-  <FeatureGridStyled>
-    <ol class="featured-block vertical-tiles">
-      {children.map(item => {
-        if (item === '\n') return null;
-        return (
-          <li>
-            <article class="post-list-item">
-              <div class="featured-post-wrapper">
-                <a class="" href={item?.props?.href}>
-                  {item?.props?.children}
-                </a>
-              </div>
-            </article>
-          </li>
-        );
-      })}
-    </ol>
-  </FeatureGridStyled>
-);
+export const VerticalTilesGrid = ({ children }) => {
+  return (
+    <FeatureGridStyled>
+      <ol class="featured-block vertical-tiles">
+        {children.map(item => {
+          if (item === '\n') return null;
+          return (
+            <li>
+              <article class="post-list-item">
+                <div class="featured-post-wrapper">
+                  <a class="" href={item?.props?.href}>
+                    {item?.props?.children}
+                  </a>
+                </div>
+              </article>
+            </li>
+          );
+        })}
+      </ol>
+    </FeatureGridStyled>
+  );
+};
 
 export default PostGrid;

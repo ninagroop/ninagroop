@@ -24,9 +24,18 @@ Whether you're facing a major life transition or you're feeling stuck where you 
 <br style="clear: both"/>
 
 <vertical-tiles-grid>
-<a href="/coaching"><h2>Life Coaching</h2></a>
-<a href="/writing"><h2>Writing</h2></a>
-<a href="/speaking"><h2>Speaking</h2></a>
+<a href="/coaching">
+<h2>Life Coaching</h2>
+<div class="img-wrapper"><img src="./pine-watt-3_Xwxya43hE-unsplash.jpg" /></div>
+</a>
+<a href="/writing">
+<h2>Writing</h2>
+<div class="img-wrapper"><img src="./rana-sawalha-W_-6PWGbYaU-unsplash.jpg" /></div>
+</a>
+<a href="/speaking">
+<h2>Speaking</h2>
+<div class="img-wrapper"><img src="./jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg" /></div>
+</a>
 </vertical-tiles-grid>
 
 ## Featured Blog Posts

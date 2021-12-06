@@ -7,7 +7,6 @@ import SalesBoxes from '../components/salesboxes';
 import Shoe from '../images/shoe.jpg';
 import Bag from '../images/bag.jpg';
 import FeaturedProducts from '../components/featuredproducts';
-import Bio from '../components/bio';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { renderAst } from '../components/render-ast';
@@ -43,7 +42,6 @@ const IndexPage = ({ data, location }) => {
       description={data.site.siteMetadata?.description}
     >
       <SEO title="Home" />
-      {/* <Bio /> */}
 
       <Tagline>{home?.frontmatter?.tagline}</Tagline>
 
