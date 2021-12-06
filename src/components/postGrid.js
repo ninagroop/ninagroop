@@ -45,13 +45,13 @@ export const FeatureGridStyled = styled.div`
         }
       }
       li:nth-child(1) .featured-post-wrapper {
-        background: linear-gradient(45deg, #63a9b6, transparent);
+        background: linear-gradient(45deg, transparent, #63a9b6);
       }
       li:nth-child(2) .featured-post-wrapper {
-        background: linear-gradient(45deg, #dfc9a0, transparent);
+        background: linear-gradient(45deg, transparent, #dfc9a0);
       }
       li:nth-child(3) .featured-post-wrapper {
-        background: linear-gradient(45deg, #c97e9a, transparent);
+        background: linear-gradient(45deg, transparent, #c97e9a);
       }
     }
   }
