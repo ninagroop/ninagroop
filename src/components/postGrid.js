@@ -28,7 +28,6 @@ export const FeatureGridStyled = styled.div`
       grid-row-gap: 20px;
       width: 100%;
       .featured-post-wrapper {
-        position: relative;
         min-width: 100%;
         height: 220px;
         @media screen and (max-width: 800px) {
@@ -38,6 +37,7 @@ export const FeatureGridStyled = styled.div`
           height: auto;
         }
         a {
+          position: relative;
           padding: 15px;
           display: block;
           width: 100%;
@@ -51,6 +51,9 @@ export const FeatureGridStyled = styled.div`
           height: 100%;
           width: 50%;
           overflow: hidden;
+          .gatsby-resp-image-wrapper {
+            max-width: initial !important;
+          }
           @media screen and (max-width: 600px) {
             width: 100%;
             position: relative;
