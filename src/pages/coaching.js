@@ -16,13 +16,7 @@ const CoachingPage = ({ data, location }) => {
           {coaching.frontmatter.title}
         </h1>
       </header>
-      <div className="article-body">
-        {renderAst(coaching.htmlAst)}
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
+      <div className="article-body">{renderAst(coaching.htmlAst)}</div>
     </Layout>
   );
 };
