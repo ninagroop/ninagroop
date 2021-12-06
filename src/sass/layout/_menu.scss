@@ -4,7 +4,7 @@
   @include vendor('transition', 'filter 0.25s ease');
   height: 100%; /* IE6: treaded as min-height*/
   min-height: 100%; /* real browsers */
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 #menu {
