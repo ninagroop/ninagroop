@@ -10,10 +10,10 @@ collections:
     label: 'Blog'
     folder: 'content/blog'
     create: true
-    slug: '{{year}}/{{month}}/{{title}}/{{slug}}'
+    slug: 'index'
     media_folder: ''
     public_folder: ''
-    path: 'blog/{{year}}/{{month}}/{{title}}/{{slug}}'
+    path: '{{title}}/index'
     editor:
       preview: false
     fields:
@@ -41,6 +41,39 @@ collections:
         }
   - name: 'pages'
     label: 'Pages'
+    folder: 'content/pages'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templatekey',
+          widget: 'hidden',
+          default: 'page',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Featured Image',
+          name: 'featuredimage',
+          widget: image,
+          required: false,
+        }
+  - name: 'pages'
+    label: 'Home'
+    folder: 'content/home'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
     files:
       - file: 'content/home/index.md'
         name: 'home'
@@ -80,56 +113,4 @@ collections:
               label: 'Footer Bio Text',
               name: 'footerbiotext',
               widget: 'markdown',
-            }
-      - file: 'content/about/index.md'
-        name: 'about'
-        label: 'About'
-        folder: 'content/about'
-        create: true
-        slug: 'index'
-        media_folder: ''
-        public_folder: ''
-        path: '{{title}}/index'
-        editor:
-          preview: false
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templatekey',
-              widget: 'hidden',
-              default: 'page',
-            }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - {
-              label: 'Featured Image',
-              name: 'featuredimage',
-              widget: image,
-              required: false,
-            }
-      - file: 'content/coaching/index.md'
-        name: 'coaching'
-        label: 'Coaching'
-        folder: 'content/coaching'
-        create: true
-        slug: 'index'
-        media_folder: ''
-        public_folder: ''
-        path: '{{title}}/index'
-        editor:
-          preview: false
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templatekey',
-              widget: 'hidden',
-              default: 'page',
-            }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - {
-              label: 'Featured Image',
-              name: 'featuredimage',
-              widget: image,
-              required: false,
             }
