@@ -64,7 +64,7 @@ collections:
           widget: image,
           required: false,
         }
-  - name: 'pages'
+  - name: 'home'
     label: 'Home'
     folder: 'content/home'
     create: true
