@@ -1,6 +1,21 @@
 ---
 templatekey: index-page
 title: Home
+navigation:
+  - display: Home
+    path: /
+  - display: Blog
+    path: /blog
+  - display: About
+    path: /about
+  - display: Coaching
+    path: /coaching
+  - display: Contact
+    path: /contact
+  - display: Store
+    path: /store
+  - display: Checkout
+    path: /checkout
 tagline: Insight. Resilience. Hope.
 homequote: All of creation and your very own life are a sacred text that never
   stop speaking. The rhythms of the Earth and the arc of your story are  an open
