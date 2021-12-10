@@ -13,7 +13,7 @@ collections:
     slug: 'index'
     media_folder: ''
     public_folder: ''
-    path: '{{title}}/index'
+    path: '{{year}}/{{month}}/{{title}}/index'
     editor:
       preview: false
     fields:
