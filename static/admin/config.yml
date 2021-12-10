@@ -43,7 +43,7 @@ collections:
     label: 'Pages'
     folder: 'content/pages'
     create: true
-    slug: 'index'
+    slug: '{{title}}'
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'

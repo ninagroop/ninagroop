@@ -14,13 +14,63 @@ exports.onCreatePage = ({ page, actions }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
+  // Define a template for page
+  const pageTemplate = path.resolve(`./src/templates/page.js`);
+
+  // Get all markdown page sorted by date
+  // note that we filter by `templatekey` here, other collections
+  // will need their own query if added
+  const pagesResult = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          filter: { frontmatter: { templatekey: { eq: "page" } } }
+          limit: 1000
+        ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    `
+  );
+
+  if (pagesResult.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading your pages`,
+      pagesResult.errors
+    );
+    return;
+  }
+
+  const pages = pagesResult.data.allMarkdownRemark.nodes;
+
+  // Create blog pages pages
+  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
+  // `context` is available in the template as a prop and as a variable in GraphQL
+
+  if (pages.length > 0) {
+    pages.forEach((page, index) => {
+      createPage({
+        path: page.fields.slug?.replace('/pages', ''),
+        component: pageTemplate,
+        context: {
+          id: page.id,
+        },
+      });
+    });
+  }
+
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
 
   // Get all markdown blog posts sorted by date
   // note that we filter by `templatekey` here, other collections
   // will need their own query if added
-  const result = await graphql(
+  const blogPostsResult = await graphql(
     `
       {
         allMarkdownRemark(
@@ -39,15 +89,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   );
 
-  if (result.errors) {
+  if (blogPostsResult.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
-      result.errors
+      blogPostsResult.errors
     );
     return;
   }
 
-  const posts = result.data.allMarkdownRemark.nodes;
+  const posts = blogPostsResult.data.allMarkdownRemark.nodes;
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)

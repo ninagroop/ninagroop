@@ -1,5 +1,6 @@
 ---
 title: About
+templatekey: page
 ---
 
 ![](nina-bio.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')

@@ -1,6 +1,6 @@
 ---
 title: Coaching
-featuredimage: coachingpage.jpg
+templatekey: page
 ---
 
 **Gain insight. Find your power. Live with joy.**
