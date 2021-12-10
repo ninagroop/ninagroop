@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Head, Nav, CartTotal } from './header-styles';
 import { CartContext } from '../context/cart';
@@ -116,6 +116,8 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, location, ...rest }) => {
       ? false
       : true;
   });
+
+  console.log('~filteredNav', filteredNav);
 
   const classes = useStyles();
   return (

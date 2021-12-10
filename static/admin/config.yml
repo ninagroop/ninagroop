@@ -82,6 +82,19 @@ collections:
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Main Navigation'
+        name: 'navigation'
+        widget: 'list'
+        fields:
+          - { label: 'Display Text', name: 'title', widget: 'string' }
+          - { label: 'URL Path', name: 'slug', widget: 'string' }
+          - {
+              label: 'Show Cart Indicator',
+              name: 'showcartindicator',
+              widget: 'boolean',
+              required: false,
+              default: false,
+            }
       - { label: 'Tagline', name: 'tagline', widget: 'markdown' }
       - { label: 'Home Quote', name: 'homequote', widget: 'markdown' }
       - {

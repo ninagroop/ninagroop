@@ -2,20 +2,21 @@
 templatekey: index-page
 title: Home
 navigation:
-  - display: Home
-    path: /
-  - display: Blog
-    path: /blog
-  - display: About
-    path: /about
-  - display: Coaching
-    path: /coaching
-  - display: Contact
-    path: /contact
-  - display: Store
-    path: /store
-  - display: Checkout
-    path: /checkout
+  - title: Home
+    slug: /
+  - title: Blog
+    slug: /blog
+  - title: About
+    slug: /about
+  - title: Coaching
+    slug: /coaching
+  - title: Contact
+    slug: /contact
+  - title: Store
+    slug: /store
+  - title: Checkout
+    slug: /checkout
+    showcartindicator: true
 tagline: Insight. Resilience. Hope.
 homequote: All of creation and your very own life are a sacred text that never
   stop speaking. The rhythms of the Earth and the arc of your story are  an open
@@ -26,6 +27,7 @@ footerbioimage: nina-bio-1.jpg
 footerbiotext: Nina is an awesome person, and she's going to TELL you all about
   it in one sentence
 ---
+
 ## You have the power to write a new future.
 
 ![](nina-bio.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')

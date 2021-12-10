@@ -76,6 +76,11 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
             }
           }
           footerbiotext
+          navigation {
+            title
+            slug
+            showcartindicator
+          }
         }
       }
     }
@@ -89,7 +94,7 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
       <MainBody featuredImage={image}>
         <div id="page-wrapper">
           <Header
-            nav={data.site.siteMetadata.nav}
+            nav={data?.home?.frontmatter?.navigation}
             siteTitle={data.site.siteMetadata.title}
             siteDescription={data.site.siteMetadata.description}
             location={location}
