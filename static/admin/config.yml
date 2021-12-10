@@ -67,50 +67,33 @@ collections:
   - name: 'home'
     label: 'Home'
     folder: 'content/home'
-    create: true
     slug: 'index'
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'
     editor:
       preview: false
-    files:
-      - file: 'content/home/index.md'
-        name: 'home'
-        label: 'Home'
-        folder: 'content/home'
-        create: true
-        slug: 'index'
-        media_folder: ''
-        public_folder: ''
-        path: '{{title}}/index'
-        editor:
-          preview: false
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templatekey',
-              widget: 'hidden',
-              default: 'index-page',
-            }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - { label: 'Tagline', name: 'tagline', widget: 'markdown' }
-          - { label: 'Home Quote', name: 'homequote', widget: 'markdown' }
-          - {
-              label: 'Featured Image',
-              name: 'featuredimage',
-              widget: image,
-              required: false,
-            }
-          - {
-              label: 'Footer Bio Image',
-              name: 'footerbioimage',
-              widget: image,
-              required: false,
-            }
-          - {
-              label: 'Footer Bio Text',
-              name: 'footerbiotext',
-              widget: 'markdown',
-            }
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templatekey',
+          widget: 'hidden',
+          default: 'index-page',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tagline', name: 'tagline', widget: 'markdown' }
+      - { label: 'Home Quote', name: 'homequote', widget: 'markdown' }
+      - {
+          label: 'Featured Image',
+          name: 'featuredimage',
+          widget: image,
+          required: false,
+        }
+      - {
+          label: 'Footer Bio Image',
+          name: 'footerbioimage',
+          widget: image,
+          required: false,
+        }
+      - { label: 'Footer Bio Text', name: 'footerbiotext', widget: 'markdown' }
