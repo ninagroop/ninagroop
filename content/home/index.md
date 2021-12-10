@@ -17,6 +17,9 @@ navigation:
   - title: Checkout
     slug: /checkout
     showcartindicator: true
+  - showcartindicator: false
+    title: Example Page
+    slug: /example-page
 tagline: Insight. Resilience. Hope.
 homequote: All of creation and your very own life are a sacred text that never
   stop speaking. The rhythms of the Earth and the arc of your story are  an open
