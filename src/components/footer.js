@@ -1,49 +1,94 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { StaticImage, getSrc, getImage } from 'gatsby-plugin-image';
+import CalendlyButton from './calendlyButton';
 
 export const StyledFooter = styled.footer`
   background: white;
+  font-size: 0.8em;
   .article-body {
     background: white;
-    padding: 70px 20vw;
   }
-  .footer-block {
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2vw;
+    img {
+      width: 100%;
+    }
+    @media screen and (max-width: 600px) {
+      // grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 0;
+    }
+  }
+  .footer-icon-link {
+    border-bottom: none;
+    display: flex;
+    align-items: flex-end;
     float: left;
-    width: 50%;
+    margin-right: 10px;
+    clear: both;
+    vertical-align: middle;
+    margin-bottom: 10px;
+    font-weight: bold;
+    img {
+      float: left;
+      display: inline-block;
+      width: 32px;
+      padding: 0 7px 0 0;
+    }
   }
 `;
 
-const Footer = ({ siteTitle, footerImage, footerBioText }) => {
+const Footer = ({
+  siteTitle,
+  footerImage,
+  footerBioText,
+  footerMeetText,
+  socialLinks,
+}) => {
   return (
     <StyledFooter>
-      <div className="article-body">
-        <div class="footer-block">
-          <h5>About Nina</h5>
-          <p>{footerBioText}</p>
-          <GatsbyImage
-            image={getImage(footerImage)}
-            alt="Nina Groop Bio Image"
-          />
-        </div>
-        <div class="footer-block">
-          TODO: Brian has a bunch todo here
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />© {new Date().getFullYear()} {siteTitle}
-          {` | `}
-          Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+      <div class="article-body">
+        <div class="footer-grid">
+          <div>
+            <h5>About Nina</h5>
+            <p>{footerBioText}</p>
+            <img src={getSrc(footerImage)} />
+          </div>
+          <div>
+            <h5>Connect</h5>
+            {socialLinks.map(link => {
+              let icon;
+              if (link.url.match(/twitter/gi)) {
+                icon = 'twitter';
+              } else if (link.url.match(/instagram/gi)) {
+                icon = 'instagram';
+              } else if (link.url.match(/facebook/gi)) {
+                icon = 'facebook';
+              } else if (link.url.match(/youtube/gi)) {
+                icon = 'youtube';
+              } else {
+                icon = 'earth';
+              }
+              return (
+                <a class="footer-icon-link" href={link.url}>
+                  <img alt={link.title} src={`/images/${icon}.svg`} />
+                  {link.title}
+                </a>
+              );
+            })}
+          </div>
+          <div>
+            <h5>Meet Nina</h5>
+            {footerMeetText}
+            <CalendlyButton>Schedule Now</CalendlyButton>
+            <br />
+            <br />
+            <br />© {new Date().getFullYear()} {siteTitle}
+            {` | `}
+            Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </div>
         </div>
       </div>
     </StyledFooter>

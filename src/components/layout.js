@@ -69,7 +69,7 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
           footerbioimage {
             childImageSharp {
               gatsbyImageData(
-                width: 250
+                width: 500
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
@@ -81,6 +81,11 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
             slug
             showcartindicator
           }
+          sociallinks {
+            title
+            url
+          }
+          footermeettext
         }
       }
     }
@@ -107,6 +112,8 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
         footerImage={data?.home?.frontmatter?.footerbioimage}
         siteTitle={data.site.siteMetadata.title}
         footerBioText={data?.home?.frontmatter?.footerbiotext}
+        socialLinks={data?.home?.frontmatter?.sociallinks}
+        footerMeetText={data?.home?.frontmatter?.footermeettext}
       />
     </>
   );

@@ -5,7 +5,7 @@ import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import { FeatureGridStyled, Tile } from '../components/postGrid';
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
 const stringToColor = str => {

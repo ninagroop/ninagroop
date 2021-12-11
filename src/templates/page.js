@@ -7,7 +7,6 @@ import Seo from '../components/seo';
 import { renderAst } from '../components/render-ast';
 
 const PageTemplate = ({ data, location }) => {
-  console.log('~PageTemplate data', JSON.stringify(data));
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata?.title || `Title`;
   const featuredImage =

@@ -23,9 +23,21 @@ homequote: All of creation and your very own life are a sacred text that never
   invitation to listen. The wisdom you need is as close as your  own heart, as
   unfailing as ocean waves.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
-footerbioimage: nina-bio-1.jpg
+footerbioimage: nina-bio.jpg
 footerbiotext: Nina is an awesome person, and she's going to TELL you all about
   it in one sentence
+footermeettext: Schedule a free, no-obligation introductory session to learn how we can work together to turn the page and help you write your next chapter.
+sociallinks:
+  - title: Facebook
+    url: http://facebook.com/ninagroop
+  - title: Instagram
+    url: http://instagram.com/ninagroop
+  - title: Youtube
+    url: http://youtube.com/ninagroop
+  - title: Twitter
+    url: http://twitter.com/ninagroop
+  - title: Other Link
+    url: http://example.com
 ---
 
 ## You have the power to write a new future.

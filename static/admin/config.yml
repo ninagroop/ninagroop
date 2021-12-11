@@ -109,4 +109,19 @@ collections:
           widget: image,
           required: false,
         }
-      - { label: 'Footer Bio Text', name: 'footerbiotext', widget: 'markdown' }
+      - {
+          label: 'About Nina Footer Bio Text',
+          name: 'footerbiotext',
+          widget: 'markdown',
+        }
+      - label: 'Social Links'
+        name: 'sociallinks'
+        widget: 'list'
+        fields:
+          - { label: 'Link Name', name: 'title', widget: 'string' }
+          - { label: 'URL', name: 'url', widget: 'string' }
+      - {
+          label: 'Meet Nina Footer Text',
+          name: 'footermeettext',
+          widget: 'markdown',
+        }

@@ -117,8 +117,6 @@ const HideAppBar = ({ siteTitle, nav, getTotalCount, location, ...rest }) => {
       : true;
   });
 
-  console.log('~filteredNav', filteredNav);
-
   const classes = useStyles();
   return (
     <>
