@@ -11,14 +11,21 @@ export const StyledFooter = styled.footer`
   }
   .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2vw;
     img {
       width: 100%;
+      max-width: 300px;
     }
     @media screen and (max-width: 600px) {
-      // grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-column-gap: 0;
+      h5 {
+        margin-top: 30px;
+      }
+      img {
+        max-width: 100%;
+      }
     }
   }
   .footer-icon-link {
@@ -56,38 +63,40 @@ const Footer = ({
             <p>{footerBioText}</p>
             <img src={getSrc(footerImage)} />
           </div>
-          <div>
-            <h5>Connect</h5>
-            {socialLinks.map(link => {
-              let icon;
-              if (link.url.match(/twitter/gi)) {
-                icon = 'twitter';
-              } else if (link.url.match(/instagram/gi)) {
-                icon = 'instagram';
-              } else if (link.url.match(/facebook/gi)) {
-                icon = 'facebook';
-              } else if (link.url.match(/youtube/gi)) {
-                icon = 'youtube';
-              } else {
-                icon = 'earth';
-              }
-              return (
-                <a class="footer-icon-link" href={link.url}>
-                  <img alt={link.title} src={`/images/${icon}.svg`} />
-                  {link.title}
-                </a>
-              );
-            })}
-          </div>
-          <div>
-            <h5>Meet Nina</h5>
-            {footerMeetText}
-            <CalendlyButton>Schedule Now</CalendlyButton>
-            <br />
-            <br />
-            <br />© {new Date().getFullYear()} {siteTitle}
-            {` | `}
-            Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <div class="footer-grid">
+            <div>
+              <h5>Connect</h5>
+              {socialLinks.map(link => {
+                let icon;
+                if (link.url.match(/twitter/gi)) {
+                  icon = 'twitter';
+                } else if (link.url.match(/instagram/gi)) {
+                  icon = 'instagram';
+                } else if (link.url.match(/facebook/gi)) {
+                  icon = 'facebook';
+                } else if (link.url.match(/youtube/gi)) {
+                  icon = 'youtube';
+                } else {
+                  icon = 'earth';
+                }
+                return (
+                  <a class="footer-icon-link" href={link.url}>
+                    <img alt={link.title} src={`/images/${icon}.svg`} />
+                    {link.title}
+                  </a>
+                );
+              })}
+            </div>
+            <div>
+              <h5>Meet Nina</h5>
+              {footerMeetText}
+              <CalendlyButton>Schedule Now</CalendlyButton>
+              <br />
+              <br />
+              <br />© {new Date().getFullYear()} {siteTitle}
+              {` | `}
+              Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </div>
           </div>
         </div>
       </div>
