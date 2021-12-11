@@ -55,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (pages.length > 0) {
     pages.forEach((page, index) => {
       createPage({
-        path: page.fields.slug?.replace('/pages', ''),
+        path: page.fields.slug.replace('/pages', ''),
         component: pageTemplate,
         context: {
           id: page.id,
