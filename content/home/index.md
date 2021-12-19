@@ -44,7 +44,7 @@ footermeettext: Schedule a free, no-obligation introductory session to learn how
 
 ![](newhomepage.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
 
-Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
+Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose.
 
 For more than two decades as an editor, I helped uncover what authors were really trying to say. [As a coach](/coaching), I will help you uncover what your heart is saying and then provide you the tools to live it.
 
