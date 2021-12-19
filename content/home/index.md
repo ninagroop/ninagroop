@@ -26,7 +26,6 @@ featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is an awesome person, and she's going to TELL you all about
   it in one sentence
-footermeettext: Schedule a free, no-obligation introductory session to learn how we can work together to turn the page and help you write your next chapter.
 sociallinks:
   - title: Facebook
     url: http://facebook.com/ninagroop
@@ -38,11 +37,12 @@ sociallinks:
     url: http://twitter.com/ninagroop
   - title: Other Link
     url: http://example.com
+footermeettext: Schedule a free, no-obligation introductory session to learn how
+  we can work together to turn the page and help you write your next chapter.
 ---
-
 ## You have the power to write a new future.
 
-![](nina-bio.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
+![](newhomepage.jpg)
 
 Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
 
