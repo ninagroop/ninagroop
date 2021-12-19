@@ -24,8 +24,8 @@ homequote: All of creation and your very own life are a sacred text that never
   unfailing as ocean waves.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio.jpg
-footerbiotext: Nina is an awesome person, and she's going to TELL you all about
-  it in one sentence
+footerbiotext: Nina is an author, editor, life coach, and speaker, who also
+  happens to be passionate about wandering in the woods and watching birds.
 sociallinks:
   - title: Facebook
     url: http://facebook.com/ninagroop
