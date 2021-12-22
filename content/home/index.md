@@ -42,7 +42,7 @@ footermeettext: Schedule a free, no-obligation introductory session to learn how
 ---
 ## You have the power to write a new future.
 
-![](1j1a3986.jpg)
+![](1j1a3986.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
 Trust me: It’s never too late to encounter your heart and renew your life to live with joy and purpose. I've done it, and you can too.
 
