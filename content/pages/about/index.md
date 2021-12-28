@@ -11,6 +11,4 @@ Many years and four sons later, I am both an editor and a writer, but I see that
 
 I know firsthand the bravery and touch choices that such editing can require. For 25 years I was married to a man with an anger problem; he had untreated mental illness and he was an alcoholic. Over time I learned the power of setting boundaries, forgiving, and letting go. Most importantly, I learned to listen to my own heart.    
 
-For more than two decades as an editor, I helped uncover what authors were trying to say, refining their thoughts and words to clarify their message. [As a coach](/coaching), I will help you uncover what your heart is saying and then provide you the tools to live it.
-
 When I am not writing, editing, [coaching](/coaching), or speaking, I am probably hiking, reading, or spending time with my boys or friends. I love the beach, the woods, live music, and strong coffee. Also, I adore my cats.
