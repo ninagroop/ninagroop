@@ -55,7 +55,10 @@ Whether you're facing a major life transition or you're feeling stuck where you 
 <vertical-tiles-grid>
 <a href="/coaching">
 <h2>Life Coaching</h2>
-Clarity and accountability to live the life you want to live
+Clarity
+Insight
+Accountability
+For the life you want to live
 <div class="img-wrapper"><img src="./pine-watt-3_Xwxya43hE-unsplash.jpg" /></div>
 </a>
 <a href="/writing">
