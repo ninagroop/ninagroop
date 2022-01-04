@@ -44,9 +44,9 @@ footermeettext: Schedule a free, no-obligation introductory session to learn how
 
 ![](stoolb-w.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
-We each have the power to write the story of our lives, but sometimes we get stuck. Our narrative gets interrupted by unexpected events, or we simply lose track of the story we want to tell. 
+Every day you are writing the story of your life, but sometimes unexpected events interrupt the narrative or you forget the story is yours to tell. 
 
-When you lose the thread of your story, sometimes you need the outside perspective a coach can bring.
+When you lose the thread of your story, you may need the outside perspective a coach can bring.
 
 For more than two decades as an editor, I helped uncover what authors were really trying to say, refining their thoughts and words to clarify their message. [As a coach](/coaching), I will help you uncover what your heart is saying and then provide you the tools to live it.
 
