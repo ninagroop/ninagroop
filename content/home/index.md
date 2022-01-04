@@ -44,7 +44,7 @@ footermeettext: Schedule a free, no-obligation introductory session to learn how
 
 ![](stoolb-w.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
-Every day you are writing the story of your life, but sometimes unexpected events interrupt the narrative or you forget the story is yours to tell. 
+Every day you are writing the story of your life, but sometimes unexpected events interrupt the narrative, or you forget the story is yours to tell. 
 
 When you lose the thread of your story, you may need the outside perspective a coach can bring.
 
