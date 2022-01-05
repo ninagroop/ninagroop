@@ -44,7 +44,7 @@ footermeettext: Schedule a free, no-obligation introductory session to learn how
 
 ![](stoolb-w.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
-Every day you are writing the story of your life. You're both the author and the main character. But sometimes unexpected events come along and disrupt the narrative; other times you may even forget the story is yours to tell. 
+Every day you are writing the story of your life. You're the main character, and you get to choose your plot, perspective, and character attributes. But sometimes unexpected events come along and disrupt the narrative; other times you can even forget the story is yours to tell. 
 
 When you lose the thread of your story, you may need the outside perspective a coach can bring.
 
