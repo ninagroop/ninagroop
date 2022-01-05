@@ -7,7 +7,6 @@ featuredimage: ""
 If you had told teenage me that one day I’d love speaking to groups, I would have laughed. Isn’t it wonderful how we never stop growing and changing? 
 
 Topics I love to speak about include:
-
 * Journaling to facilitate growth
 * How letting go makes room for a better future
 * Transformation through grief and loss
