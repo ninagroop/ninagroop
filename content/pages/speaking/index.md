@@ -1,8 +1,10 @@
 ---
 templatekey: page
 title: Speaking
-featuredimage: charib-w.jpg
+featuredimage: ""
 ---
+![](coachingpage.jpg '#position=relative;float=left;width=50%;margin=0 0 20px 20px;')
+
 If you had told teenage me that one day I’d love speaking to groups, I would have laughed. Isn’t it wonderful how we never stop growing and changing? 
 
 Topics I love to speak about include:
