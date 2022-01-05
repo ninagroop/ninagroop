@@ -13,11 +13,9 @@ Topics I love to speak about include:
 * Using your character strengths to create momentum
 * Recovering from codependency
 * Developing a gratitude practice
-* Embracing the now
 * Finding and living with joy
 * Mindset and perspective
 * Putting goals and priorties into practice
-* Identifying opportunities
 * Hearding God's voice
 * The writing and publishing process
 
