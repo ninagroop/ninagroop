@@ -25,7 +25,8 @@ homequote: All of creation and your very own life are a sacred text that never
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
-  at her desk, you'll find her wandering in the woods looking for birds.
+  at her desk, you'll probably find her wandering in the woods looking for
+  birds.
 sociallinks:
   - title: Facebook
     url: http://facebook.com/ninagroop
