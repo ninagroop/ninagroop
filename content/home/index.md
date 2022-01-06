@@ -45,7 +45,7 @@ footermeettext: Schedule a free, no-obligation introductory session to learn how
 
 ![](stoolb-w.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
 
-Every day you get to write the story of your life. But sometimes unexpected events come along and disrupt the narrative; other times you can even forget the story is yours to tell or that new chapters are possible. 
+Every day you get to write the story of your life. But sometimes unexpected events come along and disrupt the narrative; other times you can forget that new chapters are possible. 
 
 When you lose the thread of your story, you may need the outside perspective a coach can bring.
 
