@@ -59,8 +59,10 @@ Whether you're facing a major life transition or you're feeling stuck where you 
 <vertical-tiles-grid>
 <a href="/coaching">
 <h2>Life Coaching</h2>
+<p>
 Clarity. Insight. Accountability.<br />
 For the life you want to live
+</p>
 <div class="img-wrapper"><img src="./pine-watt-3_Xwxya43hE-unsplash.jpg" /></div>
 </a>
 <a href="/writing">
@@ -72,6 +74,14 @@ For the life you want to live
 <div class="img-wrapper"><img src="./jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg" /></div>
 </a>
 </vertical-tiles-grid>
+
+## Testimonials
+
+> Nina has been a tremendous help as I navigate the twists and turns of life. Her insightful and uncanny way of getting to the heart of an issue has given me a fresh perspective and new confidence in tackling my goals. ~ Sam R.
+
+<br />
+
+[Read More Testimonials &rarr;](/testimonials)
 
 ## Featured Blog Posts
 

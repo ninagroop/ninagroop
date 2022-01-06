@@ -44,6 +44,13 @@ export const FeatureGridStyled = styled.div`
           height: 100%;
           border: none;
         }
+        p {
+          max-width: 50%;
+          @media screen and (max-width: 600px) {
+            max-width: 100%;
+            position: relative;
+          }
+        }
         .img-wrapper {
           position: absolute;
           top: 0;

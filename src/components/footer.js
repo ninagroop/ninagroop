@@ -56,17 +56,17 @@ const Footer = ({
 }) => {
   return (
     <StyledFooter>
-      <div class="article-body">
-        <div class="footer-grid">
+      <div className="article-body">
+        <div className="footer-grid">
           <div>
             <h5>About Nina</h5>
             <p>{footerBioText}</p>
             <img src={getSrc(footerImage)} />
           </div>
-          <div class="footer-grid">
+          <div className="footer-grid">
             <div>
               <h5>Connect</h5>
-              {socialLinks.map(link => {
+              {socialLinks.map((link, idx) => {
                 let icon;
                 if (link.url.match(/twitter/gi)) {
                   icon = 'twitter';
@@ -80,7 +80,7 @@ const Footer = ({
                   icon = 'earth';
                 }
                 return (
-                  <a class="footer-icon-link" href={link.url}>
+                  <a key={idx} className="footer-icon-link" href={link.url}>
                     <img alt={link.title} src={`/images/${icon}.svg`} />
                     {link.title}
                   </a>
