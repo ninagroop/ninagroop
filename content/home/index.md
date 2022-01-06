@@ -41,11 +41,12 @@ sociallinks:
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 ---
+
 ## You have the power to write a new future.
 
-![](stoolb-w.jpg "#position=relative;float=right;width=50%;margin=0 0 20px 20px;")
+![](stoolb-w.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
 
-Every day you get to write the story of your life. But sometimes unexpected events come along and disrupt the narrative; other times you can forget that new chapters are possible. 
+Every day you get to write the story of your life. But sometimes unexpected events come along and disrupt the narrative; other times you can forget that new chapters are possible.
 
 When you lose the thread of your story, you may need the outside perspective a coach can bring.
 
@@ -58,9 +59,7 @@ Whether you're facing a major life transition or you're feeling stuck where you 
 <vertical-tiles-grid>
 <a href="/coaching">
 <h2>Life Coaching</h2>
-Clarity
-Insight
-Accountability
+Clarity. Insight. Accountability.<br />
 For the life you want to live
 <div class="img-wrapper"><img src="./pine-watt-3_Xwxya43hE-unsplash.jpg" /></div>
 </a>

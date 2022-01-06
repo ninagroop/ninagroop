@@ -33,7 +33,7 @@ const StoreGrid = ({ products }) => {
               <div className="img-contain">
                 <a className="no-text" href={`/product/${item.id}`}>
                   <GatsbyImage
-                    image={getImage(item.localFiles[0])}
+                    image={getImage(item?.localFiles?.[0])}
                     alt={item.name}
                   />
                 </a>
