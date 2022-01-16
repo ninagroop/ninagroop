@@ -21,4 +21,4 @@ Topics I love to speak about include:
 - Hearing God's voice
 - The writing and publishing process
 
-I will speak to your group, big or small, and tailor the message to your audience. I also lead workshops, serve as a panelist, and facilitate retreats. Contact me to discuss the possibilities.
+I will speak to your group, big or small, and tailor the message to your audience. I also lead workshops, serve as a panelist, and facilitate retreats. [Contact](/contact) me to discuss the possibilities.
