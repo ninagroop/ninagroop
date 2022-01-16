@@ -10,10 +10,9 @@ Topics I love to speak about include:
 
 
 - Journaling to facilitate growth
-- Your life as story
 - How letting go makes room for a better future 
 - Transformation through grief and loss  
-- Using your character strengths to create momentum
+- Leaning into your character strengths to create momentum
 - Recovering from codependency
 - Developing a gratitude practice
 - Finding and living with joy
