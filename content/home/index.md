@@ -18,9 +18,9 @@ navigation:
     slug: /checkout
     showcartindicator: true
 tagline: Insight. Resilience. Hope.
-homequote: With our beliefs, hopes, and dreams, we write the story of our lives,
-  and with our choices we edit. Trust that your destiny is written inside you,
-  and your life has a story to tell.
+homequote: With our beliefs, hopes, and dreams, we write the story of our lives.
+  Trust that your destiny is written inside you, and your life has a story to
+  tell.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
