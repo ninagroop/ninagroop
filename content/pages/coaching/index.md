@@ -12,7 +12,7 @@ title: Coaching
 * Do you want to encounter your authentic self and discover your dreams?
 * Do you want to free yourself from a toxic relationship, unhealthy habits, or negative thought patterns?
 
-Coaching is a dynamic one-on-one process that will help you encounter your true self and forge a path toward the life you want to live. If you're looking for support, accountability, momentum, and breakthroughs, then let's talk. 
+Coaching is a dynamic one-on-one process that will help you encounter your true self and forge a path toward the life you want to live. If you're looking for support, accountability, momentum, and breakthrough, then let's talk. 
 
 Schedule your free, no-obligation introductory session to learn how we can work together to turn the page and help you write your next chapter.
 
