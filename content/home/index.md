@@ -18,9 +18,9 @@ navigation:
     slug: /checkout
     showcartindicator: true
 tagline: Insight. Resilience. Hope.
-homequote: Your destiny is written inside you, and your life has a story to
-  tell. When you feel lost, remember that the wisdom you need is as close as
-  your own heart, as unfailing as ocean waves.
+homequote: With our beliefs, hopes, and dreams, we write the story of our lives,
+  and with our choices we edit. Trust that your destiny is written inside you,
+  and your life has a story to tell.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
@@ -64,7 +64,7 @@ Whether you're facing a major life transition or you're feeling stuck where you 
 <h2>Life Coaching</h2>
 <div class="img-wrapper"><img src="./pine-watt-3_Xwxya43hE-unsplash.jpg" /></div>
 </a>
-<a href="/writing">
+<a href="/blog">
 <h2>Writing</h2>
 <div class="img-wrapper"><img src="./rana-sawalha-W_-6PWGbYaU-unsplash.jpg" /></div>
 </a>
