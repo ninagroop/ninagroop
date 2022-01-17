@@ -40,7 +40,7 @@ sociallinks:
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 footercredits:
-  - text: Photos by
+  - text: Photos of Nina by Juniper Studios Photography
     linktext: Some Photographer
     url: http://example.com
 ---
