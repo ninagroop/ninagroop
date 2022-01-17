@@ -39,6 +39,10 @@ sociallinks:
     url: http://example.com
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
+footercredits:
+  - text: Photos by
+    linktext: Some Photographer
+    url: http://example.com
 ---
 
 ## You have the power to write a new future.

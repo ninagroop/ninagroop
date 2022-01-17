@@ -86,6 +86,11 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
             url
           }
           footermeettext
+          footercredits {
+            text
+            linktext
+            url
+          }
         }
       }
     }
@@ -114,6 +119,7 @@ const Layout = ({ children, featuredImage, location, ...rest }) => {
         footerBioText={data?.home?.frontmatter?.footerbiotext}
         socialLinks={data?.home?.frontmatter?.sociallinks}
         footerMeetText={data?.home?.frontmatter?.footermeettext}
+        footerCredits={data?.home?.frontmatter?.footercredits}
       />
     </>
   );

@@ -5,6 +5,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 // This is handled by `gatsby-source-stripe`
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions;
+
   if (page.path === `/product/`) {
     page.matchPath = `/product/*`;
     createPage(page);

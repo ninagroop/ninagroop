@@ -52,6 +52,7 @@ const Footer = ({
   footerImage,
   footerBioText,
   footerMeetText,
+  footerCredits,
   socialLinks,
 }) => {
   return (
@@ -96,6 +97,12 @@ const Footer = ({
               <br />© {new Date().getFullYear()} {siteTitle}
               {` | `}
               Built with <a href="https://www.gatsbyjs.com">Gatsby</a>
+              {footerCredits.map(item => (
+                <>
+                  {` | `}
+                  {item.text} <a href={item.url}>{item.linktext}</a>
+                </>
+              ))}
             </div>
           </div>
         </div>
