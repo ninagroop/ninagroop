@@ -40,9 +40,10 @@ sociallinks:
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 footercredits:
-  - text: Photos of Nina by Juniper Studios Photography
+  - text: "Photo credit: Juniper Studios Photography and Laura Robinson"
     linktext: Some Photographer
-    url: http://example.com
+    url: http://instagram.com/juniperstudiosphotography;
+      http://instagram.com/laura_nicole_robinson
 ---
 
 ## You have the power to write a new future.
