@@ -19,8 +19,7 @@ navigation:
     showcartindicator: true
 tagline: Insight. Resilience. Hope.
 homequote: With our beliefs, hopes, and dreams, we write the story of our lives.
-  Trust that your destiny is written inside you, and your life has a story to
-  tell.
+  New chapters are always possible.
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
@@ -40,10 +39,10 @@ sociallinks:
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 footercredits:
-  - text: "Photo credit: Juniper Studios Photography and Laura Robinson"
-    linktext: Some Photographer
-    url: http://instagram.com/juniperstudiosphotography;
-      http://instagram.com/laura_nicole_robinson
+  - text: "Photo credit: Juniper Studios Photography and Laura Robinson "
+    linktext: "IG: @juniperstudiosphotography and IG: @laura_nicole_robinson"
+    url: http://instragram.com/juniperstudiosphotography
+      /  http://instragram.com/laura_nicole_robinson
 ---
 
 ## You have the power to write a new future.
