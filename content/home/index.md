@@ -30,10 +30,6 @@ sociallinks:
     url: http://instagram.com/ninagroopcoaching
   - title: Facebook
     url: http://facebook.com/ninagroop
-  - title: Youtube
-    url: http://youtube.com/ninagroop
-  - title: Twitter
-    url: http://twitter.com/ninagroop
   - title: Other Link
     url: http://example.com
 footermeettext: Schedule a free, no-obligation introductory session to learn how
