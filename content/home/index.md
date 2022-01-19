@@ -19,7 +19,7 @@ navigation:
     showcartindicator: true
 tagline: Insight. Resilience. Hope.
 homequote: With our beliefs, hopes, and dreams, we write the story of our lives.
-  New chapters are always possible.
+  Are you ready for your next chapter?
 featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
