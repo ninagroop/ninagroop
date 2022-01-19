@@ -39,8 +39,8 @@ sociallinks:
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 footercredits:
-  - text: "Photo credit: Juniper Studios Photography and Laura Robinson "
-    linktext: "IG: @juniperstudiosphotography and IG: @laura_nicole_robinson"
+  - text: "Photo credits: Juniper Studios Photography and Laura Robinson "
+    linktext: "IG: @juniperstudiosphotography / IG: @laura_nicole_robinson"
     url: http://instragram.com/juniperstudiosphotography
       /  http://instragram.com/laura_nicole_robinson
 ---
