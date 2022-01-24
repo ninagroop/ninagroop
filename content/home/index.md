@@ -36,9 +36,9 @@ footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 footercredits:
   - text: "Photo credit: Juniper Studios Photography"
-    linktext: "IG: @juniperstudiosphotography "
+    linktext: "@juniperstudiosphotography "
     url: http://instragram.com/juniperstudiosphotography
-  - linktext: " IG: @laura_nicole_robinson"
+  - linktext: "@laura_nicole_robinson"
     text: "Photo credit: Laura Robinson"
     url: http://instragram.com/laura_nicole_robinson
 ---
