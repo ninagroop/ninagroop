@@ -30,8 +30,6 @@ sociallinks:
     url: http://instagram.com/ninagroopcoaching
   - title: Facebook
     url: http://facebook.com/ninagroop
-  - title: Other Link
-    url: http://example.com
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 footercredits:
