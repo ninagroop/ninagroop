@@ -47,7 +47,8 @@ button,
     box-shadow: none;
 
     &:hover {
-      background-color: desaturate(lighten(_palette(accent), 3), 1.5);
+      background-color: white !important;
+      color: _palette(accent) !important;
     }
 
     &:active {
