@@ -153,10 +153,14 @@ export const SignupFormWithFallback = () => {
 
 export const SignupBox = () => {
   const [modalIsOpen, setIsOpen] = useState(
-    !!window?.cookie?.match(/has_viewed_marketing=true/)?.length
+    typeof window !== 'undefined'
+      ? !!window?.cookie?.match(/has_viewed_marketing=true/)?.length
+      : false
   );
   useEffect(() => {
-    window.cookie = `has_viewed_marketing=true;max-age=604800;domain=${window.location.origin}`;
+    if (typeof window !== 'undefined') {
+      window.cookie = `has_viewed_marketing=true;max-age=604800;domain=${window.location.origin}`;
+    }
   }, []);
 
   const openModal = () => {
