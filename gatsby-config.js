@@ -141,6 +141,7 @@ module.exports = {
         `,
         feeds: [
           {
+            title: 'Nina Groop Blog Feed',
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
