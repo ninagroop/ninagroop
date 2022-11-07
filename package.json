@@ -4,6 +4,9 @@
   "description": "A simple e-commerce site developed with Gatsby and Netlify functions",
   "version": "0.1.0",
   "author": "Michael Esteban",
+  "engines": {
+    "node":">=14.15.0"
+  },
   "dependencies": {
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.11.2",
