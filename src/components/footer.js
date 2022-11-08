@@ -4,7 +4,6 @@ import { StaticImage, getSrc, getImage } from 'gatsby-plugin-image';
 import CalendlyButton from './calendlyButton';
 import SkeletonProfile from './skeletonProfile';
 import Modal from 'react-modal';
-import { reactLocalStorage } from 'reactjs-localstorage';
 
 const customModalStyles = {
   content: {
@@ -106,17 +105,11 @@ export const SignupFormWithFallback = () => {
     toggleIframeLoaded('LOADED');
   };
 
-  const iframeRef = useRef();
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (iframeLoading === 'LOADED') toggleIframeLoaded('FAILED');
-    }, 10000);
-  }, [iframeRef.current]);
-
   return (
     <>
       {iframeLoading === 'LOADING' && <SkeletonProfile />}
+      {/*
+      iframe onLoaded callback was setting FAILED erroneously, ignore for now
       {iframeLoading === 'FAILED' && (
         <a
           class="primary fit"
@@ -125,25 +118,23 @@ export const SignupFormWithFallback = () => {
         >
           Sign Up
         </a>
-      )}
+      )} */}
       {iframeLoading !== 'LOADING' && (
         <iframe
           src="https://ninagroop.substack.com/embed"
           width="320"
           height="290"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
-          onLoad={onIframeLoaded}
         />
       )}
       <iframe
-        ref={iframeRef}
         id="iframe-ref"
         style={{ display: 'none' }}
         src="https://ninagroop.substack.com/embed"
         width="320"
         height="290"
-        frameborder="0"
+        frameBorder="0"
         scrolling="no"
         onLoad={onIframeLoaded}
       />
@@ -152,15 +143,18 @@ export const SignupFormWithFallback = () => {
 };
 
 export const SignupBox = () => {
-  const [modalIsOpen, setIsOpen] = useState(
-    typeof window !== 'undefined'
-      ? !!window?.cookie?.match(/has_viewed_marketing=true/)?.length
-      : false
-  );
+  const [modalIsOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.cookie = `has_viewed_marketing=true;max-age=604800;domain=${window.location.origin}`;
+    const cookieKey = 'ninaGroopMarketingModalViewed';
+    if (document?.cookie?.match(cookieKey + '=true')) {
+      return;
     }
+    var expires = new Date();
+    expires.setSeconds(expires.getSeconds() + 10368000);
+    const cookieToSet = `${cookieKey}=true;expires=${expires.toUTCString()};`;
+    document.cookie = cookieToSet;
+    setIsOpen(true);
   }, []);
 
   const openModal = () => {
@@ -188,7 +182,14 @@ export const SignupBox = () => {
         <div class="modal-wrap-inner">
           <p class="modal-intro-text">
             If you'd like to hear from me more often, or receive free getting
-            started resources for coaching, I'd love to send you my newsletter.
+            started resources for coaching, I'd love to send you my newsletter.{' '}
+            <a
+              class="primary fit"
+              target="_blank"
+              href="https://ninagroop.substack.com/subscribe?utm_source=ninagroop.com&simple=true&next=https%3A%2F%2Fninagroop.substack.com%2Farchive"
+            >
+              Sign Up
+            </a>
           </p>
           <SignupFormWithFallback />
           <a
