@@ -181,8 +181,10 @@ export const SignupBox = () => {
 
         <div class="modal-wrap-inner">
           <p class="modal-intro-text">
-            If you'd like to hear from me more often, or receive free getting
-            started resources for coaching, I'd love to send you my newsletter.{' '}
+            If you'd like to hear from me in your inbox or you'd like to receive
+            insight into your character strengths, sign up below. I'd love to
+            send you my newsletter and some free resources that will empower
+            you.{' '}
             <a
               class="primary fit"
               target="_blank"
