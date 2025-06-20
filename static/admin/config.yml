@@ -1,14 +1,13 @@
 backend:
-  name: github
-  repo: ninagroop/ninagroop
-  branch: dark
-  base_url: https://ninagroop.com
-  auth_endpoint: auth
-  # this was the origin git gateway config a la
-  # https://docs.netlify.com/security/secure-access-to-sites/git-gateway/#reconnect-after-changing-repository-permissions
-  # name: git-gateway
-  # branch: dark # Branch to update (optional; defaults to master)
-
+  name: git-gateway
+  branch: dark # Branch to update (optional; defaults to master)
+  commit_messages:
+    create: 'content: create {{collection}} "{{slug}}"'
+    update: 'content: update {{collection}} "{{slug}}"'
+    delete: 'content: delete {{collection}} "{{slug}}"'
+    uploadMedia: 'media: upload {{path}}'
+    deleteMedia: 'media: delete {{path}}'
+      
 media_folder: static/img
 public_folder: /img
 
