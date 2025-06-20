@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: your-username/your-repo-name
+  repo: ninagroop/ninagroop
   branch: dark
   base_url: https://ninagroop.com
   auth_endpoint: auth
-  # below is the origin git gateway config a la 
+  # this was the origin git gateway config a la
   # https://docs.netlify.com/security/secure-access-to-sites/git-gateway/#reconnect-after-changing-repository-permissions
   # name: git-gateway
   # branch: dark # Branch to update (optional; defaults to master)
