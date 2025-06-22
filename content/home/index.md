@@ -20,7 +20,7 @@ navigation:
 tagline: Insight. Resilience. Hope.
 homequote: With our beliefs, hopes, and dreams, we write the story of our lives.
   Are you ready for your next chapter?
-featuredimage: typewriter_garden_bg.png
+featuredimage: typewriter_garden_bg.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
   at her desk, you'll probably find her wandering in the woods looking for
