@@ -44,27 +44,35 @@ footercredits:
 
 ![](stoolb-w.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
 
-• Writing & Editing – Thoughtful, intuitive support to shape your story, refine your voice, and say what matters
-• Grant Writing – Turning bold ideas into funded realities with clarity and heart
-• Life Coaching – Forward-looking, compassionate guidance for life’s transitions and turning points
-• My Writing – Poetry, essays, and true stories from a life of listening
+- Writing & Editing – Thoughtful, intuitive support to shape your story, refine your voice, and say what matters
+- Grant Writing – Turning bold ideas into funded realities with clarity and heart
+- Life Coaching – Forward-looking, compassionate guidance for life’s transitions and turning points
+- My Writing – Poetry, essays, and true stories from a life of listening
 
 <strong>Let’s bring your ideas — and your story — to life.</strong>
+
+<br />
+
+[Get in Touch &rarr;](/contact)
 
 <br style="clear: both"/>
 
 <vertical-tiles-grid>
+<a href="/blog">
+<h2>Writing & Editing</h2>
+<div class="img-wrapper"><img src="./rana-sawalha-W_-6PWGbYaU-unsplash.jpg" /></div>
+</a>
+
+<a href="/blog">
+<h2>Grant Writing</h2>
+<div class="img-wrapper"><img src="./unseen-studio-s9CC2SKySJM-unsplash.jpg" /></div>
+</a>
+
 <a href="/coaching">
 <h2>Life Coaching</h2>
 <div class="img-wrapper"><img src="./pine-watt-3_Xwxya43hE-unsplash.jpg" /></div>
 </a>
-<a href="/blog">
-<h2>Writing</h2>
-<div class="img-wrapper"><img src="./rana-sawalha-W_-6PWGbYaU-unsplash.jpg" /></div>
-</a>
-<a href="/speaking">
-<h2>Speaking</h2>
-<div class="img-wrapper"><img src="./jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg" /></div>
+
 </a>
 </vertical-tiles-grid>
 
