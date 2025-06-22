@@ -20,7 +20,7 @@ navigation:
 tagline: Insight. Resilience. Hope.
 homequote: With our beliefs, hopes, and dreams, we write the story of our lives.
   Are you ready for your next chapter?
-featuredimage: shifaaz-shamoon-okvxy9tg3ky-unsplash.jpg
+featuredimage: typewriter_garden_bg.png
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
   at her desk, you'll probably find her wandering in the woods looking for
@@ -33,11 +33,11 @@ sociallinks:
 footermeettext: Schedule a free, no-obligation introductory session to learn how
   we can work together to turn the page and help you write your next chapter.
 footercredits:
-  - text: "Photo credit: Juniper Studios Photography"
-    linktext: "@juniperstudiosphotography "
+  - text: 'Photo credit: Juniper Studios Photography'
+    linktext: '@juniperstudiosphotography '
     url: http://instragram.com/juniperstudiosphotography
-  - linktext: "@laura_nicole_robinson"
-    text: "Photo credit: Laura Robinson"
+  - linktext: '@laura_nicole_robinson'
+    text: 'Photo credit: Laura Robinson'
     url: http://instragram.com/laura_nicole_robinson
 ---
 
