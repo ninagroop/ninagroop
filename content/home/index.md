@@ -62,17 +62,13 @@ footercredits:
 <h2>Writing & Editing</h2>
 <div class="img-wrapper"><img src="./rana-sawalha-W_-6PWGbYaU-unsplash.jpg" /></div>
 </a>
-
 <a href="/blog">
 <h2>Grant Writing</h2>
 <div class="img-wrapper"><img src="./unseen-studio-s9CC2SKySJM-unsplash.jpg" /></div>
 </a>
-
 <a href="/coaching">
 <h2>Life Coaching</h2>
 <div class="img-wrapper"><img src="./pine-watt-3_Xwxya43hE-unsplash.jpg" /></div>
-</a>
-
 </a>
 </vertical-tiles-grid>
 
