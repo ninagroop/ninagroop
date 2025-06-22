@@ -17,9 +17,8 @@ navigation:
   - title: Checkout
     slug: /checkout
     showcartindicator: true
-tagline: Insight. Resilience. Hope.
-homequote: With our beliefs, hopes, and dreams, we write the story of our lives.
-  Are you ready for your next chapter?
+tagline: Welcome – The Next Chapter Begins Here.
+homequote: I’m Nina Groop — writer, editor, grant writer, and life coach — and I help people and organizations tell their stories. Whether you're seeking thoughtful editing, strategic grant writing, or personal support as you write a new future, I’m here to help you connect with your voice and make your message clear.
 featuredimage: typewriter_garden_bg.jpg
 footerbioimage: nina-bio.jpg
 footerbiotext: Nina is a life coach, author, editor, and speaker. If she's not
@@ -41,17 +40,16 @@ footercredits:
     url: http://instragram.com/laura_nicole_robinson
 ---
 
-## You have the power to write a new future.
+## What I Offer.
 
 ![](stoolb-w.jpg '#position=relative;float=right;width=50%;margin=0 0 20px 20px;')
 
-Every day you get to write the story of your life. But sometimes unexpected events come along and disrupt the narrative; other times you can forget that new chapters are possible.
+• Writing & Editing – Thoughtful, intuitive support to shape your story, refine your voice, and say what matters
+• Grant Writing – Turning bold ideas into funded realities with clarity and heart
+• Life Coaching – Forward-looking, compassionate guidance for life’s transitions and turning points
+• My Writing – Poetry, essays, and true stories from a life of listening
 
-When you lose the thread of your story, you may need the outside perspective a coach can bring.
-
-For more than two decades as an editor, I helped uncover what authors were really trying to say, refining their thoughts and words to clarify their message. [As a coach](/coaching), I will help you uncover what your heart is saying and then provide you the tools to live it.
-
-Whether you're facing a major life transition or you're feeling stuck where you are, I’m here to help you connect with your hopes and dreams, see the possibilities, and write your next pages.
+<strong>Let’s bring your ideas — and your story — to life.</strong>
 
 <br style="clear: both"/>
 
